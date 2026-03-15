@@ -1,0 +1,1201 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Minji Kim | Marketing Resume Portfolio 2026</title>
+    <meta
+      name="description"
+      content="마케터 김민지 포트폴리오. 퍼포먼스/SEO/커머스/바이럴 운영 경험과 성과를 담은 2026 이직용 웹 이력서."
+    />
+    <style>
+      @font-face {
+        font-family: "Wanted Sans";
+        src: url("./public/fonts/wanted/WantedSans-Regular.woff2") format("woff2");
+        font-weight: 400;
+        font-style: normal;
+        font-display: swap;
+      }
+
+      @font-face {
+        font-family: "Wanted Sans";
+        src: url("./public/fonts/wanted/WantedSans-Medium.woff2") format("woff2");
+        font-weight: 500;
+        font-style: normal;
+        font-display: swap;
+      }
+
+      @font-face {
+        font-family: "Wanted Sans";
+        src: url("./public/fonts/wanted/WantedSans-SemiBold.woff2") format("woff2");
+        font-weight: 600;
+        font-style: normal;
+        font-display: swap;
+      }
+
+      @font-face {
+        font-family: "Wanted Sans";
+        src: url("./public/fonts/wanted/WantedSans-Bold.woff2") format("woff2");
+        font-weight: 700;
+        font-style: normal;
+        font-display: swap;
+      }
+
+      @font-face {
+        font-family: "Wanted Sans";
+        src: url("./public/fonts/wanted/WantedSans-ExtraBold.woff2") format("woff2");
+        font-weight: 800;
+        font-style: normal;
+        font-display: swap;
+      }
+
+      @font-face {
+        font-family: "Wanted Sans";
+        src: url("./public/fonts/wanted/WantedSans-Black.woff2") format("woff2");
+        font-weight: 900;
+        font-style: normal;
+        font-display: swap;
+      }
+
+      @font-face {
+        font-family: "Wanted Sans";
+        src: url("./public/fonts/wanted/WantedSans-ExtraBlack.woff2") format("woff2");
+        font-weight: 950;
+        font-style: normal;
+        font-display: swap;
+      }
+
+      :root {
+        --bg: #efefec;
+        --panel: #f6f6f3;
+        --line: #b8b8b2;
+        --text: #171915;
+        --muted: #7f8379;
+        --accent: #df4f39;
+        --green: #557b37;
+        --shadow: 0 16px 40px rgba(18, 20, 18, 0.08);
+        --content-max: 1520px;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      html {
+        scroll-behavior: smooth;
+      }
+
+      body {
+        margin: 0;
+        font-family: "Wanted Sans", sans-serif;
+        background: radial-gradient(circle at 20% 0%, #f4f4f2 0%, var(--bg) 55%);
+        color: var(--text);
+        -webkit-font-smoothing: antialiased;
+        text-rendering: geometricPrecision;
+      }
+
+      img {
+        max-width: 100%;
+        display: block;
+      }
+
+      a {
+        color: inherit;
+        text-decoration: none;
+      }
+
+      .container {
+        width: min(var(--content-max), calc(100% - 72px));
+        margin: 0 auto;
+      }
+
+      .top-nav {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 24px;
+        padding: 24px 0 10px;
+      }
+
+      .nav-links,
+      .nav-actions {
+        display: flex;
+        gap: 22px;
+        flex-wrap: wrap;
+      }
+
+      .nav-link {
+        font-size: 10px;
+        font-weight: 700;
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
+        color: #222620;
+        position: relative;
+      }
+
+      .nav-link::after {
+        content: "";
+        position: absolute;
+        left: 0;
+        bottom: -4px;
+        width: 0;
+        height: 1px;
+        background: currentColor;
+        transition: width 0.25s ease;
+      }
+
+      .nav-link:hover::after {
+        width: 100%;
+      }
+
+      .hero {
+        text-align: center;
+        padding: 68px 0 46px;
+      }
+
+      .hero-label {
+        margin: 0;
+        font-size: 12px;
+        font-weight: 700;
+        letter-spacing: 0.11em;
+        text-transform: uppercase;
+        color: var(--muted);
+      }
+
+      .hero h1 {
+        margin: 20px auto 0;
+        max-width: 980px;
+        font-family: "Wanted Sans", sans-serif;
+        font-size: clamp(54px, 5.1vw, 88px);
+        line-height: 1.02;
+        letter-spacing: -0.03em;
+        font-weight: 800;
+      }
+
+      .hero-sub {
+        margin: 22px auto 0;
+        max-width: 860px;
+        font-size: clamp(16px, 1.35vw, 22px);
+        line-height: 1.62;
+        color: #2f352d;
+      }
+
+      .profile-block {
+        display: grid;
+        grid-template-columns: minmax(260px, 320px) minmax(420px, 560px) minmax(260px, 320px);
+        gap: 56px;
+        align-items: start;
+        justify-content: center;
+        padding: 38px 0 84px;
+      }
+
+      .profile-block > div:first-child,
+      .profile-block > div:last-child {
+        padding-top: 72px;
+      }
+
+      .panel {
+        background: color-mix(in srgb, var(--panel) 86%, white 14%);
+        border: 1px solid color-mix(in srgb, var(--line) 62%, white 38%);
+        border-radius: 22px;
+        padding: 20px 18px;
+        box-shadow: var(--shadow);
+      }
+
+      .panel-title {
+        margin: 0 0 14px;
+        font-size: 10px;
+        font-weight: 800;
+        letter-spacing: 0.15em;
+        text-transform: uppercase;
+        color: #7f8379;
+      }
+
+      .panel p {
+        margin: 0;
+        font-size: 14px;
+        line-height: 1.68;
+      }
+
+      .panel + .panel {
+        margin-top: 16px;
+      }
+
+      .portrait-stack {
+        display: grid;
+        gap: 18px;
+        justify-items: center;
+      }
+
+      .portrait-shell {
+        width: min(500px, 100%);
+        aspect-ratio: 0.82 / 1;
+        border-radius: 240px 240px 126px 126px;
+        border: 1.5px solid color-mix(in srgb, var(--line) 72%, white 28%);
+        background: linear-gradient(180deg, #f7f7f4 0%, #ecece7 100%);
+        padding: 18px;
+        position: relative;
+        box-shadow: var(--shadow);
+      }
+
+      .portrait-shell::before {
+        content: "";
+        position: absolute;
+        inset: -14px;
+        border: 1px dashed color-mix(in srgb, var(--line) 70%, white 30%);
+        border-radius: inherit;
+      }
+
+      .portrait {
+        width: 100%;
+        height: 100%;
+        border-radius: 220px 220px 112px 112px;
+        overflow: hidden;
+        background: #d7dde0;
+      }
+
+      .portrait img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: center top;
+      }
+
+      .portrait-caption {
+        text-align: center;
+      }
+
+      .portrait-caption p {
+        margin: 0;
+      }
+
+      .portrait-caption .name {
+        font-family: "Wanted Sans", sans-serif;
+        font-size: clamp(38px, 3.3vw, 52px);
+        font-weight: 800;
+      }
+
+      .portrait-caption .role {
+        margin-top: 4px;
+        font-size: 13px;
+        font-weight: 700;
+        color: #62695f;
+        text-transform: uppercase;
+        letter-spacing: 0.08em;
+      }
+
+      .stat-list {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        display: grid;
+        gap: 18px;
+      }
+
+      .stat-item {
+        border-bottom: 1px solid color-mix(in srgb, var(--line) 60%, white 40%);
+        padding-bottom: 14px;
+      }
+
+      .stat-item:last-child {
+        border-bottom: 0;
+      }
+
+      .stat-label {
+        display: block;
+        font-size: 11px;
+        text-transform: uppercase;
+        letter-spacing: 0.11em;
+        color: #7f8379;
+        margin-bottom: 8px;
+        font-weight: 800;
+      }
+
+      .stat-value {
+        margin: 0;
+        font-family: "Wanted Sans", sans-serif;
+        font-size: clamp(44px, 3.8vw, 68px);
+        line-height: 0.9;
+        font-weight: 800;
+      }
+
+      .stat-desc {
+        margin: 8px 0 0;
+        font-size: 12px;
+        line-height: 1.45;
+        color: #5f655b;
+      }
+
+      .line {
+        height: 1px;
+        width: 100%;
+        background: color-mix(in srgb, var(--line) 82%, white 18%);
+      }
+
+      .section {
+        padding: 88px 0 30px;
+      }
+
+      .section-title {
+        text-align: center;
+        margin: 0 0 42px;
+        font-family: "Wanted Sans", sans-serif;
+        font-size: clamp(46px, 4.6vw, 68px);
+        line-height: 1;
+        font-weight: 800;
+      }
+
+      .showreel {
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+        gap: 12px;
+      }
+
+      .showreel-item {
+        position: relative;
+        border-radius: 8px;
+        overflow: hidden;
+        aspect-ratio: 1 / 1;
+        border: 1px solid #d9dbd4;
+      }
+
+      .showreel-item::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background: linear-gradient(135deg, rgba(0, 0, 0, 0.08), transparent 45%);
+      }
+
+      .showreel-item span {
+        position: absolute;
+        left: 12px;
+        bottom: 11px;
+        font-size: 11px;
+        font-weight: 800;
+        letter-spacing: 0.04em;
+        color: white;
+        text-shadow: 0 2px 12px rgba(0, 0, 0, 0.4);
+      }
+
+      .showreel-1 {
+        background: linear-gradient(140deg, #a49a8f 0%, #c5bdb4 60%, #7f7368 100%);
+      }
+
+      .showreel-2 {
+        background: linear-gradient(145deg, #1c2026 0%, #4d535f 42%, #9fa0a5 100%);
+      }
+
+      .showreel-3 {
+        background: linear-gradient(145deg, #f1f3f8 0%, #d8ddeb 100%);
+      }
+
+      .showreel-4 {
+        background: linear-gradient(145deg, #b88e53 0%, #efc47d 100%);
+      }
+
+      .showreel-5 {
+        background: linear-gradient(145deg, #06080b 0%, #2f3947 100%);
+      }
+
+      .project-grid {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 30px;
+      }
+
+      .project-card {
+        display: grid;
+        gap: 14px;
+      }
+
+      .project-thumb {
+        border-radius: 8px;
+        border: 1px solid #d9dbd4;
+        aspect-ratio: 1.22 / 1;
+        overflow: hidden;
+        box-shadow: var(--shadow);
+      }
+
+      .project-thumb.one {
+        background: linear-gradient(150deg, #8c1b17 0%, #dd4b35 40%, #f9d0ad 100%);
+      }
+
+      .project-thumb.two {
+        background: linear-gradient(145deg, #d8d8d4 0%, #f0f0ea 55%, #b2b19d 100%);
+      }
+
+      .project-thumb.three {
+        background: linear-gradient(145deg, #b0b2b2 0%, #6f6760 45%, #55463f 100%);
+      }
+
+      .project-tag {
+        margin: 0;
+        font-size: 11px;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+        color: #878d82;
+        font-weight: 700;
+      }
+
+      .project-title {
+        margin: 2px 0 0;
+        font-size: clamp(28px, 2.1vw, 38px);
+        line-height: 1.08;
+        font-family: "Wanted Sans", sans-serif;
+        font-weight: 800;
+      }
+
+      .project-copy {
+        margin: 0;
+        font-size: 14px;
+        line-height: 1.62;
+        color: #454b41;
+      }
+
+      .project-metric {
+        margin: 2px 0 0;
+        font-size: 13px;
+        font-weight: 800;
+        color: var(--green);
+      }
+
+      .quote {
+        margin: 82px auto 16px;
+        max-width: 980px;
+        text-align: center;
+      }
+
+      .quote p {
+        margin: 0;
+        font-family: "Wanted Sans", sans-serif;
+        font-size: clamp(34px, 3.4vw, 52px);
+        line-height: 1.28;
+        letter-spacing: -0.01em;
+        font-weight: 700;
+      }
+
+      .quote span {
+        margin-top: 14px;
+        display: inline-block;
+        font-size: 13px;
+        color: #646a60;
+        font-weight: 700;
+      }
+
+      .experience {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 56px;
+        margin-top: 36px;
+      }
+
+      .timeline-col {
+        display: grid;
+        gap: 18px;
+      }
+
+      .timeline-year {
+        margin: 0;
+        font-size: 12px;
+        font-weight: 800;
+        letter-spacing: 0.08em;
+        color: #9aa095;
+      }
+
+      .timeline-item h3 {
+        margin: 0;
+        font-size: clamp(28px, 2.4vw, 36px);
+        line-height: 1.05;
+        font-family: "Wanted Sans", sans-serif;
+        font-weight: 800;
+      }
+
+      .timeline-item p {
+        margin: 5px 0 0;
+        font-size: 14px;
+        line-height: 1.56;
+        color: #60675d;
+      }
+
+      .timeline-item ul {
+        margin: 8px 0 0;
+        padding: 0 0 0 16px;
+        display: grid;
+        gap: 6px;
+      }
+
+      .timeline-item li {
+        font-size: 13px;
+        line-height: 1.5;
+        color: #555d53;
+      }
+
+      .leverage-wrap {
+        margin-top: 26px;
+        display: grid;
+        grid-template-columns: 1fr 1.1fr;
+        gap: 34px;
+        align-items: start;
+      }
+
+      .leverage-copy {
+        font-size: 15px;
+        line-height: 1.72;
+        color: #3c433b;
+      }
+
+      .leverage-copy p {
+        margin: 0;
+      }
+
+      .leverage-copy ul {
+        margin: 14px 0 0;
+        padding: 0 0 0 16px;
+      }
+
+      .leverage-copy li {
+        margin: 0 0 8px;
+      }
+
+      .bars {
+        display: grid;
+        gap: 14px;
+      }
+
+      .bar-item {
+        display: grid;
+        gap: 7px;
+      }
+
+      .bar-head {
+        display: flex;
+        justify-content: space-between;
+        align-items: baseline;
+      }
+
+      .bar-head span:first-child {
+        font-size: 12px;
+        text-transform: uppercase;
+        letter-spacing: 0.1em;
+        color: #72786d;
+        font-weight: 800;
+      }
+
+      .bar-head span:last-child {
+        font-size: 14px;
+        font-family: "Wanted Sans", sans-serif;
+        font-weight: 800;
+      }
+
+      .bar-track {
+        width: 100%;
+        height: 10px;
+        border-radius: 999px;
+        background: #dddfd8;
+        overflow: hidden;
+      }
+
+      .bar-fill {
+        width: 0;
+        height: 100%;
+        border-radius: 999px;
+        background: linear-gradient(90deg, #5d8f3c 0%, #9fc85a 100%);
+        transition: width 1.2s cubic-bezier(0.22, 1, 0.36, 1);
+      }
+
+      .cta-wrap {
+        text-align: center;
+        padding: 70px 0 46px;
+      }
+
+      .cta-circle {
+        margin: 0 auto;
+        width: min(360px, 82vw);
+        aspect-ratio: 1 / 1;
+        border-radius: 50%;
+        border: 1.5px dotted #9d9f98;
+        display: grid;
+        place-items: center;
+        background: radial-gradient(circle at 40% 35%, #fdfdfb 0%, #f0f0ed 72%);
+        transition: transform 0.35s ease;
+      }
+
+      .cta-circle:hover {
+        transform: translateY(-4px);
+      }
+
+      .cta-label {
+        margin: 0;
+        font-size: 11px;
+        font-weight: 800;
+        text-transform: uppercase;
+        letter-spacing: 0.1em;
+        color: #8b8f84;
+      }
+
+      .cta-main {
+        margin: 8px 0 0;
+        font-family: "Wanted Sans", sans-serif;
+        font-size: clamp(44px, 6vw, 64px);
+        line-height: 0.96;
+        color: var(--accent);
+        font-weight: 800;
+      }
+
+      .skill-cloud {
+        margin: 8px auto 0;
+        max-width: 1100px;
+        display: flex;
+        justify-content: center;
+        gap: 10px;
+        flex-wrap: wrap;
+      }
+
+      .skill-chip {
+        border: 1px solid #d6dbd1;
+        background: #f8f9f5;
+        border-radius: 999px;
+        padding: 8px 14px;
+        font-size: 12px;
+        font-weight: 700;
+        color: #475045;
+      }
+
+      .cta-arrow {
+        margin-top: 12px;
+        font-size: 42px;
+        line-height: 1;
+      }
+
+      .footer {
+        padding: 20px 0 40px;
+      }
+
+      .footer-row {
+        border-top: 1px solid color-mix(in srgb, var(--line) 86%, white 14%);
+        margin-top: 12px;
+        padding-top: 24px;
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 18px;
+        align-items: center;
+      }
+
+      .footer-item {
+        font-size: 12px;
+        color: #555c53;
+        font-weight: 700;
+        letter-spacing: 0.04em;
+      }
+
+      .footer-item.center {
+        text-align: center;
+      }
+
+      .footer-item.right {
+        text-align: right;
+      }
+
+      .reveal {
+        opacity: 0;
+        transform: translateY(24px);
+        transition: opacity 0.65s ease, transform 0.65s cubic-bezier(0.16, 1, 0.3, 1);
+      }
+
+      .reveal.is-visible {
+        opacity: 1;
+        transform: translateY(0);
+      }
+
+      @media (max-width: 1140px) {
+        .container {
+          width: min(var(--content-max), calc(100% - 40px));
+        }
+
+        .profile-block {
+          grid-template-columns: 1fr;
+          gap: 20px;
+          justify-items: center;
+          text-align: center;
+        }
+
+        .profile-block > div:first-child,
+        .profile-block > div:last-child {
+          padding-top: 0;
+        }
+
+        .stat-list {
+          width: min(460px, 100%);
+        }
+
+        .stat-item {
+          padding-bottom: 16px;
+        }
+
+        .project-grid,
+        .experience,
+        .leverage-wrap {
+          grid-template-columns: 1fr;
+        }
+
+        .quote {
+          margin-top: 56px;
+        }
+      }
+
+      @media (max-width: 760px) {
+        .container {
+          width: min(var(--content-max), calc(100% - 22px));
+        }
+
+        .top-nav {
+          padding-top: 18px;
+        }
+
+        .nav-actions {
+          display: none;
+        }
+
+        .hero {
+          padding-top: 34px;
+        }
+
+        .hero h1 {
+          line-height: 0.97;
+        }
+
+        .hero-sub {
+          margin-top: 14px;
+          line-height: 1.55;
+        }
+
+        .section {
+          padding-top: 56px;
+        }
+
+        .showreel {
+          grid-template-columns: repeat(2, 1fr);
+        }
+
+        .showreel-item:last-child {
+          grid-column: span 2;
+          aspect-ratio: 2 / 1;
+        }
+
+        .footer-row {
+          grid-template-columns: 1fr;
+          text-align: center;
+        }
+
+        .footer-item.center,
+        .footer-item.right {
+          text-align: center;
+        }
+      }
+
+      @media (prefers-reduced-motion: reduce) {
+        html {
+          scroll-behavior: auto;
+        }
+
+        .reveal,
+        .bar-fill,
+        .cta-circle {
+          transition: none;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <header class="top-nav reveal">
+        <nav class="nav-links" aria-label="메인 탐색">
+          <a class="nav-link" href="#home">Home</a>
+          <a class="nav-link" href="#projects">Projects</a>
+          <a class="nav-link" href="#experience">Experience</a>
+          <a class="nav-link" href="#contact">Contact</a>
+        </nav>
+        <div class="nav-actions">
+          <a class="nav-link" href="mailto:mjk8410@naver.com">Email</a>
+          <a class="nav-link" href="./public/docs/minji_resume.pdf" target="_blank" rel="noreferrer">Resume PDF</a>
+          <a class="nav-link" href="./public/docs/minji_marketing_portfolio.pdf" target="_blank" rel="noreferrer">Portfolio PDF</a>
+        </div>
+      </header>
+
+      <section id="home" class="hero reveal">
+        <p class="hero-label">Minji Kim · Marketing Resume 2026</p>
+        <h1>
+          돈 쓰는 맛을 탐구하는<br />
+          마케터 김민지입니다.
+        </h1>
+        <p class="hero-sub">
+          조리학 전공에서 출발해 3년 4개월 동안 의료·뷰티·F&B·커머스 실무를 경험했습니다.
+          콘텐츠 기획부터 광고 운영, 상세페이지, 스마트스토어, 바이럴 PM까지 이어지는
+          실행 중심의 커리어를 만들어왔습니다.
+        </p>
+      </section>
+
+      <section class="profile-block reveal">
+        <div>
+          <article class="panel">
+            <h2 class="panel-title">Career Path</h2>
+            <p>
+              전주대학교 조리학 전공(졸업) 이후, 디자인/AMD 실무를 시작점으로
+              병원 브랜드 마케팅, F&B 프랜차이즈 광고, 신규 커머스 런칭 세팅,
+              성형외과 바이럴 운영까지 영역을 확장해왔습니다.
+            </p>
+          </article>
+          <article class="panel">
+            <h2 class="panel-title">Core Capability</h2>
+            <p>
+              콘텐츠 전략 · 카피라이팅 · SEO · 네이버 검색광고 · 커뮤니티 바이럴 ·
+              상세페이지 기획 · 스마트스토어 구축 · 운영 PM
+            </p>
+          </article>
+        </div>
+
+        <div class="portrait-stack">
+          <div class="portrait-shell">
+            <figure class="portrait">
+              <img
+                id="profile-photo"
+                src="./profile-photo.jpg"
+                alt="마케터 김민지 증명사진"
+                loading="eager"
+              />
+            </figure>
+          </div>
+          <div class="portrait-caption">
+            <p class="name">Minji Kim</p>
+            <p class="role">Performance · Commerce · Viral · SEO</p>
+          </div>
+        </div>
+
+        <div>
+          <ul class="stat-list">
+            <li class="stat-item">
+              <span class="stat-label">Career</span>
+              <p class="stat-value">3년 4개월</p>
+              <p class="stat-desc">마케팅 실무 경력(2022.09 - 현재)</p>
+            </li>
+            <li class="stat-item">
+              <span class="stat-label">광고 카피 성과</span>
+              <p class="stat-value">
+                <span data-count="6.08" data-decimals="2" data-suffix="%">0.00%</span>
+              </p>
+              <p class="stat-desc">여성 페미닌 에티켓 제품 CTR</p>
+            </li>
+            <li class="stat-item">
+              <span class="stat-label">전환 결과</span>
+              <p class="stat-value">
+                <span data-count="97" data-suffix="건">0건</span>
+              </p>
+              <p class="stat-desc">상세페이지 기획 및 운영으로 구매 전환</p>
+            </li>
+            <li class="stat-item">
+              <span class="stat-label">운영 효율</span>
+              <p class="stat-value">8 / 25</p>
+              <p class="stat-desc">최대 8개 병원 동시 운영 · 일 최대 25건 바이럴 작업</p>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <div class="line"></div>
+
+      <section class="section reveal" aria-label="하이라이트 이미지">
+        <h2 class="section-title">@minji highlights</h2>
+        <div class="showreel">
+          <article class="showreel-item showreel-1"><span>카피 테스트</span></article>
+          <article class="showreel-item showreel-2"><span>커머스 구조</span></article>
+          <article class="showreel-item showreel-3"><span>브랜드 제안</span></article>
+          <article class="showreel-item showreel-4"><span>로컬 SEO</span></article>
+          <article class="showreel-item showreel-5"><span>바이럴 운영</span></article>
+        </div>
+      </section>
+
+      <section id="projects" class="section reveal">
+        <h2 class="section-title">Latest Projects</h2>
+        <div class="project-grid">
+          <article class="project-card">
+            <div class="project-thumb one" aria-hidden="true"></div>
+            <p class="project-tag">Performance & Commerce</p>
+            <h3 class="project-title">여성 페미닌 에티켓 제품 마케팅</h3>
+            <p class="project-copy">
+              “먹지말고 뿌리자” 카피 중심 A/B 테스트와 상세페이지 구조 재설계로 전환 흐름을 정리했습니다.
+            </p>
+            <p class="project-metric">CTR 6.08% · 구매 전환 97건</p>
+          </article>
+
+          <article class="project-card">
+            <div class="project-thumb two" aria-hidden="true"></div>
+            <p class="project-tag">SEO & Local Marketing</p>
+            <h3 class="project-title">치과 블로그·플레이스 최적화</h3>
+            <p class="project-copy">
+              ‘지역명 + 치료’ 키워드 구조를 재편해 블로그와 플레이스 노출 흐름을 동시에 개선했습니다.
+            </p>
+            <p class="project-metric">월 조회수 3,149 · 방문자 +24.2%</p>
+          </article>
+
+          <article class="project-card">
+            <div class="project-thumb three" aria-hidden="true"></div>
+            <p class="project-tag">0 to 1 Launching</p>
+            <h3 class="project-title">마스뚜르조 런칭 사전 구축</h3>
+            <p class="project-copy">
+              시장조사, 스마트스토어 세팅, 상세페이지, 체험단 운영까지 신규 브랜드 온라인 판매 기반을 세팅했습니다.
+            </p>
+            <p class="project-metric">홈쇼핑 진행 직전 단계까지 구조 구축</p>
+          </article>
+
+          <article class="project-card">
+            <div class="project-thumb two" aria-hidden="true"></div>
+            <p class="project-tag">Viral & Project Management</p>
+            <h3 class="project-title">성형외과 병원 카페 바이럴 운영</h3>
+            <p class="project-copy">
+              병원별 담당자와 일정/요청사항을 조율하고 커뮤니티 게시글 기획·업로드·노출관리까지
+              운영 프로세스를 표준화했습니다.
+            </p>
+            <p class="project-metric">최대 8개 병원 동시 운영 · 일 최대 25건 실행</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="section reveal" aria-label="기술 및 툴 역량">
+        <h2 class="section-title">Skill Stack</h2>
+        <div class="skill-cloud">
+          <span class="skill-chip">Microsoft Excel</span>
+          <span class="skill-chip">Google Analytics</span>
+          <span class="skill-chip">Adobe Photoshop</span>
+          <span class="skill-chip">Adobe InDesign</span>
+          <span class="skill-chip">Adobe Illustrator</span>
+          <span class="skill-chip">Microsoft PowerPoint</span>
+          <span class="skill-chip">네이버 검색광고</span>
+          <span class="skill-chip">SEO / 블로그 운영</span>
+          <span class="skill-chip">카페 바이럴 운영</span>
+          <span class="skill-chip">스마트스토어 세팅</span>
+          <span class="skill-chip">상세페이지 기획</span>
+          <span class="skill-chip">콘텐츠 카피라이팅</span>
+        </div>
+      </section>
+
+      <section class="quote reveal" aria-label="추천 문구">
+        <p>
+          “조리학에서 시작해 마케팅 실무로 전환한 뒤, <br />
+          기획·운영·커뮤니케이션을 동시에 수행하며 <br />
+          결과를 만드는 실행형 마케터로 성장했습니다.”
+        </p>
+        <span>경력의 방향성과 직무 확장성이 함께 보이는 커리어</span>
+      </section>
+
+      <div class="line"></div>
+
+      <section id="experience" class="section reveal">
+        <h2 class="section-title">Education & Experience</h2>
+        <div class="experience">
+          <div class="timeline-col">
+            <p class="timeline-year">Education · Base</p>
+            <article class="timeline-item">
+              <h3>한식조리학 전공</h3>
+              <p>
+                전주대학교 졸업. 관능평가·블라인드 테스트 경험을 통해
+                “반응을 관찰하고 비교하는 분석 습관”을 만들었고, 이를 마케팅 실무로 확장했습니다.
+              </p>
+            </article>
+            <article class="timeline-item">
+              <h3>초기 커리어</h3>
+              <p>
+                지비비(주)/(주)위드앤코에서 웹/상세페이지/패키지 디자인, 오픈마켓 AMD,
+                이벤트 배너 제작 등 제작 실무를 경험했습니다.
+              </p>
+            </article>
+          </div>
+
+          <div class="timeline-col">
+            <p class="timeline-year">2024.02 — 2025.08</p>
+            <article class="timeline-item">
+              <h3>(주)비디에스 · 브라더스팩토리</h3>
+              <ul>
+                <li>치과/뷰티 브랜드 마케팅, 블로그·플레이스 기반 SEO 운영</li>
+                <li>여성 페미닌 에티켓 제품 광고 카피 테스트 및 상세페이지 기획</li>
+                <li>당나발포차·강탄 네이버 검색/브랜드 광고 세팅 및 운영 지원</li>
+                <li>이탈리아 올리브오일 ‘마스뚜르조’ 온라인 판매 준비(시장조사·스토어·상세페이지)</li>
+                <li>블로그 체험단 및 콘텐츠 마케팅 실행</li>
+              </ul>
+            </article>
+          </div>
+
+          <div class="timeline-col">
+            <p class="timeline-year">2025.02 — Present</p>
+            <article class="timeline-item">
+              <h3>(주)우리의이야기</h3>
+              <ul>
+                <li>성형외과 병원 대상 카페 바이럴 마케팅 진행</li>
+                <li>병원 담당자 커뮤니케이션 및 일정 조율</li>
+                <li>병원별 마케팅 플랜 관리, 진행 현황 체크</li>
+                <li>온라인 커뮤니티/카페 홍보 게시글 기획 및 업로드</li>
+                <li>최대 8개 업체 동시 운영, 하루 최대 25건 작업</li>
+              </ul>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section reveal" aria-label="연봉 협상 포인트">
+        <h2 class="section-title">Why I Increase Team ROI</h2>
+        <div class="leverage-wrap">
+          <div class="leverage-copy">
+            <p>
+              저는 한 업무를 “기획으로만 끝내지 않고 운영까지 연결”하는 타입입니다.
+              실제로 광고·콘텐츠·스토어·바이럴 운영을 이어서 수행하며
+              팀의 커뮤니케이션 비용과 실행 리드타임을 줄여왔습니다.
+            </p>
+            <ul>
+              <li>0 to 1 신규 구조 세팅 경험 (브랜드 런칭 준비)</li>
+              <li>고관여 업종 다중 프로젝트 운영/조율</li>
+              <li>성과 수치가 있는 퍼포먼스/SEO 실무 경험</li>
+              <li>제작 툴 + 데이터 툴 + 운영 툴을 함께 쓰는 하이브리드 역량</li>
+            </ul>
+          </div>
+          <div class="bars" id="skill-bars">
+            <article class="bar-item">
+              <div class="bar-head"><span>Execution</span><span>96</span></div>
+              <div class="bar-track"><div class="bar-fill" data-width="96"></div></div>
+            </article>
+            <article class="bar-item">
+              <div class="bar-head"><span>Multi-Project PM</span><span>92</span></div>
+              <div class="bar-track"><div class="bar-fill" data-width="92"></div></div>
+            </article>
+            <article class="bar-item">
+              <div class="bar-head"><span>Performance/SEO</span><span>89</span></div>
+              <div class="bar-track"><div class="bar-fill" data-width="89"></div></div>
+            </article>
+            <article class="bar-item">
+              <div class="bar-head"><span>AI Prototyping</span><span>85</span></div>
+              <div class="bar-track"><div class="bar-fill" data-width="85"></div></div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section id="contact" class="cta-wrap reveal">
+        <a class="cta-circle" href="./public/docs/minji_resume.pdf" target="_blank" rel="noreferrer" aria-label="김민지 이력서 보기">
+          <div>
+            <p class="cta-label">Download</p>
+            <p class="cta-main">
+              Resume<br />
+              & Portfolio
+            </p>
+            <p class="cta-arrow">↗</p>
+          </div>
+        </a>
+      </section>
+
+      <footer class="footer">
+        <div class="line"></div>
+        <div class="footer-row">
+          <p class="footer-item">© 2026 Minji Kim. All rights reserved.</p>
+          <p class="footer-item center">mjk****@naver.com · 010-****-2097</p>
+          <p class="footer-item right">SEO · Performance · Viral · Commerce · PM</p>
+        </div>
+      </footer>
+    </div>
+
+    <script>
+      (function () {
+        const prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+        const photo = document.getElementById("profile-photo");
+        if (photo) {
+          photo.addEventListener("error", function onError() {
+            photo.src = "./profile-placeholder.svg";
+          });
+        }
+
+        const revealTargets = document.querySelectorAll(".reveal");
+        if (!prefersReducedMotion && revealTargets.length) {
+          const revealObserver = new IntersectionObserver(
+            (entries, observer) => {
+              entries.forEach((entry) => {
+                if (entry.isIntersecting) {
+                  entry.target.classList.add("is-visible");
+                  observer.unobserve(entry.target);
+                }
+              });
+            },
+            { threshold: 0.18, rootMargin: "0px 0px -8% 0px" }
+          );
+          revealTargets.forEach((el) => revealObserver.observe(el));
+        } else {
+          revealTargets.forEach((el) => el.classList.add("is-visible"));
+        }
+
+        const numberNodes = Array.from(document.querySelectorAll("[data-count]"));
+        if (numberNodes.length) {
+          const runCounter = (node) => {
+            const target = Number(node.getAttribute("data-count") || 0);
+            const decimals = Number(node.getAttribute("data-decimals") || 0);
+            const prefix = node.getAttribute("data-prefix") || "";
+            const suffix = node.getAttribute("data-suffix") || "";
+
+            if (prefersReducedMotion) {
+              node.textContent = `${prefix}${target.toFixed(decimals)}${suffix}`;
+              return;
+            }
+
+            let startTime = null;
+            const duration = 1200;
+            const step = (timestamp) => {
+              if (!startTime) startTime = timestamp;
+              const progress = Math.min((timestamp - startTime) / duration, 1);
+              const eased = 1 - Math.pow(1 - progress, 3);
+              const value = (target * eased).toFixed(decimals);
+              node.textContent = `${prefix}${value}${suffix}`;
+              if (progress < 1) requestAnimationFrame(step);
+            };
+            requestAnimationFrame(step);
+          };
+
+          const counterObserver = new IntersectionObserver(
+            (entries, observer) => {
+              entries.forEach((entry) => {
+                if (entry.isIntersecting) {
+                  runCounter(entry.target);
+                  observer.unobserve(entry.target);
+                }
+              });
+            },
+            { threshold: 0.45 }
+          );
+          numberNodes.forEach((node) => counterObserver.observe(node));
+        }
+
+        const bars = document.querySelectorAll(".bar-fill");
+        if (bars.length) {
+          const fillBars = () => {
+            bars.forEach((bar) => {
+              bar.style.width = `${Math.min(100, Number(bar.getAttribute("data-width") || 0))}%`;
+            });
+          };
+          if (prefersReducedMotion) {
+            fillBars();
+            return;
+          }
+
+          const barSection = document.getElementById("skill-bars");
+          if (!barSection) return;
+          const barObserver = new IntersectionObserver(
+            (entries, observer) => {
+              entries.forEach((entry) => {
+                if (entry.isIntersecting) {
+                  fillBars();
+                  observer.disconnect();
+                }
+              });
+            },
+            { threshold: 0.3 }
+          );
+          barObserver.observe(barSection);
+        }
+      })();
+    </script>
+  </body>
+</html>
