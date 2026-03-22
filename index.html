@@ -8,6 +8,7 @@
       name="description"
       content="마케터 김민지 포트폴리오. 퍼포먼스/SEO/커머스/바이럴 운영 경험과 성과를 담은 2026 이직용 웹 이력서."
     />
+    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.12.2/lottie.min.js"></script>
     <style>
       @font-face {
         font-family: "Wanted Sans";
@@ -267,8 +268,8 @@
         width: 100%;
         height: 100%;
         object-fit: cover;
-        object-position: center 8%;
-        transform: scale(1.1);
+        object-position: 50% 22%;
+        transform: scale(1.04);
         transform-origin: center top;
       }
 
@@ -341,6 +342,89 @@
         font-size: 13px;
         line-height: 1.55;
         color: #5f655b;
+        word-break: keep-all;
+      }
+
+      .confidence-strip {
+        padding: 0 0 54px;
+      }
+
+      .confidence-title {
+        margin: 0;
+        text-align: center;
+        font-family: "Wanted Sans", sans-serif;
+        font-size: clamp(34px, 3.2vw, 48px);
+        line-height: 1.04;
+        font-weight: 800;
+        letter-spacing: -0.01em;
+      }
+
+      .confidence-copy {
+        margin: 12px auto 0;
+        max-width: 920px;
+        text-align: center;
+        font-size: 16px;
+        line-height: 1.74;
+        color: #495046;
+        word-break: keep-all;
+      }
+
+      .confidence-grid {
+        margin-top: 24px;
+        display: grid;
+        grid-template-columns: repeat(5, minmax(0, 1fr));
+        gap: 12px;
+      }
+
+      .confidence-card {
+        border: 1px solid #d5dacf;
+        border-radius: 16px;
+        background: linear-gradient(165deg, #f8faf5 0%, #eef0e9 100%);
+        padding: 14px 13px;
+        box-shadow: 0 10px 24px rgba(18, 20, 18, 0.06);
+      }
+
+      .confidence-head {
+        display: inline-flex;
+        align-items: center;
+        gap: 7px;
+      }
+
+      .confidence-head img {
+        width: 16px;
+        height: 16px;
+        opacity: 0.82;
+      }
+
+      .confidence-label {
+        margin: 0;
+        font-size: 10px;
+        letter-spacing: 0.1em;
+        text-transform: uppercase;
+        font-weight: 800;
+        color: #7d8579;
+      }
+
+      .confidence-kpi {
+        margin: 8px 0 0;
+        font-family: "Wanted Sans", sans-serif;
+        font-size: clamp(30px, 2.3vw, 40px);
+        line-height: 0.95;
+        letter-spacing: -0.02em;
+        font-weight: 800;
+      }
+
+      .confidence-kpi small {
+        font-size: 0.46em;
+        font-weight: 700;
+        color: #5d6459;
+      }
+
+      .confidence-note {
+        margin: 8px 0 0;
+        font-size: 12px;
+        line-height: 1.5;
+        color: #555d53;
         word-break: keep-all;
       }
 
@@ -516,6 +600,253 @@
         background: #ecefe7;
         border-color: #aeb7a8;
         transform: translateY(-1px);
+      }
+
+      .growth-section {
+        padding-top: 96px;
+      }
+
+      .growth-lead {
+        margin: -10px auto 0;
+        max-width: 900px;
+        text-align: center;
+        font-size: 18px;
+        line-height: 1.78;
+        color: #3b423b;
+        word-break: keep-all;
+      }
+
+      .growth-grid {
+        margin-top: 42px;
+        display: grid;
+        grid-template-columns: minmax(0, 1.1fr) minmax(0, 0.9fr);
+        gap: 20px;
+      }
+
+      .growth-card {
+        border: 1px solid #d6dbd1;
+        border-radius: 24px;
+        background: linear-gradient(165deg, #f8f9f5 0%, #f0f1ec 100%);
+        box-shadow: var(--shadow);
+        padding: 24px 24px 22px;
+      }
+
+      .growth-card-head {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+      }
+
+      .growth-card-head img {
+        width: 18px;
+        height: 18px;
+        opacity: 0.82;
+      }
+
+      .growth-eyebrow {
+        margin: 0;
+        font-size: 11px;
+        font-weight: 800;
+        text-transform: uppercase;
+        letter-spacing: 0.1em;
+        color: #7b8377;
+      }
+
+      .growth-card h3 {
+        margin: 10px 0 0;
+        font-size: clamp(30px, 2.2vw, 40px);
+        line-height: 1.1;
+        font-family: "Wanted Sans", sans-serif;
+        font-weight: 800;
+      }
+
+      .timeline-card {
+        grid-row: span 2;
+      }
+
+      .journey-list {
+        margin: 20px 0 0;
+        padding: 0;
+        list-style: none;
+        display: grid;
+        gap: 15px;
+      }
+
+      .journey-list li {
+        position: relative;
+        padding: 14px 14px 14px 16px;
+        border: 1px solid #d6dbd1;
+        border-left: 4px solid #95b564;
+        border-radius: 14px;
+        background: #f9faf6;
+      }
+
+      .journey-date {
+        display: inline-block;
+        font-size: 11px;
+        text-transform: uppercase;
+        letter-spacing: 0.09em;
+        font-weight: 800;
+        color: #7f867b;
+      }
+
+      .journey-list strong {
+        margin-top: 6px;
+        display: block;
+        font-size: 20px;
+        line-height: 1.24;
+      }
+
+      .journey-list p {
+        margin: 6px 0 0;
+        font-size: 14px;
+        line-height: 1.62;
+        color: #4e554d;
+      }
+
+      .cluster-grid {
+        margin-top: 16px;
+        display: grid;
+        gap: 10px;
+      }
+
+      .cluster-item {
+        padding: 12px 14px;
+        border-radius: 12px;
+        background: #f6f8f3;
+        border: 1px solid #d8ddd3;
+      }
+
+      .cluster-title {
+        margin: 0 0 3px;
+        font-size: 12px;
+        letter-spacing: 0.07em;
+        text-transform: uppercase;
+        font-weight: 800;
+        color: #6c7268;
+      }
+
+      .cluster-item p {
+        margin: 0;
+        font-size: 14px;
+        line-height: 1.55;
+        color: #485047;
+      }
+
+      .toolkit-visual {
+        margin: 14px 0 0;
+        border-radius: 16px;
+        border: 1px solid #d5dad0;
+        background: linear-gradient(130deg, #eff2ea, #f8f9f5);
+        padding: 8px;
+      }
+
+      .toolkit-visual img {
+        width: 100%;
+        height: auto;
+      }
+
+      .lottie-box {
+        margin-top: 10px;
+        border-radius: 14px;
+        border: 1px dashed #c7cec1;
+        background: linear-gradient(155deg, #f3f5ef 0%, #ecefe7 100%);
+        min-height: 190px;
+        display: grid;
+        place-items: center;
+        overflow: hidden;
+      }
+
+      .lottie-canvas {
+        width: 100%;
+        max-width: 320px;
+        height: 180px;
+      }
+
+      .impact-kpis {
+        margin-top: 16px;
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 10px;
+      }
+
+      .impact-kpis article {
+        border: 1px solid #d6dbd1;
+        border-radius: 12px;
+        background: #fafbf8;
+        padding: 12px 12px 10px;
+      }
+
+      .impact-kpis img {
+        width: 18px;
+        height: 18px;
+        margin-bottom: 8px;
+        opacity: 0.75;
+      }
+
+      .impact-label {
+        margin: 0;
+        font-size: 11px;
+        letter-spacing: 0.07em;
+        text-transform: uppercase;
+        font-weight: 800;
+        color: #7a8174;
+      }
+
+      .impact-value {
+        margin: 5px 0 0;
+        font-family: "Wanted Sans", sans-serif;
+        font-size: clamp(24px, 2.1vw, 32px);
+        line-height: 1;
+        letter-spacing: -0.02em;
+        font-weight: 800;
+      }
+
+      .impact-card .bars {
+        margin-top: 18px;
+      }
+
+      .learning-list {
+        margin: 16px 0 0;
+        padding: 0;
+        list-style: none;
+        display: grid;
+        gap: 10px;
+      }
+
+      .learning-list li {
+        display: grid;
+        gap: 4px;
+        padding: 10px 12px;
+        border-radius: 12px;
+        border: 1px solid #d7dcd2;
+        background: #f9faf6;
+      }
+
+      .learning-list strong {
+        font-size: 15px;
+        line-height: 1.35;
+      }
+
+      .learning-list span {
+        font-size: 12px;
+        color: #5f665d;
+        line-height: 1.4;
+      }
+
+      .learning-visuals {
+        margin-top: 12px;
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 10px;
+      }
+
+      .learning-visuals img {
+        width: 100%;
+        border-radius: 12px;
+        border: 1px solid #d7dcd2;
+        background: #f8f9f6;
+        padding: 6px;
       }
 
       .quote {
@@ -815,8 +1146,25 @@
 
         .project-grid,
         .experience,
-        .leverage-wrap {
+        .leverage-wrap,
+        .growth-grid {
           grid-template-columns: 1fr;
+        }
+
+        .confidence-grid {
+          grid-template-columns: repeat(2, minmax(0, 1fr));
+        }
+
+        .confidence-card:last-child {
+          grid-column: span 2;
+        }
+
+        .timeline-card {
+          grid-row: auto;
+        }
+
+        .growth-card {
+          padding: 20px;
         }
 
         .quote {
@@ -862,6 +1210,11 @@
           padding: 14px;
         }
 
+        .portrait img {
+          object-position: 50% 20%;
+          transform: scale(1.06);
+        }
+
         .stat-value {
           font-size: clamp(40px, 12vw, 56px);
         }
@@ -869,6 +1222,36 @@
         .project-grid {
           grid-template-columns: 1fr;
           gap: 18px;
+        }
+
+        .confidence-strip {
+          padding-bottom: 42px;
+        }
+
+        .confidence-title {
+          font-size: clamp(28px, 9vw, 38px);
+        }
+
+        .confidence-copy {
+          font-size: 14px;
+          line-height: 1.66;
+        }
+
+        .confidence-grid {
+          grid-template-columns: 1fr;
+          gap: 10px;
+        }
+
+        .confidence-card {
+          padding: 13px 12px;
+        }
+
+        .confidence-card:last-child {
+          grid-column: auto;
+        }
+
+        .confidence-kpi {
+          font-size: clamp(28px, 9vw, 36px);
         }
 
         .project-card {
@@ -899,6 +1282,40 @@
 
         .section {
           padding-top: 56px;
+        }
+
+        .growth-section {
+          padding-top: 62px;
+        }
+
+        .growth-lead {
+          font-size: 15px;
+          line-height: 1.72;
+          margin-top: -4px;
+        }
+
+        .growth-card h3 {
+          font-size: clamp(24px, 8vw, 34px);
+        }
+
+        .journey-list li {
+          padding: 12px;
+        }
+
+        .journey-list strong {
+          font-size: 18px;
+        }
+
+        .impact-kpis {
+          grid-template-columns: 1fr 1fr;
+        }
+
+        .impact-value {
+          font-size: 28px;
+        }
+
+        .learning-visuals {
+          grid-template-columns: 1fr;
         }
 
         .showreel {
@@ -1037,18 +1454,63 @@
         </div>
       </section>
 
-      <div class="line"></div>
+      <section class="confidence-strip reveal" aria-label="채용담당자 신뢰 신호">
+        <h2 class="confidence-title">Hiring Signal Board</h2>
+        <p class="confidence-copy">
+          이력서에서 가장 강한 신호만 추려서 보이면, “실무에서 바로 성과를 낼 사람”이라는 인상이 빠르게 형성됩니다.
+        </p>
+        <div class="confidence-grid">
+          <article class="confidence-card">
+            <header class="confidence-head">
+              <img src="./public/graphics/icons/schedule.svg" alt="" aria-hidden="true" />
+              <p class="confidence-label">Career Scope</p>
+            </header>
+            <p class="confidence-kpi">
+              <span data-count="3" data-suffix="년">0년</span>
+              <small><span data-count="4" data-suffix="개월">0개월</span></small>
+            </p>
+            <p class="confidence-note">2022.09부터 현재까지 실무 연속성 유지</p>
+          </article>
 
-      <section class="section reveal" aria-label="하이라이트 이미지">
-        <h2 class="section-title">@minji highlights</h2>
-        <div class="showreel">
-          <article class="showreel-item showreel-1"><span>카피 테스트</span></article>
-          <article class="showreel-item showreel-2"><span>커머스 구조</span></article>
-          <article class="showreel-item showreel-3"><span>브랜드 제안</span></article>
-          <article class="showreel-item showreel-4"><span>로컬 SEO</span></article>
-          <article class="showreel-item showreel-5"><span>바이럴 운영</span></article>
+          <article class="confidence-card">
+            <header class="confidence-head">
+              <img src="./public/graphics/icons/strategy.svg" alt="" aria-hidden="true" />
+              <p class="confidence-label">Industry Breadth</p>
+            </header>
+            <p class="confidence-kpi"><span data-count="4">0</span><small>개 산업군</small></p>
+            <p class="confidence-note">의료 · 뷰티 · F&B · 커머스 운영 경험</p>
+          </article>
+
+          <article class="confidence-card">
+            <header class="confidence-head">
+              <img src="./public/graphics/icons/pie-chart.svg" alt="" aria-hidden="true" />
+              <p class="confidence-label">Performance</p>
+            </header>
+            <p class="confidence-kpi"><span data-count="6.08" data-decimals="2" data-suffix="%">0.00%</span></p>
+            <p class="confidence-note">카피 테스트 기반 CTR 개선 · 구매전환 97건</p>
+          </article>
+
+          <article class="confidence-card">
+            <header class="confidence-head">
+              <img src="./public/graphics/icons/search.svg" alt="" aria-hidden="true" />
+              <p class="confidence-label">SEO Lift</p>
+            </header>
+            <p class="confidence-kpi"><span data-count="24.2" data-prefix="+" data-decimals="1" data-suffix="%">+0.0%</span></p>
+            <p class="confidence-note">월 조회수 3,149 / 플레이스 순위 개선 경험</p>
+          </article>
+
+          <article class="confidence-card">
+            <header class="confidence-head">
+              <img src="./public/graphics/icons/management.svg" alt="" aria-hidden="true" />
+              <p class="confidence-label">Operating Load</p>
+            </header>
+            <p class="confidence-kpi"><span data-count="8">0</span><small> / </small><span data-count="25">0</span></p>
+            <p class="confidence-note">최대 8개 병원 동시 운영 · 일 최대 25건 실행</p>
+          </article>
         </div>
       </section>
+
+      <div class="line"></div>
 
       <section id="projects" class="section reveal">
         <h2 class="section-title">Latest Projects</h2>
@@ -1056,8 +1518,8 @@
           <article class="project-card">
             <figure class="project-thumb fit-contain">
               <img
-                src="./public/images/projects/ph40-product.png"
-                alt="펜톡 여성청결제 제품 이미지"
+                src="./public/images/projects/ph40-store.png"
+                alt="펜톡 스마트스토어 메인 페이지"
                 loading="lazy"
               />
             </figure>
@@ -1080,10 +1542,10 @@
           </article>
 
           <article class="project-card">
-            <figure class="project-thumb">
+            <figure class="project-thumb fit-contain">
               <img
-                src="./public/images/projects/ph40-store.png"
-                alt="펜톡 스마트스토어 메인 페이지"
+                src="./public/images/projects/dental-place-map.png"
+                alt="김해365치과 플레이스 지도/노출 화면"
                 loading="lazy"
               />
             </figure>
@@ -1140,137 +1602,141 @@
         </div>
       </section>
 
-      <section class="section reveal" aria-label="기술 및 툴 역량">
-        <h2 class="section-title">Skill Stack</h2>
-        <div class="skill-cloud">
-          <span class="skill-chip">Microsoft Excel</span>
-          <span class="skill-chip">Google Analytics</span>
-          <span class="skill-chip">Adobe Photoshop</span>
-          <span class="skill-chip">Adobe InDesign</span>
-          <span class="skill-chip">Adobe Illustrator</span>
-          <span class="skill-chip">Microsoft PowerPoint</span>
-          <span class="skill-chip">네이버 검색광고</span>
-          <span class="skill-chip">SEO / 블로그 운영</span>
-          <span class="skill-chip">카페 바이럴 운영</span>
-          <span class="skill-chip">스마트스토어 세팅</span>
-          <span class="skill-chip">상세페이지 기획</span>
-          <span class="skill-chip">콘텐츠 카피라이팅</span>
-        </div>
-      </section>
-
-      <section class="quote reveal" aria-label="추천 문구">
-        <p>
-          “조리학에서 시작해 마케팅 실무로 전환한 뒤, <br />
-          기획·운영·커뮤니케이션을 동시에 수행하며 <br />
-          결과를 만드는 실행형 마케터로 성장했습니다.”
+      <section id="experience" class="section growth-section reveal" aria-label="경력 인포그래픽">
+        <h2 class="section-title">Career Growth Infographic</h2>
+        <p class="growth-lead">
+          조리학 기반 분석 습관에서 출발해 디자인·콘텐츠·퍼포먼스·PM까지 확장한
+          3년 4개월의 성장 흐름을 한 눈에 볼 수 있도록 정리했습니다.
         </p>
-        <span>경력의 방향성과 직무 확장성이 함께 보이는 커리어</span>
-      </section>
 
-      <div class="line"></div>
+        <div class="growth-grid">
+          <article class="growth-card timeline-card">
+            <header class="growth-card-head">
+              <img src="./public/graphics/icons/schedule.svg" alt="" aria-hidden="true" />
+              <p class="growth-eyebrow">Step by Step</p>
+            </header>
+            <h3>Career Timeline</h3>
+            <ol class="journey-list">
+              <li>
+                <span class="journey-date">2022.09 - 2023.11</span>
+                <strong>디자인/콘텐츠 제작 기반 구축</strong>
+                <p>위드앤코·지비비에서 상세페이지/배너/AMD 실무로 제작 감각과 업무 속도 확보.</p>
+              </li>
+              <li>
+                <span class="journey-date">2024.02 - 2024.11</span>
+                <strong>SEO/콘텐츠 성과형 마케팅 전환</strong>
+                <p>비디에스에서 치과·뷰티 채널 운영 및 키워드 구조 개선으로 조회/유입 지표 개선.</p>
+              </li>
+              <li>
+                <span class="journey-date">2025.02 - 2025.08</span>
+                <strong>브랜드 런칭 A to Z 실행</strong>
+                <p>브라더스팩토리에서 스마트스토어 세팅, 상세페이지, 시장조사, 광고 운영까지 전개.</p>
+              </li>
+              <li>
+                <span class="journey-date">2025.08 - 현재</span>
+                <strong>다중 프로젝트 PM 운영</strong>
+                <p>우리의이야기에서 고관여 병원 바이럴 운영, 커뮤니케이션·일정·품질 관리 표준화.</p>
+              </li>
+            </ol>
+          </article>
 
-      <section id="experience" class="section reveal">
-        <h2 class="section-title">Education & Experience</h2>
-        <div class="experience">
-          <div class="timeline-col">
-            <p class="timeline-year">Education · Base</p>
-            <article class="timeline-item">
-              <h3>한식조리학 전공</h3>
-              <p>
-                전주대학교 졸업. 관능평가·블라인드 테스트 경험을 통해
-                “반응을 관찰하고 비교하는 분석 습관”을 만들었고, 이를 마케팅 실무로 확장했습니다.
-              </p>
-            </article>
-            <article class="timeline-item">
-              <h3>초기 커리어</h3>
-              <p>
-                지비비(주)/(주)위드앤코에서 웹/상세페이지/패키지 디자인, 오픈마켓 AMD,
-                이벤트 배너 제작 등 제작 실무를 경험했습니다.
-              </p>
-            </article>
-          </div>
+          <article class="growth-card toolkit-card">
+            <header class="growth-card-head">
+              <img src="./public/graphics/icons/strategy.svg" alt="" aria-hidden="true" />
+              <p class="growth-eyebrow">Capability Cluster</p>
+            </header>
+            <h3>실무 전환을 만든 핵심 스택</h3>
+            <div class="cluster-grid">
+              <div class="cluster-item">
+                <p class="cluster-title">전략/운영</p>
+                <p>SEO · 키워드 리서치 · 네이버 검색광고 · 커뮤니티 바이럴 · 운영 PM</p>
+              </div>
+              <div class="cluster-item">
+                <p class="cluster-title">크리에이티브</p>
+                <p>카피라이팅 · 상세페이지 기획 · 콘텐츠 캘린더 · 캠페인 아이디어 도출</p>
+              </div>
+              <div class="cluster-item">
+                <p class="cluster-title">툴/데이터</p>
+                <p>Google Analytics · Excel · Photoshop · Illustrator · InDesign</p>
+              </div>
+            </div>
+            <figure class="toolkit-visual">
+              <img src="./public/graphics/marketing/content-creator.svg" alt="콘텐츠 제작 일러스트" loading="lazy" />
+            </figure>
+            <div class="lottie-box" aria-hidden="true">
+              <div id="growth-lottie" class="lottie-canvas"></div>
+            </div>
+          </article>
 
-          <div class="timeline-col">
-            <p class="timeline-year">2024.02 — 2025.08</p>
-            <article class="timeline-item">
-              <h3>(주)비디에스 · 브라더스팩토리</h3>
-              <ul>
-                <li>치과/뷰티 브랜드 마케팅, 블로그·플레이스 기반 SEO 운영</li>
-                <li>여성 페미닌 에티켓 제품 광고 카피 테스트 및 상세페이지 기획</li>
-                <li>당나발포차·강탄 네이버 검색/브랜드 광고 세팅 및 운영 지원</li>
-                <li>이탈리아 올리브오일 ‘마스뚜르조’ 온라인 판매 준비(시장조사·스토어·상세페이지)</li>
-                <li>블로그 체험단 및 콘텐츠 마케팅 실행</li>
-              </ul>
-            </article>
-          </div>
+          <article class="growth-card impact-card">
+            <header class="growth-card-head">
+              <img src="./public/graphics/icons/achievement.svg" alt="" aria-hidden="true" />
+              <p class="growth-eyebrow">Impact Snapshot</p>
+            </header>
+            <h3>숫자로 증명한 실행력</h3>
+            <div class="impact-kpis">
+              <article>
+                <img src="./public/graphics/icons/pie-chart.svg" alt="" aria-hidden="true" />
+                <p class="impact-label">광고 CTR</p>
+                <p class="impact-value"><span data-count="6.08" data-decimals="2" data-suffix="%">0.00%</span></p>
+              </article>
+              <article>
+                <img src="./public/graphics/icons/search.svg" alt="" aria-hidden="true" />
+                <p class="impact-label">SEO 방문자</p>
+                <p class="impact-value"><span data-count="24.2" data-prefix="+" data-decimals="1" data-suffix="%">+0.0%</span></p>
+              </article>
+              <article>
+                <img src="./public/graphics/icons/management.svg" alt="" aria-hidden="true" />
+                <p class="impact-label">동시 운영</p>
+                <p class="impact-value"><span data-count="8">0</span>개 업체</p>
+              </article>
+              <article>
+                <img src="./public/graphics/icons/location.svg" alt="" aria-hidden="true" />
+                <p class="impact-label">일 최대 실행량</p>
+                <p class="impact-value"><span data-count="25">0</span>건</p>
+              </article>
+            </div>
+            <div class="bars" id="skill-bars">
+              <article class="bar-item">
+                <div class="bar-head"><span>Execution</span><span>96</span></div>
+                <div class="bar-track"><div class="bar-fill" data-width="96"></div></div>
+              </article>
+              <article class="bar-item">
+                <div class="bar-head"><span>Multi-Project PM</span><span>92</span></div>
+                <div class="bar-track"><div class="bar-fill" data-width="92"></div></div>
+              </article>
+              <article class="bar-item">
+                <div class="bar-head"><span>Performance/SEO</span><span>89</span></div>
+                <div class="bar-track"><div class="bar-fill" data-width="89"></div></div>
+              </article>
+              <article class="bar-item">
+                <div class="bar-head"><span>Creative Planning</span><span>90</span></div>
+                <div class="bar-track"><div class="bar-fill" data-width="90"></div></div>
+              </article>
+            </div>
+          </article>
 
-          <div class="timeline-col">
-            <p class="timeline-year">2025.02 — Present</p>
-            <article class="timeline-item">
-              <h3>(주)우리의이야기</h3>
-              <ul>
-                <li>성형외과 병원 대상 카페 바이럴 마케팅 진행</li>
-                <li>병원 담당자 커뮤니케이션 및 일정 조율</li>
-                <li>병원별 마케팅 플랜 관리, 진행 현황 체크</li>
-                <li>온라인 커뮤니티/카페 홍보 게시글 기획 및 업로드</li>
-                <li>최대 8개 업체 동시 운영, 하루 최대 25건 작업</li>
-              </ul>
-            </article>
-          </div>
-        </div>
-      </section>
-
-      <section class="section reveal" aria-label="연봉 협상 포인트">
-        <h2 class="section-title">Why I Increase Team ROI</h2>
-        <div class="leverage-wrap">
-          <div class="leverage-copy">
-            <p>
-              저는 한 업무를 “기획으로만 끝내지 않고 운영까지 연결”하는 타입입니다.
-              실제로 광고·콘텐츠·스토어·바이럴 운영을 이어서 수행하며
-              팀의 커뮤니케이션 비용과 실행 리드타임을 줄여왔습니다.
-            </p>
-            <ul>
-              <li>0 to 1 신규 구조 세팅 경험 (브랜드 런칭 준비)</li>
-              <li>고관여 업종 다중 프로젝트 운영/조율</li>
-              <li>성과 수치가 있는 퍼포먼스/SEO 실무 경험</li>
-              <li>제작 툴 + 데이터 툴 + 운영 툴을 함께 쓰는 하이브리드 역량</li>
+          <article class="growth-card learning-card">
+            <header class="growth-card-head">
+              <img src="./public/graphics/icons/search.svg" alt="" aria-hidden="true" />
+              <p class="growth-eyebrow">Learning Curve</p>
+            </header>
+            <h3>꾸준한 학습으로 성장 속도 유지</h3>
+            <ul class="learning-list">
+              <li><strong>전주대학교 한식조리학</strong><span>2018.03 - 2022.02 / 졸업</span></li>
+              <li><strong>러닝스푼즈 디지털 마케팅</strong><span>2023.12 - 2024.03 / 실무 과정 이수</span></li>
+              <li><strong>그린컴퓨터아트학원</strong><span>디지털 광고 디자인 실무(포토샵/일러스트/인디자인)</span></li>
+              <li><strong>HACCP 팀장과정 · 식품 품질관리자</strong><span>데이터 기반 검수/품질관리 습관 체득</span></li>
             </ul>
-          </div>
-          <div class="bars" id="skill-bars">
-            <article class="bar-item">
-              <div class="bar-head"><span>Execution</span><span>96</span></div>
-              <div class="bar-track"><div class="bar-fill" data-width="96"></div></div>
-            </article>
-            <article class="bar-item">
-              <div class="bar-head"><span>Multi-Project PM</span><span>92</span></div>
-              <div class="bar-track"><div class="bar-fill" data-width="92"></div></div>
-            </article>
-            <article class="bar-item">
-              <div class="bar-head"><span>Performance/SEO</span><span>89</span></div>
-              <div class="bar-track"><div class="bar-fill" data-width="89"></div></div>
-            </article>
-            <article class="bar-item">
-              <div class="bar-head"><span>AI Prototyping</span><span>85</span></div>
-              <div class="bar-track"><div class="bar-fill" data-width="85"></div></div>
-            </article>
-          </div>
+            <div class="learning-visuals">
+              <img src="./public/graphics/marketing/retargeting-strategy.svg" alt="리타게팅 전략 일러스트" loading="lazy" />
+              <img src="./public/graphics/marketing/marketing-funnel.svg" alt="마케팅 퍼널 일러스트" loading="lazy" />
+            </div>
+          </article>
         </div>
       </section>
 
-      <section id="contact" class="cta-wrap reveal">
-        <a class="cta-circle" href="./public/docs/minji_resume.pdf" target="_blank" rel="noreferrer" aria-label="김민지 이력서 보기">
-          <div>
-            <p class="cta-label">Download</p>
-            <p class="cta-main">
-              Resume<br />
-              & Portfolio
-            </p>
-            <p class="cta-arrow">↗</p>
-          </div>
-        </a>
-      </section>
-
-      <footer class="footer">
+      <footer id="contact" class="footer">
         <div class="line"></div>
         <div class="footer-row">
           <p class="footer-item">© 2026 Minji Kim. All rights reserved.</p>
@@ -1288,6 +1754,24 @@
           photo.addEventListener("error", function onError() {
             photo.src = "./profile-placeholder.svg";
           });
+        }
+
+        const mountLottie = () => {
+          const lottieRoot = document.getElementById("growth-lottie");
+          if (!lottieRoot || !window.lottie || typeof window.lottie.loadAnimation !== "function") return;
+          window.lottie.loadAnimation({
+            container: lottieRoot,
+            renderer: "svg",
+            loop: !prefersReducedMotion,
+            autoplay: true,
+            path: "./public/graphics/lottie/marketing-brainstorm.json"
+          });
+        };
+
+        if (window.lottie) {
+          mountLottie();
+        } else {
+          window.addEventListener("load", mountLottie, { once: true });
         }
 
         const revealTargets = document.querySelectorAll(".reveal");
@@ -1310,7 +1794,11 @@
 
         const numberNodes = Array.from(document.querySelectorAll("[data-count]"));
         if (numberNodes.length) {
+          const animatedNodes = new WeakSet();
           const runCounter = (node) => {
+            if (animatedNodes.has(node)) return;
+            animatedNodes.add(node);
+
             const target = Number(node.getAttribute("data-count") || 0);
             const decimals = Number(node.getAttribute("data-decimals") || 0);
             const prefix = node.getAttribute("data-prefix") || "";
@@ -1334,6 +1822,13 @@
             requestAnimationFrame(step);
           };
 
+          numberNodes.forEach((node, index) => {
+            const rect = node.getBoundingClientRect();
+            if (rect.top <= window.innerHeight * 0.95 && rect.bottom >= 0) {
+              setTimeout(() => runCounter(node), Math.min(index * 70, 280));
+            }
+          });
+
           const counterObserver = new IntersectionObserver(
             (entries, observer) => {
               entries.forEach((entry) => {
@@ -1343,7 +1838,7 @@
                 }
               });
             },
-            { threshold: 0.45 }
+            { threshold: 0.15, rootMargin: "0px 0px -5% 0px" }
           );
           numberNodes.forEach((node) => counterObserver.observe(node));
         }

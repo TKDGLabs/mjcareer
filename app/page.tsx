@@ -15,7 +15,7 @@ const projects = [
     copy: "“먹지말고 뿌리자” 카피 중심 A/B 테스트와 상세페이지 구조 재설계로 전환 흐름 정리",
     metric: "CTR 6.08% · 구매 전환 97건",
     thumb: "one",
-    image: "/images/projects/ph40-product.png",
+    image: "/images/projects/ph40-store.png",
     fit: "contain",
     storeLink: "https://smartstore.naver.com/gbb21",
     storeLabel: "펜톡 스마트스토어 보기 ↗"
@@ -26,8 +26,8 @@ const projects = [
     copy: "‘지역명 + 치료’ 키워드 구조 재편으로 블로그/플레이스 노출 흐름 동시 개선",
     metric: "월 조회수 3,149 · 방문자 +24.2%",
     thumb: "two",
-    image: "/images/projects/ph40-store.png",
-    fit: "cover"
+    image: "/images/projects/dental-place-map.png",
+    fit: "contain"
   },
   {
     tag: "0 to 1 Launching",
@@ -93,7 +93,11 @@ export default function Page() {
 
     const countNodes = Array.from(document.querySelectorAll("[data-count]"));
     if (countNodes.length) {
+      const animatedNodes = new WeakSet<Element>();
       const runCounter = (node: Element) => {
+        if (animatedNodes.has(node)) return;
+        animatedNodes.add(node);
+
         const target = Number(node.getAttribute("data-count") || 0);
         const decimals = Number(node.getAttribute("data-decimals") || 0);
         const prefix = node.getAttribute("data-prefix") || "";
@@ -115,6 +119,13 @@ export default function Page() {
         requestAnimationFrame(animate);
       };
 
+      countNodes.forEach((node, index) => {
+        const rect = (node as HTMLElement).getBoundingClientRect();
+        if (rect.top <= window.innerHeight * 0.95 && rect.bottom >= 0) {
+          window.setTimeout(() => runCounter(node), Math.min(index * 70, 280));
+        }
+      });
+
       const counterObserver = new IntersectionObserver(
         (entries, observer) => {
           entries.forEach((entry) => {
@@ -124,7 +135,7 @@ export default function Page() {
             }
           });
         },
-        { threshold: 0.45 }
+        { threshold: 0.15, rootMargin: "0px 0px -5% 0px" }
       );
       countNodes.forEach((node) => counterObserver.observe(node));
       observers.push(counterObserver);
@@ -422,8 +433,8 @@ export default function Page() {
           width: 100%;
           height: 100%;
           object-fit: cover;
-          object-position: center 8%;
-          transform: scale(1.1);
+          object-position: 50% 22%;
+          transform: scale(1.04);
           transform-origin: center top;
         }
 
@@ -973,6 +984,11 @@ export default function Page() {
           .mk-shell {
             width: min(390px, 100%);
             padding: 14px;
+          }
+
+          .mk-photo img {
+            object-position: 50% 20%;
+            transform: scale(1.06);
           }
 
           .mk-stat-value {
