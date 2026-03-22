@@ -14,7 +14,9 @@ const projects = [
     title: "여성 페미닌 에티켓 제품 마케팅",
     copy: "“먹지말고 뿌리자” 카피 중심 A/B 테스트와 상세페이지 구조 재설계로 전환 흐름 정리",
     metric: "CTR 6.08% · 구매 전환 97건",
-    thumb: "one"
+    thumb: "one",
+    storeLink: "https://smartstore.naver.com/gbb21",
+    storeLabel: "펜톡 스마트스토어 보기 ↗"
   },
   {
     tag: "SEO & Local Marketing",
@@ -28,7 +30,9 @@ const projects = [
     title: "마스뚜르조 런칭 사전 구축",
     copy: "시장조사, 스마트스토어 세팅, 상세페이지, 체험단 운영까지 온라인 판매 기반 세팅",
     metric: "홈쇼핑 진행 직전 단계까지 기반 구축",
-    thumb: "three"
+    thumb: "three",
+    storeLink: "https://smartstore.naver.com/masturzo_kr",
+    storeLabel: "마스뚜르조 스마트스토어 보기 ↗"
   }
 ];
 
@@ -589,6 +593,33 @@ export default function Page() {
           color: var(--mk-green);
         }
 
+        .mk-project-actions {
+          margin: 6px 0 0;
+        }
+
+        .mk-project-link {
+          display: inline-flex;
+          align-items: center;
+          gap: 6px;
+          padding: 8px 12px;
+          border-radius: 999px;
+          border: 1px solid #ccd1c6;
+          background: #f7f8f4;
+          font-size: 11px;
+          font-weight: 800;
+          letter-spacing: 0.06em;
+          text-transform: uppercase;
+          color: #3f473d;
+          text-decoration: none;
+          transition: background-color 0.2s ease, border-color 0.2s ease, transform 0.2s ease;
+        }
+
+        .mk-project-link:hover {
+          background: #ecefe7;
+          border-color: #aeb7a8;
+          transform: translateY(-1px);
+        }
+
         .mk-quote {
           margin: 82px auto 16px;
           max-width: 980px;
@@ -1016,6 +1047,13 @@ export default function Page() {
                 <h3 className="mk-project-title">{project.title}</h3>
                 <p className="mk-project-copy">{project.copy}</p>
                 <p className="mk-project-metric">{project.metric}</p>
+                {project.storeLink ? (
+                  <p className="mk-project-actions">
+                    <a className="mk-project-link" href={project.storeLink} target="_blank" rel="noreferrer">
+                      {project.storeLabel}
+                    </a>
+                  </p>
+                ) : null}
               </article>
             ))}
           </div>
