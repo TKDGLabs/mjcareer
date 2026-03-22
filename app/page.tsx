@@ -15,6 +15,8 @@ const projects = [
     copy: "“먹지말고 뿌리자” 카피 중심 A/B 테스트와 상세페이지 구조 재설계로 전환 흐름 정리",
     metric: "CTR 6.08% · 구매 전환 97건",
     thumb: "one",
+    image: "/images/projects/ph40-product.png",
+    fit: "contain",
     storeLink: "https://smartstore.naver.com/gbb21",
     storeLabel: "펜톡 스마트스토어 보기 ↗"
   },
@@ -23,7 +25,9 @@ const projects = [
     title: "치과 블로그·플레이스 최적화",
     copy: "‘지역명 + 치료’ 키워드 구조 재편으로 블로그/플레이스 노출 흐름 동시 개선",
     metric: "월 조회수 3,149 · 방문자 +24.2%",
-    thumb: "two"
+    thumb: "two",
+    image: "/images/projects/ph40-store.png",
+    fit: "cover"
   },
   {
     tag: "0 to 1 Launching",
@@ -31,8 +35,19 @@ const projects = [
     copy: "시장조사, 스마트스토어 세팅, 상세페이지, 체험단 운영까지 온라인 판매 기반 세팅",
     metric: "홈쇼핑 진행 직전 단계까지 기반 구축",
     thumb: "three",
+    image: "/images/projects/masturzo-store.png",
+    fit: "cover",
     storeLink: "https://smartstore.naver.com/masturzo_kr",
     storeLabel: "마스뚜르조 스마트스토어 보기 ↗"
+  },
+  {
+    tag: "Viral & Project Management",
+    title: "성형외과 병원 카페 바이럴 운영",
+    copy: "병원별 커뮤니케이션, 일정 조율, 게시글 기획·업로드·노출 관리까지 운영 프로세스를 표준화",
+    metric: "최대 8개 병원 동시 운영 · 일 최대 25건 실행",
+    thumb: "four",
+    image: "/images/projects/yeouya-cafe.png",
+    fit: "cover"
   }
 ];
 
@@ -533,33 +548,44 @@ export default function Page() {
 
         .mk-project-grid {
           display: grid;
-          grid-template-columns: repeat(3, minmax(0, 1fr));
-          gap: 30px;
+          grid-template-columns: repeat(2, minmax(0, 1fr));
+          gap: 24px;
         }
 
         .mk-project-card {
           display: grid;
-          gap: 14px;
-        }
-
-        .mk-project-thumb {
-          border-radius: 8px;
+          gap: 12px;
           border: 1px solid #d9dbd4;
-          aspect-ratio: 1.22 / 1;
-          overflow: hidden;
+          border-radius: 14px;
+          padding: 12px 12px 14px;
+          background: #f7f8f4;
           box-shadow: var(--mk-shadow);
         }
 
-        .mk-project-thumb.one {
-          background: linear-gradient(150deg, #8c1b17 0%, #dd4b35 40%, #f9d0ad 100%);
+        .mk-project-thumb {
+          margin: 0;
+          border-radius: 10px;
+          border: 1px solid #d4d7ce;
+          aspect-ratio: 16 / 10;
+          overflow: hidden;
+          background: #ecefe8;
         }
 
-        .mk-project-thumb.two {
-          background: linear-gradient(145deg, #d8d8d4 0%, #f0f0ea 55%, #b2b19d 100%);
+        .mk-project-thumb img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+          object-position: center;
+          transition: transform 0.35s ease;
         }
 
-        .mk-project-thumb.three {
-          background: linear-gradient(145deg, #b0b2b2 0%, #6f6760 45%, #55463f 100%);
+        .mk-project-card:hover .mk-project-thumb img {
+          transform: scale(1.02);
+        }
+
+        .mk-project-thumb.fit-contain img {
+          object-fit: contain;
+          background: #f4f5f1;
         }
 
         .mk-project-tag {
@@ -1042,7 +1068,9 @@ export default function Page() {
           <div className="mk-project-grid">
             {projects.map((project) => (
               <article className="mk-project-card" key={project.title}>
-                <div className={`mk-project-thumb ${project.thumb}`} aria-hidden="true" />
+                <figure className={`mk-project-thumb ${project.fit === "contain" ? "fit-contain" : ""}`}>
+                  <img src={project.image} alt={`${project.title} 화면`} loading="lazy" />
+                </figure>
                 <p className="mk-project-tag">{project.tag}</p>
                 <h3 className="mk-project-title">{project.title}</h3>
                 <p className="mk-project-copy">{project.copy}</p>

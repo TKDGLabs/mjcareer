@@ -399,33 +399,44 @@
 
       .project-grid {
         display: grid;
-        grid-template-columns: repeat(3, minmax(0, 1fr));
-        gap: 30px;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 24px;
       }
 
       .project-card {
         display: grid;
-        gap: 14px;
-      }
-
-      .project-thumb {
-        border-radius: 8px;
+        gap: 12px;
         border: 1px solid #d9dbd4;
-        aspect-ratio: 1.22 / 1;
-        overflow: hidden;
+        border-radius: 14px;
+        padding: 12px 12px 14px;
+        background: #f7f8f4;
         box-shadow: var(--shadow);
       }
 
-      .project-thumb.one {
-        background: linear-gradient(150deg, #8c1b17 0%, #dd4b35 40%, #f9d0ad 100%);
+      .project-thumb {
+        margin: 0;
+        border-radius: 10px;
+        border: 1px solid #d4d7ce;
+        aspect-ratio: 16 / 10;
+        overflow: hidden;
+        background: #ecefe8;
       }
 
-      .project-thumb.two {
-        background: linear-gradient(145deg, #d8d8d4 0%, #f0f0ea 55%, #b2b19d 100%);
+      .project-thumb img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: center;
+        transition: transform 0.35s ease;
       }
 
-      .project-thumb.three {
-        background: linear-gradient(145deg, #b0b2b2 0%, #6f6760 45%, #55463f 100%);
+      .project-card:hover .project-thumb img {
+        transform: scale(1.02);
+      }
+
+      .project-thumb.fit-contain img {
+        object-fit: contain;
+        background: #f4f5f1;
       }
 
       .project-tag {
@@ -944,7 +955,13 @@
         <h2 class="section-title">Latest Projects</h2>
         <div class="project-grid">
           <article class="project-card">
-            <div class="project-thumb one" aria-hidden="true"></div>
+            <figure class="project-thumb fit-contain">
+              <img
+                src="./public/images/projects/ph40-product.png"
+                alt="펜톡 여성청결제 제품 이미지"
+                loading="lazy"
+              />
+            </figure>
             <p class="project-tag">Performance & Commerce</p>
             <h3 class="project-title">여성 페미닌 에티켓 제품 마케팅</h3>
             <p class="project-copy">
@@ -964,7 +981,13 @@
           </article>
 
           <article class="project-card">
-            <div class="project-thumb two" aria-hidden="true"></div>
+            <figure class="project-thumb">
+              <img
+                src="./public/images/projects/ph40-store.png"
+                alt="펜톡 스마트스토어 메인 페이지"
+                loading="lazy"
+              />
+            </figure>
             <p class="project-tag">SEO & Local Marketing</p>
             <h3 class="project-title">치과 블로그·플레이스 최적화</h3>
             <p class="project-copy">
@@ -974,7 +997,13 @@
           </article>
 
           <article class="project-card">
-            <div class="project-thumb three" aria-hidden="true"></div>
+            <figure class="project-thumb">
+              <img
+                src="./public/images/projects/masturzo-store.png"
+                alt="마스뚜르조 스마트스토어 메인 페이지"
+                loading="lazy"
+              />
+            </figure>
             <p class="project-tag">0 to 1 Launching</p>
             <h3 class="project-title">마스뚜르조 런칭 사전 구축</h3>
             <p class="project-copy">
@@ -994,7 +1023,13 @@
           </article>
 
           <article class="project-card">
-            <div class="project-thumb two" aria-hidden="true"></div>
+            <figure class="project-thumb">
+              <img
+                src="./public/images/projects/yeouya-cafe.png"
+                alt="여우야 카페 바이럴 운영 화면"
+                loading="lazy"
+              />
+            </figure>
             <p class="project-tag">Viral & Project Management</p>
             <h3 class="project-title">성형외과 병원 카페 바이럴 운영</h3>
             <p class="project-copy">
