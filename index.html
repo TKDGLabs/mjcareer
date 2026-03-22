@@ -3,12 +3,11 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Minji Kim | Marketing Resume Portfolio 2026</title>
+    <title>Minji Kim | Marketing Portfolio 2026</title>
     <meta
       name="description"
-      content="마케터 김민지 포트폴리오. 퍼포먼스/SEO/커머스/바이럴 운영 경험과 성과를 담은 2026 이직용 웹 이력서."
+      content="마케터 김민지 포트폴리오. 의료·뷰티·F&amp;B·커머스 실무 성과를 핵심 지표와 프로젝트로 정리한 2026 웹 이력서."
     />
-    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.12.2/lottie.min.js"></script>
     <style>
       @font-face {
         font-family: "Wanted Sans";
@@ -58,24 +57,16 @@
         font-display: swap;
       }
 
-      @font-face {
-        font-family: "Wanted Sans";
-        src: url("./public/fonts/wanted/WantedSans-ExtraBlack.woff2") format("woff2");
-        font-weight: 950;
-        font-style: normal;
-        font-display: swap;
-      }
-
       :root {
-        --bg: #efefec;
-        --panel: #f6f6f3;
-        --line: #b8b8b2;
-        --text: #171915;
-        --muted: #7f8379;
-        --accent: #df4f39;
-        --green: #557b37;
-        --shadow: 0 16px 40px rgba(18, 20, 18, 0.08);
-        --content-max: 1520px;
+        --bg: #f0efea;
+        --surface: #f8f7f3;
+        --surface-strong: #f4f2eb;
+        --line: #d8d6cf;
+        --text: #131512;
+        --muted: #666b62;
+        --accent: #de5039;
+        --green: #557d37;
+        --shadow: 0 18px 45px rgba(16, 18, 14, 0.07);
       }
 
       * {
@@ -89,15 +80,9 @@
       body {
         margin: 0;
         font-family: "Wanted Sans", sans-serif;
-        background: radial-gradient(circle at 20% 0%, #f4f4f2 0%, var(--bg) 55%);
+        background: radial-gradient(circle at 20% 0%, #f6f5f1 0%, var(--bg) 58%);
         color: var(--text);
         -webkit-font-smoothing: antialiased;
-        text-rendering: geometricPrecision;
-      }
-
-      img {
-        max-width: 100%;
-        display: block;
       }
 
       a {
@@ -105,36 +90,58 @@
         text-decoration: none;
       }
 
-      .container {
-        width: min(var(--content-max), calc(100% - 72px));
+      img {
+        max-width: 100%;
+        display: block;
+      }
+
+      .site {
+        width: min(1240px, calc(100% - 56px));
         margin: 0 auto;
       }
 
-      .top-nav {
+      .topbar {
+        position: sticky;
+        top: 0;
+        z-index: 30;
+        margin-top: 14px;
+        padding: 16px 0;
         display: flex;
-        justify-content: space-between;
         align-items: center;
-        gap: 24px;
-        padding: 24px 0 10px;
+        justify-content: space-between;
+        gap: 20px;
+        backdrop-filter: blur(6px);
+        background: color-mix(in srgb, var(--bg) 88%, transparent 12%);
       }
 
-      .nav-links,
-      .nav-actions {
+      .brand {
+        font-size: 15px;
+        font-weight: 800;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+      }
+
+      .brand small {
+        color: var(--muted);
+        font-weight: 700;
+      }
+
+      .menu {
         display: flex;
-        gap: 22px;
+        gap: 18px;
         flex-wrap: wrap;
       }
 
-      .nav-link {
-        font-size: 10px;
-        font-weight: 700;
-        letter-spacing: 0.12em;
+      .menu a {
+        font-size: 11px;
+        font-weight: 800;
+        letter-spacing: 0.11em;
         text-transform: uppercase;
-        color: #222620;
+        color: #232620;
         position: relative;
       }
 
-      .nav-link::after {
+      .menu a::after {
         content: "";
         position: absolute;
         left: 0;
@@ -145,936 +152,586 @@
         transition: width 0.25s ease;
       }
 
-      .nav-link:hover::after {
+      .menu a:hover::after {
         width: 100%;
       }
 
-      .hero {
-        text-align: center;
-        padding: 68px 0 46px;
+      .divider {
+        width: 100%;
+        height: 1px;
+        background: var(--line);
       }
 
-      .hero-label {
+      .section-kicker {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
         margin: 0;
-        font-size: 12px;
-        font-weight: 700;
-        letter-spacing: 0.11em;
+        font-size: 11px;
+        font-weight: 800;
+        letter-spacing: 0.12em;
         text-transform: uppercase;
-        color: var(--muted);
+        color: #70766b;
       }
 
-      .hero h1 {
-        margin: 20px auto 0;
-        max-width: 1040px;
-        font-family: "Wanted Sans", sans-serif;
-        font-size: clamp(48px, 4.8vw, 82px);
-        line-height: 1.06;
-        letter-spacing: -0.02em;
-        font-weight: 800;
+      .section-kicker::before {
+        content: "";
+        width: 8px;
+        height: 8px;
+        border-radius: 999px;
+        background: var(--accent);
+      }
+
+      .hero {
+        padding: 68px 0 66px;
+      }
+
+      .hero-grid {
+        margin-top: 22px;
+        display: grid;
+        grid-template-columns: minmax(0, 1.1fr) minmax(0, 0.9fr);
+        gap: 52px;
+        align-items: center;
+      }
+
+      .hero-title {
+        margin: 0;
+        font-size: clamp(58px, 6.6vw, 102px);
+        line-height: 0.98;
+        letter-spacing: -0.025em;
+        font-weight: 900;
         word-break: keep-all;
         text-wrap: balance;
       }
 
-      .hero h1 span {
-        display: block;
-      }
-
-      .hero-sub {
-        margin: 22px auto 0;
-        max-width: 780px;
-        font-size: clamp(16px, 1.35vw, 22px);
-        line-height: 1.74;
-        color: #2f352d;
+      .hero-copy {
+        margin: 22px 0 0;
+        max-width: 700px;
+        font-size: clamp(16px, 1.35vw, 21px);
+        line-height: 1.8;
+        color: #31372e;
         word-break: keep-all;
         text-wrap: pretty;
       }
 
-      .profile-block {
-        display: grid;
-        grid-template-columns: minmax(280px, 360px) minmax(380px, 520px) minmax(280px, 360px);
-        gap: 34px;
-        align-items: center;
-        justify-content: center;
-        padding: 30px 0 84px;
-      }
-
-      .profile-block > div:first-child,
-      .profile-block > div:last-child {
-        padding-top: 0;
-      }
-
-      .panel {
-        background: color-mix(in srgb, var(--panel) 86%, white 14%);
-        border: 1px solid color-mix(in srgb, var(--line) 62%, white 38%);
-        border-radius: 22px;
-        padding: 20px 18px;
-        box-shadow: var(--shadow);
-      }
-
-      .panel-title {
-        margin: 0 0 14px;
-        font-size: 10px;
-        font-weight: 800;
-        letter-spacing: 0.15em;
-        text-transform: uppercase;
-        color: #7f8379;
-      }
-
-      .panel p {
-        margin: 0;
-        font-size: 15px;
-        line-height: 1.72;
-        word-break: keep-all;
-      }
-
-      .panel + .panel {
-        margin-top: 16px;
-      }
-
-      .portrait-stack {
-        display: grid;
-        gap: 18px;
-        justify-items: center;
-      }
-
-      .portrait-shell {
-        width: min(460px, 100%);
-        aspect-ratio: 0.86 / 1;
-        border-radius: 240px 240px 126px 126px;
-        border: 1.5px solid color-mix(in srgb, var(--line) 72%, white 28%);
-        background: linear-gradient(180deg, #f7f7f4 0%, #ecece7 100%);
-        padding: 18px;
-        position: relative;
-        box-shadow: var(--shadow);
-      }
-
-      .portrait-shell::before {
-        content: "";
-        position: absolute;
-        inset: -14px;
-        border: 1px dashed color-mix(in srgb, var(--line) 70%, white 30%);
-        border-radius: inherit;
-      }
-
-      .portrait {
-        width: 100%;
-        height: 100%;
-        border-radius: 220px 220px 112px 112px;
-        overflow: hidden;
-        background: #d7dde0;
-      }
-
-      .portrait img {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-        object-position: 50% 22%;
-        transform: scale(1.04);
-        transform-origin: center top;
-      }
-
-      .portrait-caption {
-        text-align: center;
-      }
-
-      .portrait-caption p {
-        margin: 0;
-      }
-
-      .portrait-caption .name {
-        font-family: "Wanted Sans", sans-serif;
-        font-size: clamp(38px, 3.3vw, 52px);
-        font-weight: 800;
-      }
-
-      .portrait-caption .role {
-        margin-top: 4px;
-        font-size: 13px;
-        font-weight: 700;
-        color: #62695f;
-        text-transform: uppercase;
-        letter-spacing: 0.08em;
-      }
-
-      .stat-list {
-        margin: 0;
+      .hero-tags {
+        margin: 24px 0 0;
         padding: 0;
         list-style: none;
-        display: grid;
-        gap: 18px;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 8px;
       }
 
-      .stat-item {
-        border-bottom: 1px solid color-mix(in srgb, var(--line) 60%, white 40%);
-        padding-bottom: 14px;
+      .hero-tags li {
+        border: 1px solid #d0d5ca;
+        border-radius: 999px;
+        background: var(--surface);
+        padding: 8px 12px;
+        font-size: 12px;
+        font-weight: 700;
+        color: #444b40;
       }
 
-      .stat-item:last-child {
-        border-bottom: 0;
-      }
-
-      .stat-label {
-        display: block;
-        font-size: 11px;
-        text-transform: uppercase;
-        letter-spacing: 0.11em;
-        color: #7f8379;
-        margin-bottom: 8px;
-        font-weight: 800;
-      }
-
-      .stat-value {
-        margin: 0;
-        font-family: "Wanted Sans", sans-serif;
-        font-size: clamp(44px, 3.8vw, 68px);
-        line-height: 0.95;
-        letter-spacing: -0.01em;
-        font-weight: 800;
-      }
-
-      .stat-spacer {
-        display: inline-block;
-        width: 0.24em;
-      }
-
-      .stat-desc {
-        margin: 8px 0 0;
+      .hero-note {
+        margin: 18px 0 0;
         font-size: 13px;
-        line-height: 1.55;
-        color: #5f655b;
-        word-break: keep-all;
+        line-height: 1.6;
+        color: var(--muted);
       }
 
-      .confidence-strip {
-        padding: 0 0 54px;
-      }
-
-      .confidence-title {
-        margin: 0;
-        text-align: center;
-        font-family: "Wanted Sans", sans-serif;
-        font-size: clamp(34px, 3.2vw, 48px);
-        line-height: 1.04;
-        font-weight: 800;
-        letter-spacing: -0.01em;
-      }
-
-      .confidence-copy {
-        margin: 12px auto 0;
-        max-width: 920px;
-        text-align: center;
-        font-size: 16px;
-        line-height: 1.74;
-        color: #495046;
-        word-break: keep-all;
-      }
-
-      .confidence-grid {
-        margin-top: 24px;
+      .hero-visual {
+        position: relative;
         display: grid;
-        grid-template-columns: repeat(5, minmax(0, 1fr));
         gap: 12px;
       }
 
-      .confidence-card {
-        border: 1px solid #d5dacf;
-        border-radius: 16px;
-        background: linear-gradient(165deg, #f8faf5 0%, #eef0e9 100%);
-        padding: 14px 13px;
-        box-shadow: 0 10px 24px rgba(18, 20, 18, 0.06);
-      }
-
-      .confidence-head {
-        display: inline-flex;
-        align-items: center;
-        gap: 7px;
-      }
-
-      .confidence-head img {
-        width: 16px;
-        height: 16px;
-        opacity: 0.82;
-      }
-
-      .confidence-label {
+      .hero-scene {
         margin: 0;
-        font-size: 10px;
-        letter-spacing: 0.1em;
-        text-transform: uppercase;
-        font-weight: 800;
-        color: #7d8579;
+        border-radius: 26px;
+        border: 1px solid #cfd3c9;
+        overflow: hidden;
+        aspect-ratio: 4 / 3;
+        background: #dce2e6;
+        box-shadow: var(--shadow);
+        position: relative;
       }
 
-      .confidence-kpi {
-        margin: 8px 0 0;
-        font-family: "Wanted Sans", sans-serif;
-        font-size: clamp(30px, 2.3vw, 40px);
-        line-height: 0.95;
+      .hero-scene img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: center;
+      }
+
+      .hero-scene::after {
+        content: "";
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        height: 38%;
+        background: linear-gradient(180deg, rgba(8, 10, 8, 0) 0%, rgba(8, 10, 8, 0.28) 100%);
+      }
+
+      .scene-caption {
+        display: flex;
+        align-items: flex-end;
+        justify-content: space-between;
+        gap: 12px;
+        padding: 0 2px;
+      }
+
+      .scene-name {
+        margin: 0;
+        font-size: clamp(34px, 3vw, 46px);
+        font-weight: 800;
+        line-height: 1;
+      }
+
+      .scene-role {
+        margin: 0;
+        font-size: 11px;
+        text-transform: uppercase;
+        letter-spacing: 0.11em;
+        color: #61685e;
+        font-weight: 700;
+        white-space: nowrap;
+      }
+
+      .floating-stats {
+        position: absolute;
+        left: 14px;
+        right: 14px;
+        bottom: 14px;
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 8px;
+        pointer-events: none;
+      }
+
+      .float-card {
+        border: 1px solid rgba(204, 208, 198, 0.92);
+        border-radius: 12px;
+        background: rgba(247, 248, 242, 0.92);
+        backdrop-filter: blur(6px);
+        padding: 8px 10px;
+        box-shadow: 0 10px 18px rgba(14, 16, 12, 0.07);
+      }
+
+      .float-label {
+        margin: 0;
+        font-size: 9px;
+        text-transform: uppercase;
+        letter-spacing: 0.09em;
+        color: #687065;
+        font-weight: 800;
+      }
+
+      .float-value {
+        margin: 3px 0 0;
+        font-size: clamp(20px, 2.2vw, 32px);
+        line-height: 1;
         letter-spacing: -0.02em;
         font-weight: 800;
       }
 
-      .confidence-kpi small {
-        font-size: 0.46em;
-        font-weight: 700;
-        color: #5d6459;
+      .float-desc {
+        margin: 3px 0 0;
+        font-size: 10px;
+        line-height: 1.4;
+        color: #4f584e;
       }
 
-      .confidence-note {
-        margin: 8px 0 0;
-        font-size: 12px;
-        line-height: 1.5;
-        color: #555d53;
+      .signal {
+        padding: 62px 0;
+      }
+
+      .section-head {
+        display: grid;
+        gap: 10px;
+        margin-bottom: 26px;
+      }
+
+      .section-head h2 {
+        margin: 0;
+        font-size: clamp(40px, 4.4vw, 68px);
+        line-height: 0.98;
+        letter-spacing: -0.02em;
+        font-weight: 800;
+      }
+
+      .section-head p {
+        margin: 0;
+        max-width: 820px;
+        font-size: 16px;
+        line-height: 1.72;
+        color: #40463d;
         word-break: keep-all;
       }
 
-      .line {
-        height: 1px;
-        width: 100%;
-        background: color-mix(in srgb, var(--line) 82%, white 18%);
-      }
-
-      .section {
-        padding: 88px 0 30px;
-      }
-
-      .section-title {
-        text-align: center;
-        margin: 0 0 42px;
-        font-family: "Wanted Sans", sans-serif;
-        font-size: clamp(46px, 4.6vw, 68px);
-        line-height: 1;
-        font-weight: 800;
-      }
-
-      .showreel {
+      .signal-grid {
         display: grid;
-        grid-template-columns: repeat(5, 1fr);
+        grid-template-columns: repeat(4, minmax(0, 1fr));
         gap: 12px;
       }
 
-      .showreel-item {
-        position: relative;
-        border-radius: 8px;
-        overflow: hidden;
-        aspect-ratio: 1 / 1;
-        border: 1px solid #d9dbd4;
+      .signal-card {
+        border: 1px solid #d3d7cd;
+        border-radius: 14px;
+        background: linear-gradient(165deg, #f8f9f4 0%, #f0f2eb 100%);
+        padding: 14px;
       }
 
-      .showreel-item::before {
-        content: "";
-        position: absolute;
-        inset: 0;
-        background: linear-gradient(135deg, rgba(0, 0, 0, 0.08), transparent 45%);
+      .signal-head {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
       }
 
-      .showreel-item span {
-        position: absolute;
-        left: 12px;
-        bottom: 11px;
+      .signal-head img {
+        width: 16px;
+        height: 16px;
+        opacity: 0.78;
+      }
+
+      .signal-label {
+        margin: 0;
         font-size: 11px;
         font-weight: 800;
-        letter-spacing: 0.04em;
-        color: white;
-        text-shadow: 0 2px 12px rgba(0, 0, 0, 0.4);
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+        color: #737a70;
       }
 
-      .showreel-1 {
-        background: linear-gradient(140deg, #a49a8f 0%, #c5bdb4 60%, #7f7368 100%);
+      .signal-value {
+        margin: 8px 0 0;
+        font-size: clamp(30px, 2.45vw, 42px);
+        font-weight: 800;
+        line-height: 1;
+        letter-spacing: -0.02em;
       }
 
-      .showreel-2 {
-        background: linear-gradient(145deg, #1c2026 0%, #4d535f 42%, #9fa0a5 100%);
+      .signal-meta {
+        margin: 6px 0 0;
+        font-size: 12px;
+        line-height: 1.5;
+        color: #525a50;
       }
 
-      .showreel-3 {
-        background: linear-gradient(145deg, #f1f3f8 0%, #d8ddeb 100%);
-      }
-
-      .showreel-4 {
-        background: linear-gradient(145deg, #b88e53 0%, #efc47d 100%);
-      }
-
-      .showreel-5 {
-        background: linear-gradient(145deg, #06080b 0%, #2f3947 100%);
+      .projects {
+        padding: 72px 0;
       }
 
       .project-grid {
         display: grid;
         grid-template-columns: repeat(2, minmax(0, 1fr));
-        gap: 24px;
+        gap: 22px;
       }
 
       .project-card {
+        border: 1px solid #d5d9cf;
+        border-radius: 16px;
+        background: var(--surface);
+        padding: 14px;
         display: grid;
         gap: 12px;
-        border: 1px solid #d9dbd4;
-        border-radius: 14px;
-        padding: 12px 12px 14px;
-        background: #f7f8f4;
         box-shadow: var(--shadow);
       }
 
       .project-thumb {
         margin: 0;
-        border-radius: 10px;
-        border: 1px solid #d4d7ce;
-        aspect-ratio: 16 / 10;
+        border-radius: 12px;
+        border: 1px solid #d3d7cd;
         overflow: hidden;
-        background: #ecefe8;
+        aspect-ratio: 16 / 10;
+        background: #ecefe7;
       }
 
       .project-thumb img {
         width: 100%;
         height: 100%;
         object-fit: cover;
-        object-position: center;
-        transition: transform 0.35s ease;
-      }
-
-      .project-card:hover .project-thumb img {
-        transform: scale(1.02);
       }
 
       .project-thumb.fit-contain img {
         object-fit: contain;
-        background: #f4f5f1;
+        background: #f4f5f0;
       }
 
       .project-tag {
         margin: 0;
         font-size: 11px;
-        letter-spacing: 0.08em;
-        text-transform: uppercase;
-        color: #878d82;
         font-weight: 700;
+        text-transform: uppercase;
+        letter-spacing: 0.08em;
+        color: #7b8177;
       }
 
       .project-title {
-        margin: 2px 0 0;
-        font-size: clamp(28px, 2.1vw, 38px);
-        line-height: 1.14;
-        font-family: "Wanted Sans", sans-serif;
+        margin: 0;
+        font-size: clamp(31px, 2.35vw, 42px);
+        line-height: 1.08;
         font-weight: 800;
+        letter-spacing: -0.01em;
         word-break: keep-all;
-        text-wrap: balance;
       }
 
       .project-copy {
         margin: 0;
         font-size: 15px;
-        line-height: 1.66;
-        color: #454b41;
+        line-height: 1.68;
+        color: #444b41;
         word-break: keep-all;
-        text-wrap: pretty;
       }
 
       .project-metric {
-        margin: 2px 0 0;
+        margin: 0;
         font-size: 13px;
         font-weight: 800;
         color: var(--green);
       }
 
-      .project-actions {
-        margin-top: 6px;
-      }
-
       .project-link {
+        margin-top: 4px;
         display: inline-flex;
         align-items: center;
         gap: 6px;
-        padding: 8px 12px;
+        width: fit-content;
+        border: 1px solid #c9cec4;
         border-radius: 999px;
-        border: 1px solid #ccd1c6;
-        background: #f7f8f4;
+        background: var(--surface-strong);
+        padding: 8px 12px;
         font-size: 11px;
         font-weight: 800;
         letter-spacing: 0.06em;
         text-transform: uppercase;
-        color: #3f473d;
-        transition: background-color 0.2s ease, border-color 0.2s ease, transform 0.2s ease;
+        color: #3d453c;
+        transition: transform 0.2s ease, background-color 0.2s ease;
       }
 
       .project-link:hover {
-        background: #ecefe7;
-        border-color: #aeb7a8;
         transform: translateY(-1px);
+        background: #e9ece3;
       }
 
-      .growth-section {
-        padding-top: 96px;
+      .experience {
+        padding: 72px 0;
       }
 
-      .growth-lead {
-        margin: -10px auto 0;
-        max-width: 900px;
-        text-align: center;
-        font-size: 18px;
-        line-height: 1.78;
-        color: #3b423b;
-        word-break: keep-all;
-      }
-
-      .growth-grid {
-        margin-top: 42px;
+      .experience-grid {
         display: grid;
-        grid-template-columns: minmax(0, 1.1fr) minmax(0, 0.9fr);
+        grid-template-columns: minmax(0, 1.08fr) minmax(0, 0.92fr);
         gap: 20px;
       }
 
-      .growth-card {
-        border: 1px solid #d6dbd1;
-        border-radius: 24px;
-        background: linear-gradient(165deg, #f8f9f5 0%, #f0f1ec 100%);
+      .timeline {
+        border: 1px solid #d4d8ce;
+        border-radius: 18px;
+        background: var(--surface);
+        padding: 18px;
         box-shadow: var(--shadow);
-        padding: 24px 24px 22px;
       }
 
-      .growth-card-head {
-        display: inline-flex;
-        align-items: center;
+      .timeline-list {
+        margin: 12px 0 0;
+        padding: 0;
+        list-style: none;
+        display: grid;
+        gap: 10px;
+        position: relative;
+      }
+
+      .timeline-list::before {
+        content: "";
+        position: absolute;
+        left: 15px;
+        top: 12px;
+        bottom: 12px;
+        width: 2px;
+        background: linear-gradient(180deg, #a6bc89 0%, #d2d9c8 100%);
+      }
+
+      .timeline-item {
+        display: grid;
+        grid-template-columns: 30px 1fr;
+        gap: 10px;
+        align-items: start;
+      }
+
+      .timeline-dot {
+        z-index: 1;
+        width: 30px;
+        height: 30px;
+        border-radius: 999px;
+        border: 1px solid #c6d0ba;
+        background: #f3f8ea;
+        display: grid;
+        place-items: center;
+      }
+
+      .timeline-dot img {
+        width: 14px;
+        height: 14px;
+      }
+
+      .timeline-body {
+        border: 1px solid #d6dbd1;
+        border-left: 4px solid #8eb05e;
+        border-radius: 12px;
+        background: #f9faf6;
+        padding: 12px 14px;
+      }
+
+      .timeline-date {
+        display: inline-block;
+        font-size: 11px;
+        font-weight: 800;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+        color: #777e74;
+      }
+
+      .timeline-title {
+        margin: 5px 0 0;
+        font-size: 22px;
+        line-height: 1.2;
+        font-weight: 800;
+      }
+
+      .timeline-copy {
+        margin: 5px 0 0;
+        font-size: 14px;
+        line-height: 1.55;
+        color: #495048;
+      }
+
+      .stack-col {
+        display: grid;
+        gap: 12px;
+      }
+
+      .board {
+        border: 1px solid #d4d8ce;
+        border-radius: 18px;
+        background: var(--surface);
+        padding: 16px;
+        box-shadow: var(--shadow);
+      }
+
+      .board h3 {
+        margin: 8px 0 0;
+        font-size: 32px;
+        line-height: 1.05;
+        font-weight: 800;
+      }
+
+      .board-list {
+        margin: 12px 0 0;
+        padding: 0;
+        list-style: none;
+        display: grid;
         gap: 8px;
       }
 
-      .growth-card-head img {
-        width: 18px;
-        height: 18px;
-        opacity: 0.82;
-      }
-
-      .growth-eyebrow {
-        margin: 0;
-        font-size: 11px;
-        font-weight: 800;
-        text-transform: uppercase;
-        letter-spacing: 0.1em;
-        color: #7b8377;
-      }
-
-      .growth-card h3 {
-        margin: 10px 0 0;
-        font-size: clamp(30px, 2.2vw, 40px);
-        line-height: 1.1;
-        font-family: "Wanted Sans", sans-serif;
-        font-weight: 800;
-      }
-
-      .timeline-card {
-        grid-row: span 2;
-      }
-
-      .journey-list {
-        margin: 20px 0 0;
-        padding: 0;
-        list-style: none;
-        display: grid;
-        gap: 15px;
-      }
-
-      .journey-list li {
-        position: relative;
-        padding: 14px 14px 14px 16px;
-        border: 1px solid #d6dbd1;
-        border-left: 4px solid #95b564;
-        border-radius: 14px;
-        background: #f9faf6;
-      }
-
-      .journey-date {
-        display: inline-block;
-        font-size: 11px;
-        text-transform: uppercase;
-        letter-spacing: 0.09em;
-        font-weight: 800;
-        color: #7f867b;
-      }
-
-      .journey-list strong {
-        margin-top: 6px;
-        display: block;
-        font-size: 20px;
-        line-height: 1.24;
-      }
-
-      .journey-list p {
-        margin: 6px 0 0;
-        font-size: 14px;
-        line-height: 1.62;
-        color: #4e554d;
-      }
-
-      .cluster-grid {
-        margin-top: 16px;
-        display: grid;
-        gap: 10px;
-      }
-
-      .cluster-item {
-        padding: 12px 14px;
-        border-radius: 12px;
-        background: #f6f8f3;
-        border: 1px solid #d8ddd3;
-      }
-
-      .cluster-title {
-        margin: 0 0 3px;
-        font-size: 12px;
-        letter-spacing: 0.07em;
-        text-transform: uppercase;
-        font-weight: 800;
-        color: #6c7268;
-      }
-
-      .cluster-item p {
-        margin: 0;
-        font-size: 14px;
-        line-height: 1.55;
-        color: #485047;
-      }
-
-      .toolkit-visual {
-        margin: 14px 0 0;
-        border-radius: 16px;
-        border: 1px solid #d5dad0;
-        background: linear-gradient(130deg, #eff2ea, #f8f9f5);
-        padding: 8px;
-      }
-
-      .toolkit-visual img {
-        width: 100%;
-        height: auto;
-      }
-
-      .lottie-box {
-        margin-top: 10px;
-        border-radius: 14px;
-        border: 1px dashed #c7cec1;
-        background: linear-gradient(155deg, #f3f5ef 0%, #ecefe7 100%);
-        min-height: 190px;
-        display: grid;
-        place-items: center;
-        overflow: hidden;
-      }
-
-      .lottie-canvas {
-        width: 100%;
-        max-width: 320px;
-        height: 180px;
-      }
-
-      .impact-kpis {
-        margin-top: 16px;
-        display: grid;
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-        gap: 10px;
-      }
-
-      .impact-kpis article {
-        border: 1px solid #d6dbd1;
-        border-radius: 12px;
-        background: #fafbf8;
-        padding: 12px 12px 10px;
-      }
-
-      .impact-kpis img {
-        width: 18px;
-        height: 18px;
-        margin-bottom: 8px;
-        opacity: 0.75;
-      }
-
-      .impact-label {
-        margin: 0;
-        font-size: 11px;
-        letter-spacing: 0.07em;
-        text-transform: uppercase;
-        font-weight: 800;
-        color: #7a8174;
-      }
-
-      .impact-value {
-        margin: 5px 0 0;
-        font-family: "Wanted Sans", sans-serif;
-        font-size: clamp(24px, 2.1vw, 32px);
-        line-height: 1;
-        letter-spacing: -0.02em;
-        font-weight: 800;
-      }
-
-      .impact-card .bars {
-        margin-top: 18px;
-      }
-
-      .learning-list {
-        margin: 16px 0 0;
-        padding: 0;
-        list-style: none;
-        display: grid;
-        gap: 10px;
-      }
-
-      .learning-list li {
-        display: grid;
-        gap: 4px;
+      .board-list li {
+        border: 1px solid #d8ddd2;
+        border-radius: 10px;
+        background: #f8faf5;
         padding: 10px 12px;
-        border-radius: 12px;
-        border: 1px solid #d7dcd2;
-        background: #f9faf6;
       }
 
-      .learning-list strong {
+      .board-list strong {
+        display: block;
         font-size: 15px;
         line-height: 1.35;
       }
 
-      .learning-list span {
+      .board-list span {
+        display: block;
+        margin-top: 2px;
         font-size: 12px;
-        color: #5f665d;
-        line-height: 1.4;
+        color: #5e655c;
       }
 
-      .learning-visuals {
-        margin-top: 12px;
+      .progress-list {
+        margin-top: 14px;
         display: grid;
-        grid-template-columns: repeat(2, minmax(0, 1fr));
         gap: 10px;
       }
 
-      .learning-visuals img {
-        width: 100%;
-        border-radius: 12px;
-        border: 1px solid #d7dcd2;
-        background: #f8f9f6;
-        padding: 6px;
-      }
-
-      .quote {
-        margin: 82px auto 16px;
-        max-width: 980px;
-        text-align: center;
-      }
-
-      .quote p {
-        margin: 0;
-        font-family: "Wanted Sans", sans-serif;
-        font-size: clamp(34px, 3.4vw, 52px);
-        line-height: 1.28;
-        letter-spacing: -0.01em;
-        font-weight: 700;
-      }
-
-      .quote span {
-        margin-top: 14px;
-        display: inline-block;
-        font-size: 13px;
-        color: #646a60;
-        font-weight: 700;
-      }
-
-      .experience {
-        display: grid;
-        grid-template-columns: repeat(3, minmax(0, 1fr));
-        gap: 56px;
-        margin-top: 36px;
-      }
-
-      .timeline-col {
-        display: grid;
-        gap: 18px;
-      }
-
-      .timeline-year {
-        margin: 0;
-        font-size: 12px;
-        font-weight: 800;
-        letter-spacing: 0.08em;
-        color: #9aa095;
-      }
-
-      .timeline-item h3 {
-        margin: 0;
-        font-size: clamp(28px, 2.4vw, 36px);
-        line-height: 1.05;
-        font-family: "Wanted Sans", sans-serif;
-        font-weight: 800;
-      }
-
-      .timeline-item p {
-        margin: 5px 0 0;
-        font-size: 14px;
-        line-height: 1.56;
-        color: #60675d;
-      }
-
-      .timeline-item ul {
-        margin: 8px 0 0;
-        padding: 0 0 0 16px;
+      .progress-item {
         display: grid;
         gap: 6px;
       }
 
-      .timeline-item li {
-        font-size: 13px;
-        line-height: 1.5;
-        color: #555d53;
-      }
-
-      .leverage-wrap {
-        margin-top: 26px;
-        display: grid;
-        grid-template-columns: 1fr 1.1fr;
-        gap: 34px;
-        align-items: start;
-      }
-
-      .leverage-copy {
-        font-size: 15px;
-        line-height: 1.72;
-        color: #3c433b;
-      }
-
-      .leverage-copy p {
-        margin: 0;
-      }
-
-      .leverage-copy ul {
-        margin: 14px 0 0;
-        padding: 0 0 0 16px;
-      }
-
-      .leverage-copy li {
-        margin: 0 0 8px;
-      }
-
-      .bars {
-        display: grid;
-        gap: 14px;
-      }
-
-      .bar-item {
-        display: grid;
-        gap: 7px;
-      }
-
-      .bar-head {
+      .progress-head {
         display: flex;
         justify-content: space-between;
         align-items: baseline;
       }
 
-      .bar-head span:first-child {
-        font-size: 12px;
+      .progress-head span:first-child {
+        font-size: 11px;
+        font-weight: 800;
+        letter-spacing: 0.08em;
         text-transform: uppercase;
-        letter-spacing: 0.1em;
-        color: #72786d;
-        font-weight: 800;
+        color: #6c7268;
       }
 
-      .bar-head span:last-child {
+      .progress-head span:last-child {
         font-size: 14px;
-        font-family: "Wanted Sans", sans-serif;
         font-weight: 800;
       }
 
-      .bar-track {
+      .progress-track {
         width: 100%;
-        height: 10px;
+        height: 9px;
         border-radius: 999px;
-        background: #dddfd8;
+        background: #dde1d8;
         overflow: hidden;
       }
 
-      .bar-fill {
+      .progress-fill {
         width: 0;
         height: 100%;
         border-radius: 999px;
-        background: linear-gradient(90deg, #5d8f3c 0%, #9fc85a 100%);
-        transition: width 1.2s cubic-bezier(0.22, 1, 0.36, 1);
+        background: linear-gradient(90deg, #5d8f3c 0%, #9dc659 100%);
+        transition: width 1.15s cubic-bezier(0.22, 1, 0.36, 1);
       }
 
-      .cta-wrap {
-        text-align: center;
-        padding: 70px 0 46px;
-      }
-
-      .cta-circle {
-        margin: 0 auto;
-        width: min(360px, 82vw);
-        aspect-ratio: 1 / 1;
-        border-radius: 50%;
-        border: 1.5px dotted #9d9f98;
-        display: grid;
-        place-items: center;
-        background: radial-gradient(circle at 40% 35%, #fdfdfb 0%, #f0f0ed 72%);
-        transition: transform 0.35s ease;
-      }
-
-      .cta-circle:hover {
-        transform: translateY(-4px);
-      }
-
-      .cta-label {
-        margin: 0;
-        font-size: 11px;
-        font-weight: 800;
-        text-transform: uppercase;
-        letter-spacing: 0.1em;
-        color: #8b8f84;
-      }
-
-      .cta-main {
-        margin: 8px 0 0;
-        font-family: "Wanted Sans", sans-serif;
-        font-size: clamp(44px, 6vw, 64px);
-        line-height: 0.96;
-        color: var(--accent);
-        font-weight: 800;
-      }
-
-      .skill-cloud {
-        margin: 8px auto 0;
-        max-width: 1100px;
-        display: flex;
-        justify-content: center;
-        gap: 10px;
-        flex-wrap: wrap;
-      }
-
-      .skill-chip {
-        border: 1px solid #d6dbd1;
-        background: #f8f9f5;
-        border-radius: 999px;
-        padding: 8px 14px;
-        font-size: 12px;
-        font-weight: 700;
-        color: #475045;
-      }
-
-      .cta-arrow {
+      .board-visual {
         margin-top: 12px;
-        font-size: 42px;
-        line-height: 1;
+        border: 1px solid #d7dcd2;
+        border-radius: 12px;
+        background: linear-gradient(150deg, #f0f2ec 0%, #fafaf7 100%);
+        padding: 8px;
+      }
+
+      .board-visual img {
+        width: 100%;
+        height: 186px;
+        object-fit: contain;
       }
 
       .footer {
-        padding: 20px 0 40px;
+        padding: 28px 0 44px;
       }
 
-      .footer-row {
-        border-top: 1px solid color-mix(in srgb, var(--line) 86%, white 14%);
-        margin-top: 12px;
-        padding-top: 24px;
+      .footer-grid {
+        border-top: 1px solid var(--line);
+        padding-top: 20px;
         display: grid;
         grid-template-columns: repeat(3, minmax(0, 1fr));
-        gap: 18px;
+        gap: 14px;
         align-items: center;
       }
 
       .footer-item {
+        margin: 0;
         font-size: 12px;
-        color: #555c53;
         font-weight: 700;
+        color: #565d53;
         letter-spacing: 0.04em;
       }
 
@@ -1088,7 +745,7 @@
 
       .reveal {
         opacity: 0;
-        transform: translateY(24px);
+        transform: translateY(22px);
         transition: opacity 0.65s ease, transform 0.65s cubic-bezier(0.16, 1, 0.3, 1);
       }
 
@@ -1097,241 +754,137 @@
         transform: translateY(0);
       }
 
-      @media (max-width: 1140px) {
-        .container {
-          width: min(var(--content-max), calc(100% - 40px));
+      @media (max-width: 1120px) {
+        .site {
+          width: min(1240px, calc(100% - 34px));
         }
 
-        .profile-block {
+        .hero-grid,
+        .experience-grid {
           grid-template-columns: 1fr;
-          gap: 20px;
-          justify-items: stretch;
-          text-align: left;
         }
 
-        .profile-block > div:first-child,
-        .profile-block > div:last-child {
-          padding-top: 0;
-        }
-
-        .profile-block > div {
-          width: min(640px, 100%);
+        .hero-visual {
+          order: -1;
+          max-width: 760px;
           margin: 0 auto;
         }
 
-        .profile-block > div:nth-child(2) {
-          order: 1;
-          justify-self: center;
+        .floating-stats {
+          left: 12px;
+          right: 12px;
+          bottom: 12px;
         }
 
-        .profile-block > div:nth-child(3) {
-          order: 2;
-        }
-
-        .profile-block > div:nth-child(1) {
-          order: 3;
-        }
-
-        .portrait-caption {
-          text-align: center;
-        }
-
-        .stat-list {
-          width: 100%;
-        }
-
-        .stat-item {
-          padding-bottom: 16px;
-        }
-
-        .project-grid,
-        .experience,
-        .leverage-wrap,
-        .growth-grid {
-          grid-template-columns: 1fr;
-        }
-
-        .confidence-grid {
+        .signal-grid {
           grid-template-columns: repeat(2, minmax(0, 1fr));
-        }
-
-        .confidence-card:last-child {
-          grid-column: span 2;
-        }
-
-        .timeline-card {
-          grid-row: auto;
-        }
-
-        .growth-card {
-          padding: 20px;
-        }
-
-        .quote {
-          margin-top: 56px;
         }
       }
 
       @media (max-width: 760px) {
-        .container {
-          width: min(var(--content-max), calc(100% - 22px));
+        .site {
+          width: min(1240px, calc(100% - 18px));
         }
 
-        .top-nav {
-          padding-top: 18px;
+        .topbar {
+          margin-top: 6px;
+          padding: 12px 0;
         }
 
-        .nav-actions {
-          display: none;
+        .menu {
+          gap: 12px;
+        }
+
+        .menu a {
+          font-size: 10px;
+        }
+
+        .brand {
+          font-size: 13px;
         }
 
         .hero {
-          padding-top: 30px;
+          padding: 42px 0 54px;
         }
 
-        .hero h1 {
-          font-size: clamp(38px, 11.6vw, 54px);
-          line-height: 1.08;
+        .hero-title {
+          font-size: clamp(44px, 12.4vw, 66px);
+          line-height: 1.04;
         }
 
-        .hero-sub {
-          margin-top: 16px;
+        .hero-copy {
           font-size: 15px;
-          line-height: 1.76;
+          line-height: 1.75;
         }
 
-        .panel p {
-          font-size: 13px;
-          line-height: 1.66;
+        .hero-tags li {
+          font-size: 11px;
+          padding: 7px 10px;
         }
 
-        .portrait-shell {
-          width: min(390px, 100%);
-          padding: 14px;
+        .hero-scene {
+          aspect-ratio: 4 / 3;
         }
 
-        .portrait img {
-          object-position: 50% 20%;
-          transform: scale(1.06);
+        .scene-name {
+          font-size: 52px;
         }
 
-        .stat-value {
-          font-size: clamp(40px, 12vw, 56px);
+        .floating-stats {
+          position: static;
+          width: 100%;
+          margin-top: 4px;
+          grid-template-columns: repeat(2, minmax(0, 1fr));
         }
 
-        .project-grid {
-          grid-template-columns: 1fr;
-          gap: 18px;
+        .float-card:last-child {
+          grid-column: span 2;
         }
 
-        .confidence-strip {
-          padding-bottom: 42px;
+        .section-head h2 {
+          font-size: clamp(34px, 10vw, 50px);
         }
 
-        .confidence-title {
-          font-size: clamp(28px, 9vw, 38px);
-        }
-
-        .confidence-copy {
+        .section-head p {
           font-size: 14px;
           line-height: 1.66;
         }
 
-        .confidence-grid {
+        .signal-grid,
+        .project-grid {
           grid-template-columns: 1fr;
-          gap: 10px;
-        }
-
-        .confidence-card {
-          padding: 13px 12px;
-        }
-
-        .confidence-card:last-child {
-          grid-column: auto;
-        }
-
-        .confidence-kpi {
-          font-size: clamp(28px, 9vw, 36px);
         }
 
         .project-card {
-          padding: 12px 12px 14px;
+          padding: 12px;
         }
 
         .project-thumb {
           aspect-ratio: 4 / 3;
         }
 
-        .project-tag {
-          font-size: 10px;
-        }
-
         .project-title {
-          font-size: 30px;
+          font-size: 34px;
         }
 
         .project-copy {
           font-size: 14px;
+          line-height: 1.64;
         }
 
-        .project-link {
-          font-size: 10px;
-          letter-spacing: 0.04em;
-          padding: 8px 10px;
+        .timeline-title {
+          font-size: 20px;
         }
 
-        .section {
-          padding-top: 56px;
-        }
-
-        .growth-section {
-          padding-top: 62px;
-        }
-
-        .growth-lead {
-          font-size: 15px;
-          line-height: 1.72;
-          margin-top: -4px;
-        }
-
-        .growth-card h3 {
-          font-size: clamp(24px, 8vw, 34px);
-        }
-
-        .journey-list li {
-          padding: 12px;
-        }
-
-        .journey-list strong {
-          font-size: 18px;
-        }
-
-        .impact-kpis {
-          grid-template-columns: 1fr 1fr;
-        }
-
-        .impact-value {
+        .board h3 {
           font-size: 28px;
         }
 
-        .learning-visuals {
+        .footer-grid {
           grid-template-columns: 1fr;
         }
 
-        .showreel {
-          grid-template-columns: repeat(2, 1fr);
-        }
-
-        .showreel-item:last-child {
-          grid-column: span 2;
-          aspect-ratio: 2 / 1;
-        }
-
-        .footer-row {
-          grid-template-columns: 1fr;
-          text-align: center;
-        }
-
+        .footer-item,
         .footer-item.center,
         .footer-item.right {
           text-align: center;
@@ -1344,401 +897,301 @@
         }
 
         .reveal,
-        .bar-fill,
-        .cta-circle {
+        .progress-fill {
           transition: none;
         }
       }
     </style>
   </head>
   <body>
-    <div class="container">
-      <header class="top-nav reveal">
-        <nav class="nav-links" aria-label="메인 탐색">
-          <a class="nav-link" href="#home">Home</a>
-          <a class="nav-link" href="#projects">Projects</a>
-          <a class="nav-link" href="#experience">Experience</a>
-          <a class="nav-link" href="#contact">Contact</a>
+    <div class="site">
+      <header class="topbar reveal">
+        <p class="brand">Minji Kim <small>Marketing Resume 2026</small></p>
+        <nav class="menu" aria-label="메인 메뉴">
+          <a href="#home">Home</a>
+          <a href="#signal">Signal</a>
+          <a href="#projects">Projects</a>
+          <a href="#experience">Experience</a>
+          <a href="#contact">Contact</a>
         </nav>
-        <div class="nav-actions">
-          <a class="nav-link" href="mailto:mjk8410@naver.com">Email</a>
-          <a class="nav-link" href="./public/docs/minji_resume.pdf" target="_blank" rel="noreferrer">Resume PDF</a>
-          <a class="nav-link" href="./public/docs/minji_marketing_portfolio.pdf" target="_blank" rel="noreferrer">Portfolio PDF</a>
-        </div>
       </header>
 
       <section id="home" class="hero reveal">
-        <p class="hero-label">Minji Kim · Marketing Resume 2026</p>
-        <h1>
-          <span>돈 쓰는 맛을 탐구하는</span>
-          <span>마케터 김민지입니다.</span>
-        </h1>
-        <p class="hero-sub">
-          조리학 전공에서 출발해 3년 4개월 동안 의료·뷰티·F&B·커머스 실무를 경험했습니다.
-          콘텐츠 기획부터 광고 운영, 상세페이지, 스마트스토어, 바이럴 PM까지 이어지는
-          실행 중심의 커리어를 만들어왔습니다.
-        </p>
-      </section>
-
-      <section class="profile-block reveal">
-        <div>
-          <article class="panel">
-            <h2 class="panel-title">Career Path</h2>
-            <p>
-              전주대학교 조리학 전공(졸업) 이후, 디자인/AMD 실무를 시작점으로
-              병원 브랜드 마케팅, F&B 프랜차이즈 광고, 신규 커머스 런칭 세팅,
-              성형외과 바이럴 운영까지 영역을 확장해왔습니다.
+        <p class="section-kicker">Main Intro</p>
+        <div class="hero-grid">
+          <div>
+            <h1 class="hero-title">돈 쓰는 맛을 탐구하는<br />마케터 김민지입니다.</h1>
+            <p class="hero-copy">
+              조리학 전공에서 출발해 의료·뷰티·F&amp;B·커머스 실무를 거치며, 콘텐츠 기획부터
+              광고 운영, 상세페이지, 스마트스토어, 바이럴 PM까지 연결되는 실행형 커리어를 쌓았습니다.
             </p>
-          </article>
-          <article class="panel">
-            <h2 class="panel-title">Core Capability</h2>
-            <p>
-              콘텐츠 전략 · 카피라이팅 · SEO · 네이버 검색광고 · 커뮤니티 바이럴 ·
-              상세페이지 기획 · 스마트스토어 구축 · 운영 PM
+            <ul class="hero-tags">
+              <li>콘텐츠 전략</li>
+              <li>퍼포먼스 광고 운영</li>
+              <li>SEO/플레이스 최적화</li>
+              <li>커머스 런칭 세팅</li>
+              <li>다중 프로젝트 PM</li>
+            </ul>
+            <p class="hero-note">
+              핵심 강점: 빠른 실행력, 지표 기반 개선, 병원/브랜드 실무 커뮤니케이션
             </p>
-          </article>
-        </div>
+          </div>
 
-        <div class="portrait-stack">
-          <div class="portrait-shell">
-            <figure class="portrait">
+          <aside class="hero-visual">
+            <figure class="hero-scene">
               <img
-                id="profile-photo"
-                src="./profile-photo.jpg"
-                alt="마케터 김민지 증명사진"
-                loading="eager"
+                id="hero-scene-image"
+                src="./public/images/hero/minji-office-ai.png"
+                alt="대시보드를 보며 팀과 협업 중인 마케터 김민지 이미지"
               />
             </figure>
-          </div>
-          <div class="portrait-caption">
-            <p class="name">Minji Kim</p>
-            <p class="role">Performance · Commerce · Viral · SEO</p>
-          </div>
-        </div>
+            <div class="scene-caption">
+              <p class="scene-name">Minji Kim</p>
+              <p class="scene-role">Performance · Commerce · Viral · SEO</p>
+            </div>
 
-        <div>
-          <ul class="stat-list">
-            <li class="stat-item">
-              <span class="stat-label">Career</span>
-              <p class="stat-value">
-                <span data-count="3" data-suffix="년">0년</span>
-                <span class="stat-spacer" aria-hidden="true"></span>
-                <span data-count="4" data-suffix="개월">0개월</span>
-              </p>
-              <p class="stat-desc">마케팅 실무 경력(2022.09 - 현재)</p>
-            </li>
-            <li class="stat-item">
-              <span class="stat-label">광고 카피 성과</span>
-              <p class="stat-value">
-                <span data-count="6.08" data-decimals="2" data-suffix="%">0.00%</span>
-              </p>
-              <p class="stat-desc">여성 페미닌 에티켓 제품 CTR</p>
-            </li>
-            <li class="stat-item">
-              <span class="stat-label">전환 결과</span>
-              <p class="stat-value">
-                <span data-count="97" data-suffix="건">0건</span>
-              </p>
-              <p class="stat-desc">상세페이지 기획 및 운영으로 구매 전환</p>
-            </li>
-            <li class="stat-item">
-              <span class="stat-label">운영 효율</span>
-              <p class="stat-value">
-                <span data-count="8">0</span>
-                /
-                <span data-count="25">0</span>
-              </p>
-              <p class="stat-desc">최대 8개 병원 동시 운영 · 일 최대 25건 바이럴 작업</p>
-            </li>
-          </ul>
+            <div class="floating-stats">
+              <article class="float-card">
+                <p class="float-label">광고 카피 성과</p>
+                <p class="float-value"><span data-count="6.08" data-decimals="2" data-suffix="%">0.00%</span></p>
+                <p class="float-desc">여성 페미닌 에티켓 제품 CTR</p>
+              </article>
+
+              <article class="float-card">
+                <p class="float-label">전환 성과</p>
+                <p class="float-value"><span data-count="97" data-suffix="건">0건</span></p>
+                <p class="float-desc">상세페이지 기획/운영 구매 전환</p>
+              </article>
+
+              <article class="float-card">
+                <p class="float-label">운영 효율</p>
+                <p class="float-value">
+                  <span data-count="8">0</span> / <span data-count="25">0</span>
+                </p>
+                <p class="float-desc">최대 8개 병원 동시 운영 · 일 최대 25건</p>
+              </article>
+            </div>
+          </aside>
         </div>
       </section>
 
-      <section class="confidence-strip reveal" aria-label="채용담당자 신뢰 신호">
-        <h2 class="confidence-title">Hiring Signal Board</h2>
-        <p class="confidence-copy">
-          이력서에서 가장 강한 신호만 추려서 보이면, “실무에서 바로 성과를 낼 사람”이라는 인상이 빠르게 형성됩니다.
-        </p>
-        <div class="confidence-grid">
-          <article class="confidence-card">
-            <header class="confidence-head">
+      <div class="divider"></div>
+
+      <section id="signal" class="signal reveal" aria-label="핵심 성과 요약">
+        <div class="section-head">
+          <p class="section-kicker">Core Signal</p>
+          <h2>핵심 성과 요약</h2>
+          <p>실무자가 바로 확인할 수 있도록 성과 지표와 업무 범위를 간결하게 정리했습니다.</p>
+        </div>
+
+        <div class="signal-grid">
+          <article class="signal-card">
+            <header class="signal-head">
               <img src="./public/graphics/icons/schedule.svg" alt="" aria-hidden="true" />
-              <p class="confidence-label">Career Scope</p>
+              <p class="signal-label">Career</p>
             </header>
-            <p class="confidence-kpi">
+            <p class="signal-value">
               <span data-count="3" data-suffix="년">0년</span>
-              <small><span data-count="4" data-suffix="개월">0개월</span></small>
+              <span data-count="4" data-suffix="개월">0개월</span>
             </p>
-            <p class="confidence-note">2022.09부터 현재까지 실무 연속성 유지</p>
+            <p class="signal-meta">2022.09 - 현재 · 실무 연속성 유지</p>
           </article>
 
-          <article class="confidence-card">
-            <header class="confidence-head">
+          <article class="signal-card">
+            <header class="signal-head">
               <img src="./public/graphics/icons/strategy.svg" alt="" aria-hidden="true" />
-              <p class="confidence-label">Industry Breadth</p>
+              <p class="signal-label">Industry Breadth</p>
             </header>
-            <p class="confidence-kpi"><span data-count="4">0</span><small>개 산업군</small></p>
-            <p class="confidence-note">의료 · 뷰티 · F&B · 커머스 운영 경험</p>
+            <p class="signal-value"><span data-count="4">0</span>개 산업군</p>
+            <p class="signal-meta">의료 · 뷰티 · F&amp;B · 커머스 실무 운영 경험</p>
           </article>
 
-          <article class="confidence-card">
-            <header class="confidence-head">
+          <article class="signal-card">
+            <header class="signal-head">
               <img src="./public/graphics/icons/pie-chart.svg" alt="" aria-hidden="true" />
-              <p class="confidence-label">Performance</p>
+              <p class="signal-label">Performance</p>
             </header>
-            <p class="confidence-kpi"><span data-count="6.08" data-decimals="2" data-suffix="%">0.00%</span></p>
-            <p class="confidence-note">카피 테스트 기반 CTR 개선 · 구매전환 97건</p>
+            <p class="signal-value"><span data-count="6.08" data-decimals="2" data-suffix="%">0.00%</span></p>
+            <p class="signal-meta">카피 테스트 기반 CTR 개선 · 구매 전환 97건</p>
           </article>
 
-          <article class="confidence-card">
-            <header class="confidence-head">
+          <article class="signal-card">
+            <header class="signal-head">
               <img src="./public/graphics/icons/search.svg" alt="" aria-hidden="true" />
-              <p class="confidence-label">SEO Lift</p>
+              <p class="signal-label">SEO Lift</p>
             </header>
-            <p class="confidence-kpi"><span data-count="24.2" data-prefix="+" data-decimals="1" data-suffix="%">+0.0%</span></p>
-            <p class="confidence-note">월 조회수 3,149 / 플레이스 순위 개선 경험</p>
-          </article>
-
-          <article class="confidence-card">
-            <header class="confidence-head">
-              <img src="./public/graphics/icons/management.svg" alt="" aria-hidden="true" />
-              <p class="confidence-label">Operating Load</p>
-            </header>
-            <p class="confidence-kpi"><span data-count="8">0</span><small> / </small><span data-count="25">0</span></p>
-            <p class="confidence-note">최대 8개 병원 동시 운영 · 일 최대 25건 실행</p>
+            <p class="signal-value"><span data-count="24.2" data-prefix="+" data-decimals="1" data-suffix="%">+0.0%</span></p>
+            <p class="signal-meta">월 조회수 3,149 · 방문자 +24.2% 개선</p>
           </article>
         </div>
       </section>
 
-      <div class="line"></div>
+      <div class="divider"></div>
 
-      <section id="projects" class="section reveal">
-        <h2 class="section-title">Latest Projects</h2>
+      <section id="projects" class="projects reveal" aria-label="주요 프로젝트">
+        <div class="section-head">
+          <p class="section-kicker">Selected Work</p>
+          <h2>Latest Projects</h2>
+          <p>문제 정의부터 실행, 결과 지표, 실제 증빙 이미지까지 한 번에 확인할 수 있도록 구성했습니다.</p>
+        </div>
+
         <div class="project-grid">
           <article class="project-card">
             <figure class="project-thumb fit-contain">
-              <img
-                src="./public/images/projects/ph40-store.png"
-                alt="펜톡 스마트스토어 메인 페이지"
-                loading="lazy"
-              />
+              <img src="./public/images/projects/ph40-product.png" alt="펜톡 밸런스토크 제품 이미지" loading="lazy" />
             </figure>
-            <p class="project-tag">Performance & Commerce</p>
+            <p class="project-tag">Performance &amp; Commerce</p>
             <h3 class="project-title">여성 페미닌 에티켓 제품 마케팅</h3>
             <p class="project-copy">
-              “먹지말고 뿌리자” 카피 중심 A/B 테스트와 상세페이지 구조 재설계로 전환 흐름을 정리했습니다.
+              “먹지말고 뿌리자” 카피 중심 A/B 테스트와 상세페이지 구조 재설계로 전환 흐름을 개선했습니다.
             </p>
             <p class="project-metric">CTR 6.08% · 구매 전환 97건</p>
-            <p class="project-actions">
-              <a
-                class="project-link"
-                href="https://smartstore.naver.com/gbb21"
-                target="_blank"
-                rel="noreferrer"
-              >
-                펜톡 스마트스토어 보기 ↗
-              </a>
-            </p>
+            <a class="project-link" href="https://smartstore.naver.com/gbb21" target="_blank" rel="noreferrer">
+              펜톡 스마트스토어 보기 ↗
+            </a>
           </article>
 
           <article class="project-card">
             <figure class="project-thumb fit-contain">
-              <img
-                src="./public/images/projects/dental-place-map.png"
-                alt="김해365치과 플레이스 지도/노출 화면"
-                loading="lazy"
-              />
+              <img src="./public/images/projects/dental-place-map.png" alt="김해365치과 네이버 플레이스 노출 지도 화면" loading="lazy" />
             </figure>
-            <p class="project-tag">SEO & Local Marketing</p>
+            <p class="project-tag">SEO &amp; Local Marketing</p>
             <h3 class="project-title">치과 블로그·플레이스 최적화</h3>
             <p class="project-copy">
-              ‘지역명 + 치료’ 키워드 구조를 재편해 블로그와 플레이스 노출 흐름을 동시에 개선했습니다.
+              ‘지역명 + 치료’ 키워드 구조로 콘텐츠를 재편해 블로그/플레이스 노출 흐름을 동시에 개선했습니다.
             </p>
             <p class="project-metric">월 조회수 3,149 · 방문자 +24.2%</p>
           </article>
 
           <article class="project-card">
             <figure class="project-thumb">
-              <img
-                src="./public/images/projects/masturzo-store.png"
-                alt="마스뚜르조 스마트스토어 메인 페이지"
-                loading="lazy"
-              />
+              <img src="./public/images/projects/masturzo-store.png" alt="마스뚜르조 스마트스토어 메인 화면" loading="lazy" />
             </figure>
             <p class="project-tag">0 to 1 Launching</p>
             <h3 class="project-title">마스뚜르조 런칭 사전 구축</h3>
             <p class="project-copy">
-              시장조사, 스마트스토어 세팅, 상세페이지, 체험단 운영까지 신규 브랜드 온라인 판매 기반을 세팅했습니다.
+              시장조사부터 스마트스토어 세팅, 상세페이지 기획, 체험단 운영까지 온라인 판매 기반을 구축했습니다.
             </p>
             <p class="project-metric">홈쇼핑 진행 직전 단계까지 구조 구축</p>
-            <p class="project-actions">
-              <a
-                class="project-link"
-                href="https://smartstore.naver.com/masturzo_kr"
-                target="_blank"
-                rel="noreferrer"
-              >
-                마스뚜르조 스마트스토어 보기 ↗
-              </a>
-            </p>
+            <a class="project-link" href="https://smartstore.naver.com/masturzo_kr" target="_blank" rel="noreferrer">
+              마스뚜르조 스마트스토어 보기 ↗
+            </a>
           </article>
 
           <article class="project-card">
-            <figure class="project-thumb">
-              <img
-                src="./public/images/projects/yeouya-cafe.png"
-                alt="여우야 카페 바이럴 운영 화면"
-                loading="lazy"
-              />
+            <figure class="project-thumb fit-contain">
+              <img src="./public/images/projects/yeouya-cafe.png" alt="여우야 카페 바이럴 운영 화면" loading="lazy" />
             </figure>
-            <p class="project-tag">Viral & Project Management</p>
+            <p class="project-tag">Viral &amp; Project Management</p>
             <h3 class="project-title">성형외과 병원 카페 바이럴 운영</h3>
             <p class="project-copy">
-              병원별 담당자와 일정/요청사항을 조율하고 커뮤니티 게시글 기획·업로드·노출관리까지
-              운영 프로세스를 표준화했습니다.
+              병원별 커뮤니케이션·일정 조율·게시글 운영을 체계화해 고관여 업종의 다중 프로젝트를 안정적으로 관리했습니다.
             </p>
             <p class="project-metric">최대 8개 병원 동시 운영 · 일 최대 25건 실행</p>
           </article>
         </div>
       </section>
 
-      <section id="experience" class="section growth-section reveal" aria-label="경력 인포그래픽">
-        <h2 class="section-title">Career Growth Infographic</h2>
-        <p class="growth-lead">
-          조리학 기반 분석 습관에서 출발해 디자인·콘텐츠·퍼포먼스·PM까지 확장한
-          3년 4개월의 성장 흐름을 한 눈에 볼 수 있도록 정리했습니다.
-        </p>
+      <div class="divider"></div>
 
-        <div class="growth-grid">
-          <article class="growth-card timeline-card">
-            <header class="growth-card-head">
-              <img src="./public/graphics/icons/schedule.svg" alt="" aria-hidden="true" />
-              <p class="growth-eyebrow">Step by Step</p>
-            </header>
-            <h3>Career Timeline</h3>
-            <ol class="journey-list">
-              <li>
-                <span class="journey-date">2022.09 - 2023.11</span>
-                <strong>디자인/콘텐츠 제작 기반 구축</strong>
-                <p>위드앤코·지비비에서 상세페이지/배너/AMD 실무로 제작 감각과 업무 속도 확보.</p>
+      <section id="experience" class="experience reveal" aria-label="경력 및 역량">
+        <div class="section-head">
+          <p class="section-kicker">Growth Story</p>
+          <h2>Education &amp; Experience</h2>
+          <p>조리학 기반 분석 습관에서 시작해 디자인, SEO, 커머스, PM으로 확장한 성장 경로입니다.</p>
+        </div>
+
+        <div class="experience-grid">
+          <article class="timeline">
+            <p class="section-kicker">Career Timeline</p>
+            <ol class="timeline-list">
+              <li class="timeline-item">
+                <span class="timeline-dot"><img src="./public/graphics/icons/management.svg" alt="" aria-hidden="true" /></span>
+                <div class="timeline-body">
+                  <span class="timeline-date">2022.09 - 2023.11</span>
+                  <p class="timeline-title">지비비(주) / (주)위드앤코</p>
+                  <p class="timeline-copy">웹디자인·상세페이지·배너 제작, 오픈마켓 AMD, 이벤트 콘텐츠 운영 실무</p>
+                </div>
               </li>
-              <li>
-                <span class="journey-date">2024.02 - 2024.11</span>
-                <strong>SEO/콘텐츠 성과형 마케팅 전환</strong>
-                <p>비디에스에서 치과·뷰티 채널 운영 및 키워드 구조 개선으로 조회/유입 지표 개선.</p>
+
+              <li class="timeline-item">
+                <span class="timeline-dot"><img src="./public/graphics/icons/search.svg" alt="" aria-hidden="true" /></span>
+                <div class="timeline-body">
+                  <span class="timeline-date">2024.02 - 2024.11</span>
+                  <p class="timeline-title">(주)비디에스</p>
+                  <p class="timeline-copy">치과/뷰티 채널 SEO·콘텐츠 운영, 여성 페미닌 제품 광고 기획 및 성과 최적화</p>
+                </div>
               </li>
-              <li>
-                <span class="journey-date">2025.02 - 2025.08</span>
-                <strong>브랜드 런칭 A to Z 실행</strong>
-                <p>브라더스팩토리에서 스마트스토어 세팅, 상세페이지, 시장조사, 광고 운영까지 전개.</p>
+
+              <li class="timeline-item">
+                <span class="timeline-dot"><img src="./public/graphics/icons/strategy.svg" alt="" aria-hidden="true" /></span>
+                <div class="timeline-body">
+                  <span class="timeline-date">2025.02 - 2025.08</span>
+                  <p class="timeline-title">브라더스팩토리(주)</p>
+                  <p class="timeline-copy">당나발포차·강탄 광고 운영, 마스뚜르조 온라인 판매 기반 A to Z 구축</p>
+                </div>
               </li>
-              <li>
-                <span class="journey-date">2025.08 - 현재</span>
-                <strong>다중 프로젝트 PM 운영</strong>
-                <p>우리의이야기에서 고관여 병원 바이럴 운영, 커뮤니케이션·일정·품질 관리 표준화.</p>
+
+              <li class="timeline-item">
+                <span class="timeline-dot"><img src="./public/graphics/icons/achievement.svg" alt="" aria-hidden="true" /></span>
+                <div class="timeline-body">
+                  <span class="timeline-date">2025.08 - Present</span>
+                  <p class="timeline-title">(주)우리의이야기</p>
+                  <p class="timeline-copy">성형외과 병원 바이럴 운영, 다수 병원 PM 커뮤니케이션 및 진행 현황 관리</p>
+                </div>
               </li>
             </ol>
           </article>
 
-          <article class="growth-card toolkit-card">
-            <header class="growth-card-head">
-              <img src="./public/graphics/icons/strategy.svg" alt="" aria-hidden="true" />
-              <p class="growth-eyebrow">Capability Cluster</p>
-            </header>
-            <h3>실무 전환을 만든 핵심 스택</h3>
-            <div class="cluster-grid">
-              <div class="cluster-item">
-                <p class="cluster-title">전략/운영</p>
-                <p>SEO · 키워드 리서치 · 네이버 검색광고 · 커뮤니티 바이럴 · 운영 PM</p>
-              </div>
-              <div class="cluster-item">
-                <p class="cluster-title">크리에이티브</p>
-                <p>카피라이팅 · 상세페이지 기획 · 콘텐츠 캘린더 · 캠페인 아이디어 도출</p>
-              </div>
-              <div class="cluster-item">
-                <p class="cluster-title">툴/데이터</p>
-                <p>Google Analytics · Excel · Photoshop · Illustrator · InDesign</p>
-              </div>
-            </div>
-            <figure class="toolkit-visual">
-              <img src="./public/graphics/marketing/content-creator.svg" alt="콘텐츠 제작 일러스트" loading="lazy" />
-            </figure>
-            <div class="lottie-box" aria-hidden="true">
-              <div id="growth-lottie" class="lottie-canvas"></div>
-            </div>
-          </article>
+          <div class="stack-col">
+            <article class="board">
+              <p class="section-kicker">Capability Board</p>
+              <h3>실무 전환을 만든 핵심 스택</h3>
+              <ul class="board-list">
+                <li><strong>전략/운영</strong><span>SEO · 네이버 검색광고 · 바이럴 · 운영 PM</span></li>
+                <li><strong>크리에이티브</strong><span>카피라이팅 · 상세페이지 기획 · 콘텐츠 구조 설계</span></li>
+                <li><strong>툴/데이터</strong><span>Google Analytics · Excel · Photoshop · Illustrator · InDesign</span></li>
+              </ul>
 
-          <article class="growth-card impact-card">
-            <header class="growth-card-head">
-              <img src="./public/graphics/icons/achievement.svg" alt="" aria-hidden="true" />
-              <p class="growth-eyebrow">Impact Snapshot</p>
-            </header>
-            <h3>숫자로 증명한 실행력</h3>
-            <div class="impact-kpis">
-              <article>
-                <img src="./public/graphics/icons/pie-chart.svg" alt="" aria-hidden="true" />
-                <p class="impact-label">광고 CTR</p>
-                <p class="impact-value"><span data-count="6.08" data-decimals="2" data-suffix="%">0.00%</span></p>
-              </article>
-              <article>
-                <img src="./public/graphics/icons/search.svg" alt="" aria-hidden="true" />
-                <p class="impact-label">SEO 방문자</p>
-                <p class="impact-value"><span data-count="24.2" data-prefix="+" data-decimals="1" data-suffix="%">+0.0%</span></p>
-              </article>
-              <article>
-                <img src="./public/graphics/icons/management.svg" alt="" aria-hidden="true" />
-                <p class="impact-label">동시 운영</p>
-                <p class="impact-value"><span data-count="8">0</span>개 업체</p>
-              </article>
-              <article>
-                <img src="./public/graphics/icons/location.svg" alt="" aria-hidden="true" />
-                <p class="impact-label">일 최대 실행량</p>
-                <p class="impact-value"><span data-count="25">0</span>건</p>
-              </article>
-            </div>
-            <div class="bars" id="skill-bars">
-              <article class="bar-item">
-                <div class="bar-head"><span>Execution</span><span>96</span></div>
-                <div class="bar-track"><div class="bar-fill" data-width="96"></div></div>
-              </article>
-              <article class="bar-item">
-                <div class="bar-head"><span>Multi-Project PM</span><span>92</span></div>
-                <div class="bar-track"><div class="bar-fill" data-width="92"></div></div>
-              </article>
-              <article class="bar-item">
-                <div class="bar-head"><span>Performance/SEO</span><span>89</span></div>
-                <div class="bar-track"><div class="bar-fill" data-width="89"></div></div>
-              </article>
-              <article class="bar-item">
-                <div class="bar-head"><span>Creative Planning</span><span>90</span></div>
-                <div class="bar-track"><div class="bar-fill" data-width="90"></div></div>
-              </article>
-            </div>
-          </article>
+              <div class="progress-list" id="skill-bars">
+                <article class="progress-item">
+                  <div class="progress-head"><span>Execution</span><span>96</span></div>
+                  <div class="progress-track"><div class="progress-fill" data-width="96"></div></div>
+                </article>
+                <article class="progress-item">
+                  <div class="progress-head"><span>Multi-Project PM</span><span>92</span></div>
+                  <div class="progress-track"><div class="progress-fill" data-width="92"></div></div>
+                </article>
+                <article class="progress-item">
+                  <div class="progress-head"><span>Performance/SEO</span><span>89</span></div>
+                  <div class="progress-track"><div class="progress-fill" data-width="89"></div></div>
+                </article>
+                <article class="progress-item">
+                  <div class="progress-head"><span>Creative Planning</span><span>90</span></div>
+                  <div class="progress-track"><div class="progress-fill" data-width="90"></div></div>
+                </article>
+              </div>
+            </article>
 
-          <article class="growth-card learning-card">
-            <header class="growth-card-head">
-              <img src="./public/graphics/icons/search.svg" alt="" aria-hidden="true" />
-              <p class="growth-eyebrow">Learning Curve</p>
-            </header>
-            <h3>꾸준한 학습으로 성장 속도 유지</h3>
-            <ul class="learning-list">
-              <li><strong>전주대학교 한식조리학</strong><span>2018.03 - 2022.02 / 졸업</span></li>
-              <li><strong>러닝스푼즈 디지털 마케팅</strong><span>2023.12 - 2024.03 / 실무 과정 이수</span></li>
-              <li><strong>그린컴퓨터아트학원</strong><span>디지털 광고 디자인 실무(포토샵/일러스트/인디자인)</span></li>
-              <li><strong>HACCP 팀장과정 · 식품 품질관리자</strong><span>데이터 기반 검수/품질관리 습관 체득</span></li>
-            </ul>
-            <div class="learning-visuals">
-              <img src="./public/graphics/marketing/retargeting-strategy.svg" alt="리타게팅 전략 일러스트" loading="lazy" />
-              <img src="./public/graphics/marketing/marketing-funnel.svg" alt="마케팅 퍼널 일러스트" loading="lazy" />
-            </div>
-          </article>
+            <article class="board">
+              <p class="section-kicker">Learning Curve</p>
+              <h3>지속 학습 기반 성장</h3>
+              <ul class="board-list">
+                <li><strong>전주대학교 한식조리학</strong><span>2018.03 - 2022.02 / 졸업</span></li>
+                <li><strong>러닝스푼즈 디지털 마케팅</strong><span>2023.12 - 2024.03 / 실무 과정 이수</span></li>
+                <li><strong>그린컴퓨터아트학원</strong><span>디지털 광고 디자인 실무(포토샵/일러스트/인디자인)</span></li>
+                <li><strong>HACCP 팀장과정 · 식품 품질관리자</strong><span>데이터 기반 검수/품질관리 습관 체득</span></li>
+              </ul>
+              <figure class="board-visual">
+                <img src="./public/graphics/marketing/content-creator.svg" alt="콘텐츠 제작 및 운영 일러스트" loading="lazy" />
+              </figure>
+            </article>
+          </div>
         </div>
       </section>
 
       <footer id="contact" class="footer">
-        <div class="line"></div>
-        <div class="footer-row">
+        <div class="footer-grid">
           <p class="footer-item">© 2026 Minji Kim. All rights reserved.</p>
           <p class="footer-item center">mjk****@naver.com · 010-****-2097</p>
           <p class="footer-item right">SEO · Performance · Viral · Commerce · PM</p>
@@ -1749,33 +1202,16 @@
     <script>
       (function () {
         const prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-        const photo = document.getElementById("profile-photo");
-        if (photo) {
-          photo.addEventListener("error", function onError() {
-            photo.src = "./profile-placeholder.svg";
-          });
-        }
 
-        const mountLottie = () => {
-          const lottieRoot = document.getElementById("growth-lottie");
-          if (!lottieRoot || !window.lottie || typeof window.lottie.loadAnimation !== "function") return;
-          window.lottie.loadAnimation({
-            container: lottieRoot,
-            renderer: "svg",
-            loop: !prefersReducedMotion,
-            autoplay: true,
-            path: "./public/graphics/lottie/marketing-brainstorm.json"
+        const heroSceneImage = document.getElementById("hero-scene-image");
+        if (heroSceneImage) {
+          heroSceneImage.addEventListener("error", function onError() {
+            heroSceneImage.src = "./profile-photo.jpg";
           });
-        };
-
-        if (window.lottie) {
-          mountLottie();
-        } else {
-          window.addEventListener("load", mountLottie, { once: true });
         }
 
         const revealTargets = document.querySelectorAll(".reveal");
-        if (!prefersReducedMotion && revealTargets.length) {
+        if (revealTargets.length && !prefersReducedMotion) {
           const revealObserver = new IntersectionObserver(
             (entries, observer) => {
               entries.forEach((entry) => {
@@ -1785,7 +1221,7 @@
                 }
               });
             },
-            { threshold: 0.18, rootMargin: "0px 0px -8% 0px" }
+            { threshold: 0.12, rootMargin: "0px 0px -6% 0px" }
           );
           revealTargets.forEach((el) => revealObserver.observe(el));
         } else {
@@ -1793,82 +1229,79 @@
         }
 
         const numberNodes = Array.from(document.querySelectorAll("[data-count]"));
-        if (numberNodes.length) {
-          const animatedNodes = new WeakSet();
-          const runCounter = (node) => {
-            if (animatedNodes.has(node)) return;
-            animatedNodes.add(node);
+        const animatedNodes = new WeakSet();
 
-            const target = Number(node.getAttribute("data-count") || 0);
-            const decimals = Number(node.getAttribute("data-decimals") || 0);
-            const prefix = node.getAttribute("data-prefix") || "";
-            const suffix = node.getAttribute("data-suffix") || "";
+        const animateCount = (node) => {
+          if (animatedNodes.has(node)) return;
+          animatedNodes.add(node);
 
-            if (prefersReducedMotion) {
-              node.textContent = `${prefix}${target.toFixed(decimals)}${suffix}`;
-              return;
+          const target = Number(node.getAttribute("data-count") || 0);
+          const decimals = Number(node.getAttribute("data-decimals") || 0);
+          const prefix = node.getAttribute("data-prefix") || "";
+          const suffix = node.getAttribute("data-suffix") || "";
+
+          if (prefersReducedMotion) {
+            node.textContent = prefix + target.toFixed(decimals) + suffix;
+            return;
+          }
+
+          let startTime = null;
+          const duration = 1200;
+          const frame = (timestamp) => {
+            if (!startTime) startTime = timestamp;
+            const progress = Math.min((timestamp - startTime) / duration, 1);
+            const eased = 1 - Math.pow(1 - progress, 3);
+            node.textContent = prefix + (target * eased).toFixed(decimals) + suffix;
+            if (progress < 1) {
+              requestAnimationFrame(frame);
             }
-
-            let startTime = null;
-            const duration = 1200;
-            const step = (timestamp) => {
-              if (!startTime) startTime = timestamp;
-              const progress = Math.min((timestamp - startTime) / duration, 1);
-              const eased = 1 - Math.pow(1 - progress, 3);
-              const value = (target * eased).toFixed(decimals);
-              node.textContent = `${prefix}${value}${suffix}`;
-              if (progress < 1) requestAnimationFrame(step);
-            };
-            requestAnimationFrame(step);
           };
+          requestAnimationFrame(frame);
+        };
 
-          numberNodes.forEach((node, index) => {
-            const rect = node.getBoundingClientRect();
-            if (rect.top <= window.innerHeight * 0.95 && rect.bottom >= 0) {
-              setTimeout(() => runCounter(node), Math.min(index * 70, 280));
-            }
-          });
-
-          const counterObserver = new IntersectionObserver(
+        if (numberNodes.length) {
+          const countObserver = new IntersectionObserver(
             (entries, observer) => {
               entries.forEach((entry) => {
                 if (entry.isIntersecting) {
-                  runCounter(entry.target);
+                  animateCount(entry.target);
                   observer.unobserve(entry.target);
                 }
               });
             },
-            { threshold: 0.15, rootMargin: "0px 0px -5% 0px" }
+            { threshold: 0.16, rootMargin: "0px 0px -4% 0px" }
           );
-          numberNodes.forEach((node) => counterObserver.observe(node));
+          numberNodes.forEach((node) => countObserver.observe(node));
         }
 
-        const bars = document.querySelectorAll(".bar-fill");
+        const bars = document.querySelectorAll(".progress-fill");
         if (bars.length) {
-          const fillBars = () => {
+          const fill = () => {
             bars.forEach((bar) => {
-              bar.style.width = `${Math.min(100, Number(bar.getAttribute("data-width") || 0))}%`;
+              const width = Math.max(0, Math.min(100, Number(bar.getAttribute("data-width") || 0)));
+              bar.style.width = width + "%";
             });
           };
-          if (prefersReducedMotion) {
-            fillBars();
-            return;
-          }
 
-          const barSection = document.getElementById("skill-bars");
-          if (!barSection) return;
-          const barObserver = new IntersectionObserver(
-            (entries, observer) => {
-              entries.forEach((entry) => {
-                if (entry.isIntersecting) {
-                  fillBars();
-                  observer.disconnect();
-                }
-              });
-            },
-            { threshold: 0.3 }
-          );
-          barObserver.observe(barSection);
+          if (prefersReducedMotion) {
+            fill();
+          } else {
+            const barSection = document.getElementById("skill-bars");
+            if (barSection) {
+              const barObserver = new IntersectionObserver(
+                (entries, observer) => {
+                  entries.forEach((entry) => {
+                    if (entry.isIntersecting) {
+                      fill();
+                      observer.disconnect();
+                    }
+                  });
+                },
+                { threshold: 0.35 }
+              );
+              barObserver.observe(barSection);
+            }
+          }
         }
       })();
     </script>
