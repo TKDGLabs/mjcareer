@@ -319,34 +319,42 @@ export default function Page() {
 
         .mk-hero h1 {
           margin: 20px auto 0;
-          max-width: 980px;
+          max-width: 1040px;
           font-family: "Wanted Sans", sans-serif;
-          font-size: clamp(54px, 5.7vw, 96px);
-          line-height: 0.98;
+          font-size: clamp(48px, 4.8vw, 82px);
+          line-height: 1.06;
           letter-spacing: -0.02em;
           font-weight: 500;
+          word-break: keep-all;
+          text-wrap: balance;
+        }
+
+        .mk-hero h1 span {
+          display: block;
         }
 
         .mk-sub {
           margin: 22px auto 0;
-          max-width: 860px;
+          max-width: 780px;
           font-size: clamp(16px, 1.35vw, 22px);
-          line-height: 1.62;
+          line-height: 1.74;
           color: #2f352d;
+          word-break: keep-all;
+          text-wrap: pretty;
         }
 
         .mk-profile {
           display: grid;
-          grid-template-columns: minmax(260px, 320px) minmax(420px, 560px) minmax(260px, 320px);
-          gap: 56px;
-          align-items: start;
+          grid-template-columns: minmax(280px, 360px) minmax(380px, 520px) minmax(280px, 360px);
+          gap: 34px;
+          align-items: center;
           justify-content: center;
-          padding: 38px 0 84px;
+          padding: 30px 0 84px;
         }
 
         .mk-profile > div:first-child,
         .mk-profile > div:last-child {
-          padding-top: 72px;
+          padding-top: 0;
         }
 
         .mk-panel {
@@ -372,8 +380,9 @@ export default function Page() {
 
         .mk-panel p {
           margin: 0;
-          font-size: 14px;
-          line-height: 1.68;
+          font-size: 15px;
+          line-height: 1.72;
+          word-break: keep-all;
         }
 
         .mk-photo-stack {
@@ -383,8 +392,8 @@ export default function Page() {
         }
 
         .mk-shell {
-          width: min(500px, 100%);
-          aspect-ratio: 0.82 / 1;
+          width: min(460px, 100%);
+          aspect-ratio: 0.86 / 1;
           border-radius: 240px 240px 126px 126px;
           border: 1.5px solid color-mix(in srgb, var(--mk-line) 72%, white 28%);
           background: linear-gradient(180deg, #f7f7f4 0%, #ecece7 100%);
@@ -413,7 +422,9 @@ export default function Page() {
           width: 100%;
           height: 100%;
           object-fit: cover;
-          object-position: center top;
+          object-position: center 8%;
+          transform: scale(1.1);
+          transform-origin: center top;
         }
 
         .mk-name {
@@ -464,15 +475,22 @@ export default function Page() {
           margin: 0;
           font-family: "Wanted Sans", sans-serif;
           font-size: clamp(52px, 4.4vw, 74px);
-          line-height: 0.9;
+          line-height: 0.95;
+          letter-spacing: -0.01em;
           font-weight: 500;
+        }
+
+        .mk-stat-spacer {
+          display: inline-block;
+          width: 0.24em;
         }
 
         .mk-stat-desc {
           margin: 8px 0 0;
-          font-size: 12px;
-          line-height: 1.45;
+          font-size: 13px;
+          line-height: 1.55;
           color: #5f655b;
+          word-break: keep-all;
         }
 
         .mk-line {
@@ -600,16 +618,20 @@ export default function Page() {
         .mk-project-title {
           margin: 2px 0 0;
           font-size: clamp(30px, 2.2vw, 40px);
-          line-height: 1.08;
+          line-height: 1.14;
           font-family: "Wanted Sans", sans-serif;
           font-weight: 500;
+          word-break: keep-all;
+          text-wrap: balance;
         }
 
         .mk-project-copy {
           margin: 0;
-          font-size: 14px;
-          line-height: 1.62;
+          font-size: 15px;
+          line-height: 1.66;
           color: #454b41;
+          word-break: keep-all;
+          text-wrap: pretty;
         }
 
         .mk-project-metric {
@@ -879,8 +901,8 @@ export default function Page() {
 
           .mk-profile {
             gap: 20px;
-            justify-items: center;
-            text-align: center;
+            justify-items: stretch;
+            text-align: left;
           }
 
           .mk-profile > div:first-child,
@@ -888,8 +910,30 @@ export default function Page() {
             padding-top: 0;
           }
 
+          .mk-profile > div {
+            width: min(640px, 100%);
+            margin: 0 auto;
+          }
+
+          .mk-profile > div:nth-child(2) {
+            order: 1;
+            justify-self: center;
+          }
+
+          .mk-profile > div:nth-child(3) {
+            order: 2;
+          }
+
+          .mk-profile > div:nth-child(1) {
+            order: 3;
+          }
+
+          .mk-photo-stack {
+            justify-items: center;
+          }
+
           .mk-stat-list {
-            width: min(460px, 100%);
+            width: 100%;
           }
         }
 
@@ -907,7 +951,63 @@ export default function Page() {
           }
 
           .mk-hero {
-            padding-top: 34px;
+            padding-top: 30px;
+          }
+
+          .mk-hero h1 {
+            font-size: clamp(38px, 11.6vw, 54px);
+            line-height: 1.08;
+          }
+
+          .mk-sub {
+            margin-top: 16px;
+            font-size: 15px;
+            line-height: 1.76;
+          }
+
+          .mk-panel p {
+            font-size: 13px;
+            line-height: 1.66;
+          }
+
+          .mk-shell {
+            width: min(390px, 100%);
+            padding: 14px;
+          }
+
+          .mk-stat-value {
+            font-size: clamp(40px, 12vw, 56px);
+          }
+
+          .mk-project-grid {
+            grid-template-columns: 1fr;
+            gap: 18px;
+          }
+
+          .mk-project-card {
+            padding: 12px 12px 14px;
+          }
+
+          .mk-project-thumb {
+            aspect-ratio: 4 / 3;
+          }
+
+          .mk-project-tag {
+            font-size: 10px;
+          }
+
+          .mk-project-title {
+            font-size: 30px;
+          }
+
+          .mk-project-copy {
+            font-size: 14px;
+          }
+
+          .mk-project-link {
+            font-size: 10px;
+            letter-spacing: 0.04em;
+            padding: 8px 10px;
           }
 
           .mk-showreel {
@@ -975,9 +1075,8 @@ export default function Page() {
         <section id="home" className="mk-hero mk-reveal">
           <p className="mk-label">Minji Kim · Marketing Resume 2026</p>
           <h1>
-            돈 쓰는 맛을 탐구하는
-            <br />
-            마케터 김민지입니다.
+            <span>돈 쓰는 맛을 탐구하는</span>
+            <span>마케터 김민지입니다.</span>
           </h1>
           <p className="mk-sub">
             치과·뷰티·F&B·커머스를 넘나들며 SEO, 광고, 바이럴, 상세페이지, 스마트스토어 세팅까지 한
@@ -1015,6 +1114,19 @@ export default function Page() {
 
           <div>
             <ul className="mk-stat-list">
+              <li className="mk-stat-item">
+                <span className="mk-stat-label">Career</span>
+                <p className="mk-stat-value">
+                  <span data-count={3} data-suffix="년">
+                    0년
+                  </span>
+                  <span className="mk-stat-spacer" aria-hidden="true" />
+                  <span data-count={4} data-suffix="개월">
+                    0개월
+                  </span>
+                </p>
+                <p className="mk-stat-desc">마케팅 실무 경력(2022.09 - 현재)</p>
+              </li>
               {stats.map((stat) => (
                 <li className="mk-stat-item" key={stat.label}>
                   <span className="mk-stat-label">{stat.label}</span>
@@ -1033,7 +1145,9 @@ export default function Page() {
               ))}
               <li className="mk-stat-item">
                 <span className="mk-stat-label">멀티 프로젝트</span>
-                <p className="mk-stat-value">8 / 25</p>
+                <p className="mk-stat-value">
+                  <span data-count={8}>0</span> / <span data-count={25}>0</span>
+                </p>
                 <p className="mk-stat-desc">최대 8개 병원 동시 운영 · 일 최대 25건</p>
               </li>
             </ul>

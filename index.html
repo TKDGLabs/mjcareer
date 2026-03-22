@@ -164,34 +164,42 @@
 
       .hero h1 {
         margin: 20px auto 0;
-        max-width: 980px;
+        max-width: 1040px;
         font-family: "Wanted Sans", sans-serif;
-        font-size: clamp(54px, 5.1vw, 88px);
-        line-height: 1.02;
-        letter-spacing: -0.03em;
+        font-size: clamp(48px, 4.8vw, 82px);
+        line-height: 1.06;
+        letter-spacing: -0.02em;
         font-weight: 800;
+        word-break: keep-all;
+        text-wrap: balance;
+      }
+
+      .hero h1 span {
+        display: block;
       }
 
       .hero-sub {
         margin: 22px auto 0;
-        max-width: 860px;
+        max-width: 780px;
         font-size: clamp(16px, 1.35vw, 22px);
-        line-height: 1.62;
+        line-height: 1.74;
         color: #2f352d;
+        word-break: keep-all;
+        text-wrap: pretty;
       }
 
       .profile-block {
         display: grid;
-        grid-template-columns: minmax(260px, 320px) minmax(420px, 560px) minmax(260px, 320px);
-        gap: 56px;
-        align-items: start;
+        grid-template-columns: minmax(280px, 360px) minmax(380px, 520px) minmax(280px, 360px);
+        gap: 34px;
+        align-items: center;
         justify-content: center;
-        padding: 38px 0 84px;
+        padding: 30px 0 84px;
       }
 
       .profile-block > div:first-child,
       .profile-block > div:last-child {
-        padding-top: 72px;
+        padding-top: 0;
       }
 
       .panel {
@@ -213,8 +221,9 @@
 
       .panel p {
         margin: 0;
-        font-size: 14px;
-        line-height: 1.68;
+        font-size: 15px;
+        line-height: 1.72;
+        word-break: keep-all;
       }
 
       .panel + .panel {
@@ -228,8 +237,8 @@
       }
 
       .portrait-shell {
-        width: min(500px, 100%);
-        aspect-ratio: 0.82 / 1;
+        width: min(460px, 100%);
+        aspect-ratio: 0.86 / 1;
         border-radius: 240px 240px 126px 126px;
         border: 1.5px solid color-mix(in srgb, var(--line) 72%, white 28%);
         background: linear-gradient(180deg, #f7f7f4 0%, #ecece7 100%);
@@ -258,7 +267,9 @@
         width: 100%;
         height: 100%;
         object-fit: cover;
-        object-position: center top;
+        object-position: center 8%;
+        transform: scale(1.1);
+        transform-origin: center top;
       }
 
       .portrait-caption {
@@ -315,15 +326,22 @@
         margin: 0;
         font-family: "Wanted Sans", sans-serif;
         font-size: clamp(44px, 3.8vw, 68px);
-        line-height: 0.9;
+        line-height: 0.95;
+        letter-spacing: -0.01em;
         font-weight: 800;
+      }
+
+      .stat-spacer {
+        display: inline-block;
+        width: 0.24em;
       }
 
       .stat-desc {
         margin: 8px 0 0;
-        font-size: 12px;
-        line-height: 1.45;
+        font-size: 13px;
+        line-height: 1.55;
         color: #5f655b;
+        word-break: keep-all;
       }
 
       .line {
@@ -451,16 +469,20 @@
       .project-title {
         margin: 2px 0 0;
         font-size: clamp(28px, 2.1vw, 38px);
-        line-height: 1.08;
+        line-height: 1.14;
         font-family: "Wanted Sans", sans-serif;
         font-weight: 800;
+        word-break: keep-all;
+        text-wrap: balance;
       }
 
       .project-copy {
         margin: 0;
-        font-size: 14px;
-        line-height: 1.62;
+        font-size: 15px;
+        line-height: 1.66;
         color: #454b41;
+        word-break: keep-all;
+        text-wrap: pretty;
       }
 
       .project-metric {
@@ -752,8 +774,8 @@
         .profile-block {
           grid-template-columns: 1fr;
           gap: 20px;
-          justify-items: center;
-          text-align: center;
+          justify-items: stretch;
+          text-align: left;
         }
 
         .profile-block > div:first-child,
@@ -761,8 +783,30 @@
           padding-top: 0;
         }
 
+        .profile-block > div {
+          width: min(640px, 100%);
+          margin: 0 auto;
+        }
+
+        .profile-block > div:nth-child(2) {
+          order: 1;
+          justify-self: center;
+        }
+
+        .profile-block > div:nth-child(3) {
+          order: 2;
+        }
+
+        .profile-block > div:nth-child(1) {
+          order: 3;
+        }
+
+        .portrait-caption {
+          text-align: center;
+        }
+
         .stat-list {
-          width: min(460px, 100%);
+          width: 100%;
         }
 
         .stat-item {
@@ -794,16 +838,63 @@
         }
 
         .hero {
-          padding-top: 34px;
+          padding-top: 30px;
         }
 
         .hero h1 {
-          line-height: 0.97;
+          font-size: clamp(38px, 11.6vw, 54px);
+          line-height: 1.08;
         }
 
         .hero-sub {
-          margin-top: 14px;
-          line-height: 1.55;
+          margin-top: 16px;
+          font-size: 15px;
+          line-height: 1.76;
+        }
+
+        .panel p {
+          font-size: 13px;
+          line-height: 1.66;
+        }
+
+        .portrait-shell {
+          width: min(390px, 100%);
+          padding: 14px;
+        }
+
+        .stat-value {
+          font-size: clamp(40px, 12vw, 56px);
+        }
+
+        .project-grid {
+          grid-template-columns: 1fr;
+          gap: 18px;
+        }
+
+        .project-card {
+          padding: 12px 12px 14px;
+        }
+
+        .project-thumb {
+          aspect-ratio: 4 / 3;
+        }
+
+        .project-tag {
+          font-size: 10px;
+        }
+
+        .project-title {
+          font-size: 30px;
+        }
+
+        .project-copy {
+          font-size: 14px;
+        }
+
+        .project-link {
+          font-size: 10px;
+          letter-spacing: 0.04em;
+          padding: 8px 10px;
         }
 
         .section {
@@ -862,8 +953,8 @@
       <section id="home" class="hero reveal">
         <p class="hero-label">Minji Kim · Marketing Resume 2026</p>
         <h1>
-          돈 쓰는 맛을 탐구하는<br />
-          마케터 김민지입니다.
+          <span>돈 쓰는 맛을 탐구하는</span>
+          <span>마케터 김민지입니다.</span>
         </h1>
         <p class="hero-sub">
           조리학 전공에서 출발해 3년 4개월 동안 의료·뷰티·F&B·커머스 실무를 경험했습니다.
@@ -912,7 +1003,11 @@
           <ul class="stat-list">
             <li class="stat-item">
               <span class="stat-label">Career</span>
-              <p class="stat-value">3년 4개월</p>
+              <p class="stat-value">
+                <span data-count="3" data-suffix="년">0년</span>
+                <span class="stat-spacer" aria-hidden="true"></span>
+                <span data-count="4" data-suffix="개월">0개월</span>
+              </p>
               <p class="stat-desc">마케팅 실무 경력(2022.09 - 현재)</p>
             </li>
             <li class="stat-item">
@@ -931,7 +1026,11 @@
             </li>
             <li class="stat-item">
               <span class="stat-label">운영 효율</span>
-              <p class="stat-value">8 / 25</p>
+              <p class="stat-value">
+                <span data-count="8">0</span>
+                /
+                <span data-count="25">0</span>
+              </p>
               <p class="stat-desc">최대 8개 병원 동시 운영 · 일 최대 25건 바이럴 작업</p>
             </li>
           </ul>
