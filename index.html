@@ -113,11 +113,11 @@
         transform: translateX(-50%);
         z-index: 90;
         width: min(860px, calc(100% - 28px));
-        border: 1px solid rgba(255, 255, 255, 0.22);
+        border: 1px solid rgba(255, 214, 137, 0.26);
         border-radius: 14px;
         backdrop-filter: blur(9px);
-        background: rgba(16, 20, 27, 0.68);
-        box-shadow: 0 14px 30px rgba(3, 5, 10, 0.22);
+        background: rgba(24, 20, 14, 0.72);
+        box-shadow: 0 14px 30px rgba(16, 12, 8, 0.34);
         padding: 10px 14px;
       }
 
@@ -133,7 +133,7 @@
         font-weight: 800;
         letter-spacing: 0.1em;
         text-transform: uppercase;
-        color: rgba(247, 250, 255, 0.95);
+        color: rgba(255, 247, 232, 0.95);
         transition: color 0.2s ease;
       }
 
@@ -172,7 +172,7 @@
         width: 100%;
         min-height: 100svh;
         overflow: hidden;
-        background: #101216;
+        background: #17130d;
         padding: 0;
       }
 
@@ -220,7 +220,7 @@
         overflow: hidden;
         width: 100%;
         height: 100%;
-        background: #151922;
+        background: #1a150f;
         position: relative;
       }
 
@@ -229,7 +229,7 @@
         height: 100%;
         object-fit: cover;
         object-position: center;
-        filter: saturate(0.7) contrast(1.04) brightness(0.84);
+        filter: saturate(0.58) contrast(1.04) brightness(0.82) sepia(0.12);
         animation: heroDrift 14s ease-in-out infinite alternate;
       }
 
@@ -238,9 +238,9 @@
         position: absolute;
         inset: 0;
         background:
-          linear-gradient(180deg, rgba(8, 10, 15, 0.2) 0%, rgba(8, 10, 15, 0.48) 58%, rgba(8, 10, 15, 0.78) 100%),
-          radial-gradient(100% 52% at 50% 84%, rgba(255, 190, 11, 0.22) 0%, rgba(255, 190, 11, 0.02) 56%, rgba(255, 190, 11, 0) 70%),
-          linear-gradient(90deg, rgba(10, 13, 19, 0.44) 0%, rgba(10, 13, 19, 0.12) 48%, rgba(10, 13, 19, 0.44) 100%);
+          linear-gradient(180deg, rgba(16, 12, 8, 0.2) 0%, rgba(16, 12, 8, 0.5) 58%, rgba(16, 12, 8, 0.82) 100%),
+          radial-gradient(102% 54% at 50% 84%, rgba(255, 190, 11, 0.26) 0%, rgba(255, 190, 11, 0.04) 56%, rgba(255, 190, 11, 0) 70%),
+          linear-gradient(90deg, rgba(18, 14, 10, 0.46) 0%, rgba(18, 14, 10, 0.1) 48%, rgba(18, 14, 10, 0.46) 100%);
       }
 
       .scene-name-overlay {
@@ -582,8 +582,8 @@
 
       .project-thumb.seo-focus img {
         object-fit: cover;
-        object-position: 27% 60%;
-        transform: scale(1.45);
+        object-position: 30% 58%;
+        transform: scale(1.38);
         transform-origin: center;
       }
 
@@ -715,21 +715,19 @@
       }
 
       .essay-grid {
-        display: grid;
-        grid-template-columns: minmax(0, 1.02fr) minmax(0, 0.98fr);
-        gap: 20px;
+        display: block;
       }
 
       .essay-stack {
         display: grid;
-        gap: 12px;
+        gap: 14px;
       }
 
       .essay-card {
         border: 1px solid #d4d8e2;
         border-radius: 16px;
         background: #ffffff;
-        padding: 16px;
+        padding: 18px;
         box-shadow: var(--shadow);
         transition: transform 0.28s ease, box-shadow 0.28s ease, border-color 0.28s ease;
       }
@@ -775,43 +773,27 @@
         color: #333c4d;
       }
 
-      .essay-visual {
+      .essay-illustration-card {
+        margin: 0;
         border: 1px solid #d4d8e2;
         border-radius: 16px;
-        background: linear-gradient(160deg, #f8faff 0%, #ffffff 100%);
-        padding: 14px;
-        box-shadow: var(--shadow);
-        display: grid;
-        gap: 12px;
-        align-content: start;
-      }
-
-      .essay-visual figure {
-        margin: 0;
-        border: 1px solid #dce1ee;
-        border-radius: 12px;
         background: #ffffff;
-        min-height: 200px;
+        min-height: 260px;
         display: grid;
         place-items: center;
-        padding: 10px;
+        padding: 14px;
+        box-shadow: var(--shadow);
       }
 
-      .essay-visual img {
+      .essay-illustration-card img {
         width: 100%;
-        max-width: 360px;
+        max-width: 460px;
         height: auto;
       }
 
-      .essay-note {
-        margin: 0;
-        border: 1px solid #dce1ee;
-        border-radius: 10px;
-        background: #ffffff;
-        padding: 10px 12px;
-        font-size: 13px;
-        line-height: 1.62;
-        color: #3c465a;
+      .essay-summary-card h3 {
+        font-size: clamp(24px, 2vw, 32px);
+        line-height: 1.28;
       }
 
       .experience-grid {
@@ -930,6 +912,51 @@
         font-size: 13px;
         line-height: 1.55;
         color: #3d4454;
+        word-break: keep-all;
+      }
+
+      .experience-left {
+        display: grid;
+        gap: 12px;
+        align-content: start;
+      }
+
+      .team-visual-card {
+        padding: 14px;
+      }
+
+      .team-visual-card h3 {
+        margin: 8px 0 0;
+        font-size: 26px;
+        line-height: 1.08;
+        font-weight: 800;
+      }
+
+      .team-visual-figure {
+        margin: 10px 0 0;
+        border: 1px solid #e0e5ee;
+        border-radius: 12px;
+        background: #ffffff;
+        overflow: hidden;
+        aspect-ratio: 16 / 10;
+      }
+
+      .team-visual-figure img {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+        transition: transform 0.45s ease;
+      }
+
+      .team-visual-card:hover .team-visual-figure img {
+        transform: scale(1.03);
+      }
+
+      .team-visual-note {
+        margin: 10px 0 0;
+        font-size: 13px;
+        line-height: 1.6;
+        color: #4b5467;
         word-break: keep-all;
       }
 
@@ -1056,6 +1083,58 @@
         object-fit: contain;
       }
 
+      .conditions {
+        padding: 68px 0;
+      }
+
+      .conditions-grid {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 12px;
+      }
+
+      .condition-card {
+        border: 1px solid #d8dde7;
+        border-radius: 16px;
+        background: #ffffff;
+        padding: 16px;
+        box-shadow: var(--shadow);
+        transition: transform 0.28s ease, box-shadow 0.28s ease, border-color 0.28s ease;
+      }
+
+      .condition-card:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 18px 34px rgba(16, 18, 23, 0.09);
+        border-color: #cfd7e5;
+      }
+
+      .condition-label {
+        margin: 0;
+        font-size: 11px;
+        font-weight: 800;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+        color: #70798a;
+      }
+
+      .condition-value {
+        margin: 8px 0 0;
+        font-size: clamp(34px, 2.4vw, 50px);
+        line-height: 1.04;
+        letter-spacing: -0.02em;
+        font-weight: 800;
+        color: #131722;
+        word-break: keep-all;
+      }
+
+      .condition-meta {
+        margin: 8px 0 0;
+        font-size: 13px;
+        line-height: 1.62;
+        color: #505a6d;
+        word-break: keep-all;
+      }
+
 
       .footer {
         padding: 28px 0 44px;
@@ -1135,7 +1214,7 @@
 
         .experience-grid,
         .letter-grid,
-        .essay-grid {
+        .conditions-grid {
           grid-template-columns: 1fr;
         }
 
@@ -1232,7 +1311,8 @@
         }
 
         .signal-grid,
-        .project-grid {
+        .project-grid,
+        .conditions-grid {
           grid-template-columns: 1fr;
         }
 
@@ -1311,7 +1391,7 @@
 
         .project-thumb.seo-focus img {
           transform: scale(1.28);
-          object-position: 27% 60%;
+          object-position: 30% 58%;
         }
 
         .project-title {
@@ -1321,6 +1401,17 @@
         .project-copy {
           font-size: 14px;
           line-height: 1.64;
+        }
+
+        .essay-card h3,
+        .essay-summary-card h3 {
+          font-size: clamp(22px, 7.4vw, 34px);
+          line-height: 1.3;
+        }
+
+        .essay-illustration-card {
+          min-height: 220px;
+          padding: 12px;
         }
 
         .timeline-title {
@@ -1369,6 +1460,7 @@
           <a href="#experience">Experience</a>
           <a href="#projects">Projects</a>
           <a href="#essay">Essay</a>
+          <a href="#conditions">Conditions</a>
           <a href="#contact">Contact</a>
         </nav>
       </header>
@@ -1427,6 +1519,7 @@
         </div>
 
         <div class="experience-grid">
+          <div class="experience-left">
           <article class="timeline">
             <p class="section-kicker">Career Timeline</p>
             <ol class="timeline-list">
@@ -1499,6 +1592,19 @@
               </li>
             </ol>
           </article>
+
+          <article class="board team-visual-card" aria-label="마케팅 팀 협업 이미지">
+            <p class="section-kicker">Team Collaboration</p>
+            <h3>실행력은 결국 팀 협업에서 완성됩니다</h3>
+            <figure class="team-visual-figure">
+              <img src="./public/graphics/marketing/marketing-team-collaboration.png" alt="마케팅 팀이 데이터 보드를 중심으로 협업하는 일러스트" loading="lazy" />
+            </figure>
+            <p class="team-visual-note">
+              채널별 실행을 하나의 전환 구조로 묶어내고, 광고·콘텐츠·운영 팀과의 정렬을 통해
+              프로젝트 완성도를 높여온 협업형 실무 역량을 담았습니다.
+            </p>
+          </article>
+          </div>
 
           <div class="stack-col">
             <article class="board">
@@ -1782,17 +1888,53 @@
                 <li>다양한 세대와 소통 가능한 콘텐츠/전략 설계</li>
               </ul>
             </article>
-          </div>
 
-          <aside class="essay-visual">
-            <figure>
-              <img src="./public/graphics/marketing/retargeting-strategy.svg" alt="자기소개서 내용을 보조하는 마케팅 커뮤니케이션 일러스트" loading="lazy" />
+            <figure class="essay-illustration-card" aria-label="자기소개서 보조 일러스트">
+              <img src="./public/graphics/marketing/retargeting-strategy.svg" alt="마케팅 커뮤니케이션 일러스트" loading="lazy" />
             </figure>
-            <p class="essay-note">
-              조리학 기반의 관찰·분석 습관을 마케팅 실무로 전환해, 키워드·콘텐츠·광고·커머스를
-              한 흐름으로 연결하는 실행형 커리어를 만들어 왔습니다.
+
+            <article class="essay-card essay-summary-card">
+              <p class="section-kicker">실행 요약</p>
+              <h3>
+                조리학 기반의 관찰·분석 습관을 마케팅 실무로 전환해, 키워드·콘텐츠·광고·커머스를 한 흐름으로 연결하는 실행형 커리어를 만들어 왔습니다.
+              </h3>
+              <p>
+                단순 기획이 아니라 실행-개선-성과까지 이어지는 운영 구조를 만드는 데 강점이 있습니다.
+              </p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <div class="divider"></div>
+
+      <section id="conditions" class="conditions reveal" aria-label="희망 근무 조건">
+        <div class="section-head">
+          <p class="section-kicker">Preferred Conditions</p>
+          <h2>희망 근무 조건</h2>
+          <p>회사와 빠르게 핏을 맞추기 위해, 선호 조건을 명확하게 공유드립니다.</p>
+        </div>
+
+        <div class="conditions-grid">
+          <article class="condition-card">
+            <p class="condition-label">희망 연봉</p>
+            <p class="condition-value">
+              <span data-count="3800">0</span>만원+
             </p>
-          </aside>
+            <p class="condition-meta">성과 책임 범위를 넓히는 포지션 기준 · 협의 가능</p>
+          </article>
+
+          <article class="condition-card">
+            <p class="condition-label">근무 희망 지역</p>
+            <p class="condition-value">서울</p>
+            <p class="condition-meta">강남 · 종로 · 용산 중심 (협의에 따라 인접 권역 가능)</p>
+          </article>
+
+          <article class="condition-card">
+            <p class="condition-label">선호 포지션</p>
+            <p class="condition-value">브랜드 마케터</p>
+            <p class="condition-meta">콘텐츠·퍼포먼스·SEO·커머스를 연결하는 실행형 역할 선호</p>
+          </article>
         </div>
       </section>
 
