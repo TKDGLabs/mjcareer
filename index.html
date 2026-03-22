@@ -592,6 +592,13 @@
         background: #f6f8fc;
       }
 
+      .project-thumb.dangnabal-focus img {
+        object-fit: cover;
+        object-position: center 18%;
+        transform: scale(1.08);
+        transform-origin: center top;
+      }
+
       .project-card:hover .project-thumb img {
         filter: saturate(1.06) contrast(1.02);
       }
@@ -650,6 +657,53 @@
       .project-link:hover {
         transform: translateY(-1px);
         background: #ffefbf;
+      }
+
+      .project-links {
+        margin-top: 4px;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 8px;
+      }
+
+      .project-card-wide {
+        grid-column: 1 / -1;
+        padding: 16px;
+      }
+
+      .project-wide-grid {
+        display: grid;
+        grid-template-columns: minmax(0, 1fr) minmax(0, 1.05fr);
+        gap: 16px;
+        align-items: start;
+      }
+
+      .project-wide-copy {
+        display: grid;
+        gap: 10px;
+      }
+
+      .project-wide-meta {
+        margin: 0;
+        font-size: 12px;
+        font-weight: 700;
+        letter-spacing: 0.06em;
+        text-transform: uppercase;
+        color: #6f7787;
+      }
+
+      .project-points {
+        margin: 0;
+        padding: 0 0 0 18px;
+        display: grid;
+        gap: 6px;
+      }
+
+      .project-points li {
+        font-size: 14px;
+        line-height: 1.58;
+        color: #454f63;
+        word-break: keep-all;
       }
 
       .experience {
@@ -1182,6 +1236,15 @@
           grid-template-columns: 1fr;
         }
 
+        .project-card-wide {
+          grid-column: auto;
+          padding: 12px;
+        }
+
+        .project-wide-grid {
+          grid-template-columns: 1fr;
+        }
+
         .letter {
           padding: 52px 0;
         }
@@ -1572,6 +1635,39 @@
         </div>
 
         <div class="project-grid">
+          <article class="project-card project-card-wide">
+            <div class="project-wide-grid">
+              <figure class="project-thumb dangnabal-focus">
+                <img src="./public/images/projects/dangnabal-blog.jpg" alt="당나발포차 창업 블로그 콘텐츠 화면" loading="lazy" />
+              </figure>
+
+              <div class="project-wide-copy">
+                <p class="project-tag">Franchise Growth · Content + Search Ads</p>
+                <h3 class="project-title">당나발포차 창업 블로그 기획 및 작성</h3>
+                <p class="project-wide-meta">기간: 2025.03 · 약 1개월</p>
+                <p class="project-copy">
+                  가맹 전환을 가로막던 ‘신뢰 가능한 정보 부재’ 문제를 해결하기 위해
+                  점주 경험 스토리와 매출 공개형 콘텐츠를 설계하고, 브랜드 검색 광고를 결합해
+                  검색 상단 점유부터 블로그 랜딩까지 전환 구조를 구축했습니다.
+                </p>
+                <ul class="project-points">
+                  <li>블로그 콘텐츠 운영: 점주 경험 기반 스토리, 매출 공개, 창업 현실 정보 전달</li>
+                  <li>브랜드 검색 광고 집행: ‘당나발포차’ 키워드 상단 점유, 블로그 랜딩 연결</li>
+                  <li>전환 흐름 설계: 검색 → 블로그 유입 → 신뢰 형성 → 가맹/확장 유도</li>
+                </ul>
+                <p class="project-metric">핵심 성과: 한 달 내 신규 지점 3곳 확장 · 노출/클릭/조회수 상승</p>
+                <div class="project-links">
+                  <a class="project-link" href="https://m.blog.naver.com/dangnabal_/223795872389?isFromSearchAddView=true&recommendTrackingCode=0" target="_blank" rel="noreferrer">
+                    창업 사례 글 1 ↗
+                  </a>
+                  <a class="project-link" href="https://m.blog.naver.com/dangnabal_/223795774410?isFromSearchAddView=true&recommendTrackingCode=0" target="_blank" rel="noreferrer">
+                    창업 사례 글 2 ↗
+                  </a>
+                </div>
+              </div>
+            </div>
+          </article>
+
           <article class="project-card">
             <figure class="project-thumb ph40-focus">
               <img src="./public/images/projects/ph40-store.png" alt="피에이치포 밸런스토크 파우더 스마트스토어 메인 화면" loading="lazy" />
@@ -1635,8 +1731,8 @@
           <p class="section-kicker">Self Introduction</p>
           <h2>Self-Introduction Highlights</h2>
           <p>
-            성장과정, 지원동기, 입사 후 포부를 통해 제가 어떤 방식으로 성과를 만드는지 보여드립니다.
-            분석 습관이 실행력으로 연결되는 흐름을 한 번에 읽을 수 있습니다.
+            성장과정·지원동기·입사 후 포부를 하나의 실행 스토리로 압축했습니다.
+            관찰에서 가설을 세우고, 실행과 개선으로 성과를 만드는 저의 방식이 선명하게 드러납니다.
           </p>
         </div>
 
