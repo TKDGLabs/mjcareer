@@ -106,8 +106,12 @@
         }
 
         /* Typography & Readability Fixes */
+        html,
         body {
             background-color: #FFFFFF;
+        }
+
+        body {
             color: #0A0A0A;
             /* 
                Core fix for Korean line-breaking: 
@@ -154,6 +158,8 @@
         .script-write {
             display: inline-block;
             white-space: nowrap;
+            line-height: 1.22;
+            padding-block: 0.06em;
         }
 
         .script-write .char {
@@ -165,6 +171,24 @@
 
         .script-write .char.space {
             width: 0.32em;
+        }
+
+        .script-line {
+            overflow: visible;
+            line-height: 1.18;
+        }
+
+        .script-line + .script-line {
+            margin-top: 0.15em;
+        }
+
+        .hero-script-title {
+            line-height: 1.28;
+        }
+
+        .hero-section {
+            min-height: 100vh;
+            min-height: 100svh;
         }
 
         .reveal.active .script-write .char,
@@ -242,10 +266,20 @@
             border-top: 1px solid #E5E5E5;
         }
 
+        .ops-board {
+            border: 1px solid #E5E5E5;
+            background: #FFFFFF;
+        }
+
+        .ops-cell {
+            background: #FFFFFF;
+            min-height: 150px;
+        }
+
         /* Image treatment - keep real work evidence legible */
         .img-wrapper {
             overflow: hidden;
-            background-color: #F8F8F8;
+            background-color: #FFFFFF;
         }
         .img-wrapper img {
             transition: transform 1.5s cubic-bezier(0.16, 1, 0.3, 1), filter 1s ease;
@@ -353,19 +387,6 @@
             --image-scale: 1.32;
         }
 
-        .ai-frame {
-            overflow: hidden;
-            background: #F4F6F3;
-        }
-
-        .ai-frame img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            object-position: 48% 50%;
-            filter: saturate(0.88) contrast(0.98);
-        }
-
         /* Staggered transition delays */
         .delay-100 { transition-delay: 0.1s; }
         .delay-200 { transition-delay: 0.2s; }
@@ -381,178 +402,186 @@
             Minji<i class="italic font-light">.</i>Kim
         </div>
         <div class="hidden md:flex gap-10 text-[11px] font-semibold uppercase pointer-events-auto">
-            <a href="#about" class="hover:opacity-50 transition-opacity">About</a>
-            <a href="#competency" class="hover:opacity-50 transition-opacity">Competency</a>
-            <a href="#archive" class="hover:opacity-50 transition-opacity">Archive</a>
+            <a href="#profile-summary" class="hover:opacity-50 transition-opacity">Position</a>
+            <a href="#archive" class="hover:opacity-50 transition-opacity">Work Evidence</a>
+            <a href="#competency" class="hover:opacity-50 transition-opacity">How I Work</a>
+            <a href="#career-brief" class="hover:opacity-50 transition-opacity">Brief</a>
             <a href="#contact" class="hover:opacity-50 transition-opacity">Contact</a>
         </div>
     </nav>
 
     <!-- Hero Section -->
-    <section class="min-h-screen flex flex-col justify-center px-6 md:px-12 pt-20 relative">
+    <section class="hero-section flex flex-col justify-center px-6 md:px-12 py-28 md:py-32 relative bg-white">
         <div class="max-w-7xl mx-auto w-full relative z-10 flex flex-col lg:flex-row justify-between items-start lg:items-center gap-16">
             
             <div class="flex-1 w-full mt-20 lg:mt-0">
                 <p class="reveal text-brand-gray text-[11px] uppercase font-semibold mb-6">
-                    Marketer Portfolio
+                    Marketing Planning & Operations
                 </p>
                 
-                <h1 class="font-display text-6xl md:text-8xl lg:text-[112px] leading-[1.05] mb-8 text-brand-black">
-                    <div class="reveal overflow-hidden">
-                        <span class="script-write block font-light" data-write-text="Strategic" data-cursor-delay="0.48">Strategic</span>
+                <h1 class="hero-script-title font-display text-[44px] md:text-7xl lg:text-[92px] mb-8 text-brand-black">
+                    <div class="reveal script-line">
+                        <span class="script-write block font-light" data-write-text="읽고, 정리하고" data-cursor-delay="0.72">읽고, 정리하고</span>
                     </div>
-                    <div class="reveal overflow-hidden delay-100">
-                        <span class="script-write block italic pr-4 text-brand-accent" data-write-text="Execution." data-write-delay="0.18" data-cursor-delay="0.76">Execution.</span>
+                    <div class="reveal script-line delay-100">
+                        <span class="script-write block pr-4 text-brand-accent" data-write-text="실행까지 연결합니다." data-write-delay="0.18" data-cursor-delay="1.1">실행까지 연결합니다.</span>
                     </div>
                 </h1>
 
                 <div class="reveal delay-200 max-w-2xl">
                     <p class="text-brand-black text-lg md:text-2xl font-light leading-[1.6] mb-10">
-                        복잡한 정보는 간결하게, 브랜드의 메시지는 선명하게 다듬어<br class="hidden md:block">
-                        고객을 움직이는 명확한 다음 액션을 설계합니다.<br>
+                        고객 요청 정리, 콘텐츠·채널 운영, 제안 자료 구성,<br class="hidden md:block">
+                        상세페이지·스마트스토어 운영, 프로젝트 일정 관리를 경험했습니다.<br>
                         <span class="block mt-4 text-brand-gray text-base md:text-lg">
-                            의료, 뷰티, F&B, 커머스 등 4개 산업군을 아우르며<br class="hidden md:block">
-                            마케팅 기획부터 매체 최적화, 콘텐츠 운영까지의 전체 퍼널을 매니징한<br class="hidden md:block">
-                            3년 7개월 차 올라운더 마케터 김민지입니다.
+                            의료·뷰티·F&B·커머스 현장에서 일을 실행 단위로 정리해 온<br class="hidden md:block">
+                            콘텐츠·채널 운영 기반의 3년 7개월 경력 마케팅 PM형 실무자 김민지입니다.
                         </span>
                     </p>
-                    <div class="flex gap-8 items-center text-[11px] uppercase font-semibold">
-                        <a href="#archive" class="border-b border-brand-black pb-1 hover:text-brand-gray hover:border-brand-gray transition-colors">View Projects</a>
-                        <a href="./public/docs/minji_resume.pdf" download="260608_김민지_이력서.pdf" class="border-b border-brand-black pb-1 hover:text-brand-gray hover:border-brand-gray transition-colors">Download Resume</a>
+                    <div class="flex flex-wrap gap-x-8 gap-y-4 items-center text-[11px] uppercase font-semibold">
+                        <a href="#archive" class="border-b border-brand-black pb-1 hover:text-brand-gray hover:border-brand-gray transition-colors">Work Evidence</a>
+                        <a href="#career-brief" class="border-b border-brand-black pb-1 hover:text-brand-gray hover:border-brand-gray transition-colors">Career Brief</a>
+                        <a href="./public/docs/minji_resume.pdf" download="260608_김민지_이력서.pdf" class="border-b border-brand-black pb-1 hover:text-brand-gray hover:border-brand-gray transition-colors">Resume PDF</a>
                     </div>
                 </div>
             </div>
 
             <!-- Minimalist Profile Data -->
-            <div class="w-full lg:w-[320px] reveal delay-300">
+            <div class="w-full lg:w-[360px] reveal delay-300">
                 <div class="hairline-t pt-6 mb-6 flex justify-between items-start">
-                    <span class="text-[10px] font-semibold text-brand-gray uppercase">Focus</span>
-                    <span class="text-sm font-light text-right leading-relaxed text-brand-black">다중 프로젝트 PM<br>커뮤니케이션 및 구조화</span>
+                    <span class="text-[10px] font-semibold text-brand-gray uppercase">Career</span>
+                    <span class="text-sm font-light text-right leading-relaxed text-brand-black">3년 7개월 경력<br>콘텐츠·채널 운영 경험</span>
                 </div>
                 <div class="hairline-t pt-6 mb-6 flex justify-between items-start">
-                    <span class="text-[10px] font-semibold text-brand-gray uppercase">Scale</span>
-                    <span class="text-sm font-light text-right leading-relaxed text-brand-black">동시 8개 고객사 관리<br>일 25건 콘텐츠 핸들링</span>
+                    <span class="text-[10px] font-semibold text-brand-gray uppercase">Location</span>
+                    <span class="text-sm font-light text-right leading-relaxed text-brand-black">구미 · 대구권 근무 희망<br>대구 전역 근무 가능</span>
+                </div>
+                <div class="hairline-t pt-6 mb-6 flex justify-between items-start">
+                    <span class="text-[10px] font-semibold text-brand-gray uppercase">Available</span>
+                    <span class="text-sm font-light text-right leading-relaxed text-brand-black">즉시 합류 가능<br>경력직 실무 범위 기여 희망</span>
                 </div>
                 <div class="hairline-t pt-6 flex justify-between items-start">
-                    <span class="text-[10px] font-semibold text-brand-gray uppercase">Core</span>
-                    <span class="text-sm font-light text-right leading-relaxed text-brand-black">퍼포먼스 A/B 테스트<br>브랜드 커머스 구축</span>
+                    <span class="text-[10px] font-semibold text-brand-gray uppercase">Compensation</span>
+                    <span class="text-sm font-light text-right leading-relaxed text-brand-black">제출 이력서 기준<br>역할·책임 범위에 따라 협의</span>
                 </div>
             </div>
 
         </div>
     </section>
 
-    <!-- About Section -->
-    <section id="about" class="py-28 px-6 md:px-12 relative bg-white">
-        <div class="max-w-7xl mx-auto hairline-t pt-24">
-            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-end">
-                <div class="lg:col-span-5 reveal">
-                    <span class="block text-brand-gray text-[11px] font-semibold uppercase mb-5">Profile Note</span>
-                    <h2 class="text-4xl md:text-5xl font-display font-medium leading-tight text-brand-black mb-8">
-                        읽고, 정리하고,<br>
-                        <i class="font-light text-brand-accent">실행까지 연결합니다.</i>
-                    </h2>
-                    <p class="text-brand-gray text-lg leading-[1.7] font-light">
-                        빠르게 움직이는 조직 안에서 흩어진 요청을 구조화하고, 각 담당자가 바로 판단할 수 있는 기준으로 바꾸는 일을 잘합니다. 화려한 한 장보다 실무자가 다시 열어보게 되는 자료, 고객이 다음 행동을 이해하는 문장을 만듭니다.
-                    </p>
-                </div>
-
-                <figure class="lg:col-span-7 reveal delay-100">
-                    <div class="ai-frame aspect-[4/3] w-full">
-                        <img src="./public/images/hero/minji-office-ai-portrait.png" alt="생성형 AI로 제작한 김민지 마케터 업무 콘셉트 이미지">
-                    </div>
-                    <figcaption class="mt-3 text-[11px] leading-relaxed text-brand-gray font-light">
-                        *이 이미지는 생성형 AI로 제작되었습니다.
-                    </figcaption>
-                </figure>
-            </div>
-        </div>
-    </section>
-        
-    <!-- Competency Section -->
-    <section id="competency" class="py-32 px-6 md:px-12 relative bg-white">
-        <div class="max-w-7xl mx-auto hairline-t pt-32">
-            
-            <div class="grid grid-cols-1 lg:grid-cols-12 gap-16">
-                
-                <!-- Section Title -->
-                <div class="lg:col-span-4 relative">
-                    <div class="sticky top-40 reveal">
-                        <h2 class="text-4xl md:text-5xl font-display font-medium leading-tight text-brand-black mb-6">
-                            업무의 해상도를<br>
-                            <i class="font-light text-brand-accent">높이는 방식.</i>
-                        </h2>
-                        <p class="text-brand-gray text-base leading-[1.6] font-light">
-                            마케팅은 단순히 예쁜 콘텐츠를 만드는 것을 넘어, 부서 간의 목표를 정렬하고 실무자가 확신을 가지고 실행할 수 있도록 '명확한 기준'을 세우는 일이라 믿습니다.
-                        </p>
-                    </div>
-                </div>
-
-                <!-- Detail List -->
-                <div class="lg:col-span-8">
-                    
-                    <!-- Item 01 -->
-                    <div class="reveal relative pb-20 hairline-b mb-20">
-                        <span class="block text-brand-gray text-[11px] font-semibold uppercase mb-4">01. Project Management</span>
-                        <h3 class="text-2xl md:text-3xl font-medium mb-6 text-brand-black">요구사항의 완벽한 번역과 일정 통제</h3>
-                        <p class="text-brand-gray text-lg leading-[1.6] font-light mb-8">
-                            복잡한 고객사의 요구를 실행팀이 즉각 작업할 수 있는 명확한 언어로 번역합니다. 최대 8개 성형외과의 마케팅 플랜을 총괄하며, 파편화된 수정 요청을 일원화하고 하루 25건 이상의 콘텐츠 일정을 무결점으로 조율했습니다.
-                        </p>
-                        <ul class="flex flex-wrap gap-x-8 gap-y-3 text-[12px] text-brand-black">
-                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-brand-accent text-[10px]"></i> B2B 커뮤니케이션</li>
-                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-brand-accent text-[10px]"></i> 다중 프로젝트 운영표 관리</li>
-                        </ul>
-                    </div>
-
-                    <!-- Item 02 -->
-                    <div class="reveal relative pb-20 hairline-b mb-20">
-                        <span class="block text-brand-gray text-[11px] font-semibold uppercase mb-4">02. Performance Optimization</span>
-                        <h3 class="text-2xl md:text-3xl font-medium mb-6 text-brand-black">숫자로 증명하는 채널 최적화</h3>
-                        <p class="text-brand-gray text-lg leading-[1.6] font-light mb-8">
-                            직관에만 의존하지 않고 데이터를 기반으로 고객의 행동을 유도합니다. 페미닌 제품의 카피라이팅 A/B 테스트로 최고 CTR 6.08%를 달성했으며, 검색 환경에 맞춘 키워드 구조화로 치과 블로그 방문자를 전월 대비 24.2% 상승시켰습니다.
-                        </p>
-                        <ul class="flex flex-wrap gap-x-8 gap-y-3 text-[12px] text-brand-black">
-                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-brand-accent text-[10px]"></i> A/B 테스트 설계</li>
-                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-brand-accent text-[10px]"></i> 검색엔진(SEO) 전략</li>
-                        </ul>
-                    </div>
-
-                    <!-- Item 03 -->
-                    <div class="reveal relative pb-20">
-                        <span class="block text-brand-gray text-[11px] font-semibold uppercase mb-4">03. Brand Commerce Setup</span>
-                        <h3 class="text-2xl md:text-3xl font-medium mb-6 text-brand-black">시장 조사부터 세일즈 인프라 구축까지</h3>
-                        <p class="text-brand-gray text-lg leading-[1.6] font-light mb-8">
-                            단편적인 채널 운영을 넘어 브랜드 런칭의 A to Z를 직접 세팅합니다. 이탈리아 수입 올리브오일의 국내 도입을 위해 타겟 포지셔닝을 기획하고, 브랜드 상세페이지 제작 및 스마트스토어 커머스 환경을 성공적으로 구축했습니다.
-                        </p>
-                        <ul class="flex flex-wrap gap-x-8 gap-y-3 text-[12px] text-brand-black">
-                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-brand-accent text-[10px]"></i> 시장 및 경쟁사 리서치</li>
-                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-brand-accent text-[10px]"></i> 세일즈 카피라이팅</li>
-                        </ul>
-                    </div>
-
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Archive Section (Projects) -->
-    <section id="archive" class="py-32 px-6 md:px-12 relative bg-[#FDFDFD]">
+    <!-- Work Evidence Section -->
+    <section id="archive" class="py-28 md:py-32 px-6 md:px-12 relative bg-white border-t border-[#E5E5E5]">
         <div class="max-w-7xl mx-auto">
             
-            <div class="reveal mb-20 md:mb-32 flex flex-col md:flex-row justify-between items-start md:items-end border-b border-brand-black pb-8">
+            <div class="reveal mb-14 md:mb-16 flex flex-col md:flex-row justify-between items-start md:items-end border-b border-brand-black pb-8">
                 <div>
                     <h2 class="text-6xl md:text-7xl font-display font-medium text-brand-black leading-none">
-                        Archive<i class="text-brand-accent">.</i>
+                        Work Evidence<i class="text-brand-accent">.</i>
                     </h2>
                 </div>
                 <p class="text-brand-gray text-sm font-light mt-6 md:mt-0 max-w-sm text-left md:text-right">
-                    공개 가능한 실제 운영 화면을 중심으로, 실무자로서의 문제 해결 과정과 실행 범위를 정리했습니다.
+                    공개 가능한 운영 화면과 업무 흐름을 중심으로, 어떤 역할을 맡았고 어떤 기준으로 일을 정리했는지 보여드립니다. 내부 관리자 화면, 매출 데이터, 클라이언트 비공개 자료는 제외했습니다.
                 </p>
+            </div>
+
+            <div id="profile-summary" class="reveal grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-x-10 gap-y-8 mb-24 md:mb-32 scroll-mt-28">
+                <div class="hairline-t pt-6">
+                    <span class="block text-[10px] text-brand-gray font-semibold uppercase mb-3">Position</span>
+                    <p class="text-lg leading-[1.55] text-brand-black">콘텐츠·채널 운영 기반의<br>마케팅 PM형 실무자</p>
+                </div>
+                <div class="hairline-t pt-6">
+                    <span class="block text-[10px] text-brand-gray font-semibold uppercase mb-3">Strength</span>
+                    <p class="text-lg leading-[1.55] text-brand-black">요청 정리 · 일정 관리<br>제안 자료 구성 · 채널 운영</p>
+                </div>
+                <div class="hairline-t pt-6">
+                    <span class="block text-[10px] text-brand-gray font-semibold uppercase mb-3">Experience</span>
+                    <p class="text-lg leading-[1.55] text-brand-black">병원 고객사 · 커머스<br>F&B · 여성 헬스케어</p>
+                </div>
+                <div class="hairline-t pt-6">
+                    <span class="block text-[10px] text-brand-gray font-semibold uppercase mb-3">Work Area</span>
+                    <p class="text-lg leading-[1.55] text-brand-black">구미 · 대구권<br>대구 전역 근무 가능</p>
+                </div>
             </div>
 
             <div class="space-y-40">
                 
                 <!-- Project 01 -->
+                <div class="group">
+                    <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                        <div class="lg:col-span-7 reveal">
+                            <div class="ops-board p-8 md:p-10">
+                                <span class="block text-brand-gray text-[11px] font-semibold uppercase mb-8">Operation Flow</span>
+                                <div class="grid grid-cols-1 sm:grid-cols-2 gap-px bg-[#E5E5E5]">
+                                    <div class="ops-cell p-6 flex flex-col justify-between">
+                                        <span class="text-[10px] text-brand-gray font-semibold uppercase">01. Request</span>
+                                        <strong class="text-2xl font-medium leading-tight mt-10">요청사항 정리</strong>
+                                    </div>
+                                    <div class="ops-cell p-6 flex flex-col justify-between">
+                                        <span class="text-[10px] text-brand-gray font-semibold uppercase">02. Revision</span>
+                                        <strong class="text-2xl font-medium leading-tight mt-10">수정 이력 관리</strong>
+                                    </div>
+                                    <div class="ops-cell p-6 flex flex-col justify-between">
+                                        <span class="text-[10px] text-brand-gray font-semibold uppercase">03. Schedule</span>
+                                        <strong class="text-2xl font-medium leading-tight mt-10">게시 일정 확인</strong>
+                                    </div>
+                                    <div class="ops-cell p-6 flex flex-col justify-between">
+                                        <span class="text-[10px] text-brand-gray font-semibold uppercase">04. Done</span>
+                                        <strong class="text-2xl font-medium leading-tight mt-10">완료 상태 기록</strong>
+                                    </div>
+                                </div>
+                                <p class="text-brand-gray text-sm leading-[1.7] mt-8">
+                                    고객사 운영표, 내부 관리자 화면, 비공개 원고는 공개하지 않고 실제 수행한 운영 항목만 구조화했습니다.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="lg:col-span-5 reveal delay-100 flex flex-col justify-center">
+                            <span class="text-brand-gray text-[11px] font-semibold uppercase mb-4 block">Client Content Operations</span>
+                            <h3 class="text-3xl md:text-4xl font-medium leading-snug text-brand-black mb-6">고객사 콘텐츠 운영 PM</h3>
+                            <p class="text-brand-gray font-light leading-[1.6] mb-8">
+                                다수 병원 고객사의 요청사항, 원고 수정, 게시 일정, 완료 상태를 정리하며 고객 담당자와 실행팀 사이의 커뮤니케이션을 관리했습니다. 공개하기 어려운 세부 운영표 대신, 실제 업무에서 반복적으로 다룬 기준을 중심으로 정리했습니다.
+                            </p>
+                            <div class="grid grid-cols-2 gap-4 hairline-t pt-6">
+                                <div>
+                                    <span class="block text-[10px] text-brand-gray font-semibold uppercase mb-1">Scale</span>
+                                    <span class="text-sm font-medium">최대 8개 고객사</span>
+                                </div>
+                                <div>
+                                    <span class="block text-[10px] text-brand-gray font-semibold uppercase mb-1">Volume</span>
+                                    <span class="text-sm font-medium">일 최대 25건 확인</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 02 -->
+                <div class="group cursor-pointer">
+                    <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                        <div class="lg:col-span-7 lg:order-2 evidence-board w-full reveal">
+                            <div class="evidence-shot tall ratio-4-3">
+                                <img src="./public/images/projects/masturzo-store.png" alt="마스뚜르조 스마트스토어 구축 화면">
+                            </div>
+                        </div>
+                        <div class="lg:col-span-5 lg:order-1 reveal delay-100 flex flex-col justify-center">
+                            <span class="text-brand-gray text-[11px] font-semibold uppercase mb-4 block">Proposal / Commerce Setup</span>
+                            <h3 class="text-3xl md:text-4xl font-medium leading-snug text-brand-black mb-6">제안서·시장조사·커머스 초기 세팅</h3>
+                            <p class="text-brand-gray font-light leading-[1.6] mb-8">
+                                해외 신규 제품 도입 과정에서 시장조사, 경쟁 제품 비교, 제안서 구성, 스마트스토어 상품 등록과 상세페이지 구조 검토에 참여했습니다. 브랜드를 크게 포장하기보다 초기 운영에 필요한 자료와 판매 접점을 정리했습니다.
+                            </p>
+                            <div class="grid grid-cols-2 gap-4 hairline-t pt-6">
+                                <div>
+                                    <span class="block text-[10px] text-brand-gray font-semibold uppercase mb-1">Role</span>
+                                    <span class="text-sm font-medium">Market Research</span>
+                                </div>
+                                <div>
+                                    <span class="block text-[10px] text-brand-gray font-semibold uppercase mb-1">Output</span>
+                                    <span class="text-sm font-medium">Proposal / Store Setup</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 03 -->
                 <div class="group cursor-pointer">
                     <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
                         <div class="lg:col-span-7 evidence-board w-full reveal">
@@ -564,55 +593,26 @@
                             </div>
                         </div>
                         <div class="lg:col-span-5 reveal delay-100 flex flex-col justify-center">
-                            <span class="text-brand-gray text-[11px] font-semibold uppercase mb-4 block">Healthcare / Local Search</span>
-                            <h3 class="text-3xl md:text-4xl font-medium leading-snug text-brand-black mb-6">치과 플레이스 노출 관리 & <br>키워드 순위 점검</h3>
+                            <span class="text-brand-gray text-[11px] font-semibold uppercase mb-4 block">Search / Place / Blog</span>
+                            <h3 class="text-3xl md:text-4xl font-medium leading-snug text-brand-black mb-6">검색·플레이스·블로그 운영</h3>
                             <p class="text-brand-gray font-light leading-[1.6] mb-8">
-                                지역 검색 환경에서 고객사가 어떤 위치와 키워드로 노출되는지 확인하고, 플레이스 순위와 지도 노출 상태를 기준으로 개선 우선순위를 정리했습니다. 단순 업로드가 아니라 검색 결과에서 보이는 방식까지 점검했습니다.
+                                지역 검색 환경에서 노출 상태와 키워드 순위를 확인하고, 콘텐츠 주제와 검색 의도를 정리했습니다. 플레이스, 블로그, 지도 노출처럼 성격이 다른 접점을 분리해 확인했습니다.
                             </p>
                             <div class="grid grid-cols-2 gap-4 hairline-t pt-6">
                                 <div>
-                                    <span class="block text-[10px] text-brand-gray font-semibold uppercase mb-1">Channel</span>
-                                    <span class="text-sm font-medium">Naver Place</span>
+                                    <span class="block text-[10px] text-brand-gray font-semibold uppercase mb-1">Blog Visitors</span>
+                                    <span class="text-sm font-medium">+24.2%</span>
                                 </div>
                                 <div>
-                                    <span class="block text-[10px] text-brand-gray font-semibold uppercase mb-1">Check</span>
-                                    <span class="text-sm font-medium">Keyword Ranking</span>
+                                    <span class="block text-[10px] text-brand-gray font-semibold uppercase mb-1">Monthly Views</span>
+                                    <span class="text-sm font-medium">3,149</span>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
 
-                <!-- Project 02 -->
-                <div class="group cursor-pointer">
-                    <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
-                        <!-- Note: Image on right for desktop layout variation -->
-                        <div class="lg:col-span-7 lg:order-2 evidence-board w-full reveal">
-                            <div class="evidence-shot tall ratio-4-3">
-                                <img src="./public/images/projects/masturzo-store.png" alt="마스뚜르조 스마트스토어 구축 화면">
-                            </div>
-                        </div>
-                        <div class="lg:col-span-5 lg:order-1 reveal delay-100 flex flex-col justify-center">
-                            <span class="text-brand-gray text-[11px] font-semibold uppercase mb-4 block">F&B / Commerce Setup</span>
-                            <h3 class="text-3xl md:text-4xl font-medium leading-snug text-brand-black mb-6">해외 신규 브랜드 런칭 & <br>세일즈 인프라 구축</h3>
-                            <p class="text-brand-gray font-light leading-[1.6] mb-8">
-                                이탈리아 올리브오일 브랜드의 국내 도입 초기 전략을 기획했습니다. 시장 분석을 바탕으로 타겟 페르소나를 설정하고, 제품의 본질을 담은 상세페이지 제작 및 스마트스토어 개설을 주도하여 성공적인 런칭 기반을 다졌습니다.
-                            </p>
-                            <div class="grid grid-cols-2 gap-4 hairline-t pt-6">
-                                <div>
-                                    <span class="block text-[10px] text-brand-gray font-semibold uppercase mb-1">Role</span>
-                                    <span class="text-sm font-medium">Market Research</span>
-                                </div>
-                                <div>
-                                    <span class="block text-[10px] text-brand-gray font-semibold uppercase mb-1">Output</span>
-                                    <span class="text-sm font-medium">Store Launched</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Project 03 -->
+                <!-- Project 04 -->
                 <div class="group cursor-pointer">
                     <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
                         <div class="lg:col-span-7 evidence-board w-full reveal">
@@ -625,25 +625,25 @@
                         </div>
                         <div class="lg:col-span-5 reveal delay-100 flex flex-col justify-center">
                             <span class="text-brand-gray text-[11px] font-semibold uppercase mb-4 block">Women Healthcare / Commerce</span>
-                            <h3 class="text-3xl md:text-4xl font-medium leading-snug text-brand-black mb-6">제품 메시지 정리 & <br>커머스 접점 최적화</h3>
+                            <h3 class="text-3xl md:text-4xl font-medium leading-snug text-brand-black mb-6">커머스 메시지·제품 콘텐츠 정리</h3>
                             <p class="text-brand-gray font-light leading-[1.6] mb-8">
-                                여성 헬스케어 제품의 핵심 메시지를 고객 관점에서 정리하고, 상세페이지와 스토어 노출 흐름을 점검했습니다. 카피라이팅 A/B 테스트와 상품 정보 구조화를 통해 클릭 이후의 이해도를 높이는 방향으로 운영했습니다.
+                                여성 헬스케어 제품의 핵심 메시지와 사용 상황을 고객 관점에서 정리하고, 상세페이지와 스토어 노출 흐름을 점검했습니다. 광고 카피 A/B 테스트와 상품 정보 구조화는 커머스 프로젝트 기준으로 분리해 확인했습니다.
                             </p>
                             <div class="grid grid-cols-2 gap-4 hairline-t pt-6">
                                 <div>
-                                    <span class="block text-[10px] text-brand-gray font-semibold uppercase mb-1">A/B Test</span>
-                                    <span class="text-sm font-medium">Max CTR 6.08%</span>
+                                    <span class="block text-[10px] text-brand-gray font-semibold uppercase mb-1">CTR</span>
+                                    <span class="text-sm font-medium">6.08%</span>
                                 </div>
                                 <div>
-                                    <span class="block text-[10px] text-brand-gray font-semibold uppercase mb-1">SEO Impact</span>
-                                    <span class="text-sm font-medium">Traffic +24.2%</span>
+                                    <span class="block text-[10px] text-brand-gray font-semibold uppercase mb-1">Conversion</span>
+                                    <span class="text-sm font-medium">구매 전환 97건</span>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
 
-                <!-- Project 04 -->
+                <!-- Project 05 -->
                 <div class="group cursor-pointer">
                     <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
                         <div class="lg:col-span-7 lg:order-2 evidence-board w-full reveal">
@@ -656,7 +656,7 @@
                         </div>
                         <div class="lg:col-span-5 lg:order-1 reveal delay-100 flex flex-col justify-center">
                             <span class="text-brand-gray text-[11px] font-semibold uppercase mb-4 block">Blog / Community Media</span>
-                            <h3 class="text-3xl md:text-4xl font-medium leading-snug text-brand-black mb-6">브랜드 블로그와 커뮤니티 <br>콘텐츠 접점 운영</h3>
+                            <h3 class="text-3xl md:text-4xl font-medium leading-snug text-brand-black mb-6">블로그·카페·커뮤니티 운영</h3>
                             <p class="text-brand-gray font-light leading-[1.6] mb-8">
                                 브랜드 블로그와 카페형 커뮤니티 매체에서 사용자가 실제로 마주하는 화면 구조를 기준으로 콘텐츠를 기획했습니다. 게시판, 배너, 본문 흐름을 확인하며 정보가 자연스럽게 읽히는 접점을 만들었습니다.
                             </p>
@@ -679,26 +679,166 @@
         </div>
     </section>
 
+    <!-- How I Work Section -->
+    <section id="competency" class="py-32 px-6 md:px-12 relative bg-white border-t border-[#F0F0F0]">
+        <div class="max-w-7xl mx-auto hairline-t pt-32">
+            
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-16">
+                
+                <!-- Section Title -->
+                <div class="lg:col-span-4 relative">
+                    <div class="sticky top-40 reveal">
+                        <h2 class="text-4xl md:text-5xl font-display font-medium leading-tight text-brand-black mb-6">
+                            업무의 해상도를<br>
+                            <i class="font-light text-brand-accent">높이는 방식.</i>
+                        </h2>
+                        <p class="text-brand-gray text-base leading-[1.6] font-light">
+                            고객 요청은 처음부터 정리된 형태로 들어오지 않습니다. 수정사항, 일정, 필요한 자료, 승인 여부가 섞여 들어올 때 실행자가 바로 확인할 수 있는 형태로 바꾸고, 누가 무엇을 언제까지 해야 하는지 남기는 방식으로 일합니다.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Detail List -->
+                <div class="lg:col-span-8">
+                    
+                    <!-- Item 01 -->
+                    <div class="reveal relative pb-20 hairline-b mb-20">
+                        <span class="block text-brand-gray text-[11px] font-semibold uppercase mb-4">01. Project Management</span>
+                        <h3 class="text-2xl md:text-3xl font-medium mb-6 text-brand-black">요청사항을 실행 단위로 정리하는 PM형 업무</h3>
+                        <p class="text-brand-gray text-lg leading-[1.6] font-light mb-8">
+                            다수 병원 고객사의 요청사항, 수정 이력, 게시 일정, 완료 상태를 정리했습니다. 최대 8개 고객사의 콘텐츠 운영 흐름을 동시에 확인하며, 누락을 줄이기 위해 진행 상태를 기준화했습니다.
+                        </p>
+                        <ul class="flex flex-wrap gap-x-8 gap-y-3 text-[12px] text-brand-black">
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-brand-accent text-[10px]"></i> 고객 요청 정리</li>
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-brand-accent text-[10px]"></i> 수정 이력·일정 관리</li>
+                        </ul>
+                    </div>
+
+                    <!-- Item 02 -->
+                    <div class="reveal relative pb-20 hairline-b mb-20">
+                        <span class="block text-brand-gray text-[11px] font-semibold uppercase mb-4">02. Channel Operations</span>
+                        <h3 class="text-2xl md:text-3xl font-medium mb-6 text-brand-black">채널별 지표와 운영 상태를 분리해 확인</h3>
+                        <p class="text-brand-gray text-lg leading-[1.6] font-light mb-8">
+                            블로그, 플레이스, 커머스, 광고 카피처럼 성격이 다른 채널을 하나의 성과처럼 묶지 않고 각 채널의 기준으로 확인합니다. 노출 상태, 방문자 변화, 클릭률, 콘텐츠 반응을 구분해 다음 실행에 필요한 정보를 정리했습니다.
+                        </p>
+                        <ul class="flex flex-wrap gap-x-8 gap-y-3 text-[12px] text-brand-black">
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-brand-accent text-[10px]"></i> 검색·블로그 운영 지표</li>
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-brand-accent text-[10px]"></i> 광고 카피 A/B 테스트</li>
+                        </ul>
+                    </div>
+
+                    <!-- Item 03 -->
+                    <div class="reveal relative pb-20">
+                        <span class="block text-brand-gray text-[11px] font-semibold uppercase mb-4">03. Brand Commerce Setup</span>
+                        <h3 class="text-2xl md:text-3xl font-medium mb-6 text-brand-black">신규 브랜드의 초기 운영 기반 정리</h3>
+                        <p class="text-brand-gray text-lg leading-[1.6] font-light mb-8">
+                            해외 신규 제품 도입 과정에서 시장조사, 경쟁 제품 비교, 제안서 구성, 스마트스토어 상품 등록, 상세페이지 구조 검토에 참여했습니다. 초기 판매 접점이 운영 가능한 형태로 정리되도록 필요한 자료와 화면 흐름을 확인했습니다.
+                        </p>
+                        <ul class="flex flex-wrap gap-x-8 gap-y-3 text-[12px] text-brand-black">
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-brand-accent text-[10px]"></i> 시장·경쟁 제품 리서치</li>
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-brand-accent text-[10px]"></i> 제안 자료·커머스 운영</li>
+                        </ul>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Career Brief Section -->
+    <section id="career-brief" class="py-32 px-6 md:px-12 relative bg-white border-t border-[#F0F0F0]">
+        <div class="max-w-7xl mx-auto">
+            <div class="reveal mb-20 flex flex-col md:flex-row justify-between items-start md:items-end border-b border-brand-black pb-8">
+                <div>
+                    <span class="block text-brand-gray text-[11px] font-semibold uppercase mb-5">Career Brief</span>
+                    <h2 class="text-5xl md:text-7xl font-display font-medium text-brand-black leading-none">
+                        지원 요약<i class="text-brand-accent">.</i>
+                    </h2>
+                </div>
+                <p class="text-brand-gray text-sm font-light mt-6 md:mt-0 max-w-sm text-left md:text-right">
+                    사람인 이력서 PDF를 대체하는 자료가 아니라, 현재 포지션과 근무 가능 조건을 빠르게 이해할 수 있도록 정리한 해석본입니다.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12">
+                <div class="lg:col-span-5 reveal">
+                    <div class="space-y-6">
+                        <div class="hairline-t pt-6 flex justify-between gap-8">
+                            <span class="text-[10px] text-brand-gray font-semibold uppercase">Position</span>
+                            <span class="text-right text-brand-black leading-relaxed">마케팅 기획/운영<br>콘텐츠·채널 운영 · AE/PM · 커머스</span>
+                        </div>
+                        <div class="hairline-t pt-6 flex justify-between gap-8">
+                            <span class="text-[10px] text-brand-gray font-semibold uppercase">Career</span>
+                            <span class="text-right text-brand-black leading-relaxed">3년 7개월</span>
+                        </div>
+                        <div class="hairline-t pt-6 flex justify-between gap-8">
+                            <span class="text-[10px] text-brand-gray font-semibold uppercase">Location</span>
+                            <span class="text-right text-brand-black leading-relaxed">구미 · 대구권 근무 희망<br>대구 전역 근무 가능</span>
+                        </div>
+                        <div class="hairline-t pt-6 flex justify-between gap-8">
+                            <span class="text-[10px] text-brand-gray font-semibold uppercase">Available</span>
+                            <span class="text-right text-brand-black leading-relaxed">즉시 합류 가능</span>
+                        </div>
+                        <div class="hairline-t pt-6 flex justify-between gap-8">
+                            <span class="text-[10px] text-brand-gray font-semibold uppercase">Compensation</span>
+                            <span class="text-right text-brand-black leading-relaxed">제출 이력서 기준<br>역할·책임 범위에 따라 협의</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="lg:col-span-7 reveal delay-100">
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-px bg-[#E5E5E5]">
+                        <div class="bg-white p-7 min-h-[170px]">
+                            <span class="block text-[10px] text-brand-gray font-semibold uppercase mb-8">Core Strength</span>
+                            <p class="text-xl leading-snug text-brand-black">고객 요청 정리<br>콘텐츠 일정 관리<br>채널 운영</p>
+                        </div>
+                        <div class="bg-white p-7 min-h-[170px]">
+                            <span class="block text-[10px] text-brand-gray font-semibold uppercase mb-8">Document Work</span>
+                            <p class="text-xl leading-snug text-brand-black">제안 자료 구성<br>시장조사<br>상품 정보 정리</p>
+                        </div>
+                        <div class="bg-white p-7 min-h-[170px]">
+                            <span class="block text-[10px] text-brand-gray font-semibold uppercase mb-8">Representative Experience</span>
+                            <p class="text-xl leading-snug text-brand-black">최대 8개 고객사 운영 흐름 확인<br>일 최대 25건 콘텐츠 진행 상태 확인</p>
+                        </div>
+                        <div class="bg-white p-7 min-h-[170px]">
+                            <span class="block text-[10px] text-brand-gray font-semibold uppercase mb-8">Channel Range</span>
+                            <p class="text-xl leading-snug text-brand-black">블로그 · 카페 · 플레이스 · SNS<br>스마트스토어 · 상세페이지</p>
+                        </div>
+                    </div>
+                    <div class="mt-10 flex flex-wrap gap-x-8 gap-y-4 text-[11px] uppercase font-semibold">
+                        <a href="./public/docs/minji_resume.pdf" download="260608_김민지_이력서.pdf" class="border-b border-brand-black pb-1 hover:text-brand-gray hover:border-brand-gray transition-colors">Resume PDF</a>
+                        <a href="mailto:mjk8410@naver.com" class="border-b border-brand-black pb-1 hover:text-brand-gray hover:border-brand-gray transition-colors">Email</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- Contact / CTA Section -->
     <section id="contact" class="py-40 px-6 md:px-12 relative bg-white border-t border-[#F0F0F0]">
-        <div class="max-w-4xl mx-auto text-center reveal">
-            <h2 class="text-5xl md:text-7xl font-display font-medium leading-tight mb-10 text-brand-black">
-                <span class="script-write" data-write-text="Let's Build an" data-cursor-delay="0.72">Let's Build an</span><br>
-                <i class="script-write font-light text-brand-accent" data-write-text="Exceptional Structure." data-write-delay="0.32" data-cursor-delay="1.2">Exceptional Structure.</i>
+        <div class="max-w-5xl mx-auto text-center reveal">
+            <h2 class="text-4xl md:text-6xl font-display font-medium leading-tight mb-10 text-brand-black">
+                구미·대구권에서<br>
+                <span class="script-write" data-write-text="바로 합류 가능한" data-cursor-delay="0.72">바로 합류 가능한</span><br>
+                <i class="script-write font-light text-brand-accent" data-write-text="마케팅 PM형 실무자입니다." data-write-delay="0.28" data-cursor-delay="1.25">마케팅 PM형 실무자입니다.</i>
             </h2>
             
-            <p class="text-lg md:text-xl text-brand-black font-light leading-[1.6] mb-16">
-                입사 후 첫 한 달, 거창한 약속보다는 기존 자료의 맥락을 빠르게 파악하고<br class="hidden md:block">
-                조직에 당장 필요한 '운영의 기준'을 탄탄하게 세우겠습니다.
+            <p class="text-lg md:text-xl text-brand-black font-light leading-[1.65] mb-16">
+                콘텐츠/채널 운영, 고객 커뮤니케이션, 제안 자료 정리,<br class="hidden md:block">
+                커머스 운영, 검색·블로그 기반 마케팅 업무에 강점이 있습니다.<br class="hidden md:block">
+                즉시 합류 가능하며, 처우와 역할 범위는 제출 이력서 기준으로 협의 가능합니다.
             </p>
 
             <div class="flex flex-col sm:flex-row gap-4 justify-center items-center">
-                <a href="mailto:mjk8410@naver.com" class="w-full sm:w-auto px-10 py-5 bg-brand-black text-white text-[11px] font-semibold uppercase hover:bg-black/80 transition-colors">
-                    mjk8410@naver.com
+                <a href="#career-brief" class="w-full sm:w-auto px-10 py-5 bg-white border border-[#E5E5E5] text-brand-black text-[11px] font-semibold uppercase hover:border-brand-black transition-colors">
+                    Career Brief
                 </a>
-                <button class="w-full sm:w-auto px-10 py-5 bg-white border border-[#E5E5E5] text-brand-black text-[11px] font-semibold uppercase hover:border-brand-black transition-colors flex items-center justify-center gap-3" onclick="copyEmail()" id="copyBtn">
-                    <span id="copyText">Copy Address</span>
-                </button>
+                <a href="./public/docs/minji_resume.pdf" download="260608_김민지_이력서.pdf" class="w-full sm:w-auto px-10 py-5 bg-white border border-[#E5E5E5] text-brand-black text-[11px] font-semibold uppercase hover:border-brand-black transition-colors">
+                    Resume PDF
+                </a>
+                <a href="mailto:mjk8410@naver.com" class="w-full sm:w-auto px-10 py-5 bg-brand-black text-white text-[11px] font-semibold uppercase hover:bg-black/80 transition-colors">
+                    Email
+                </a>
             </div>
         </div>
     </section>
@@ -709,7 +849,7 @@
             Minji<i class="italic font-light">.</i>Kim
         </div>
         <div class="text-[10px] font-semibold uppercase text-brand-gray text-center md:text-left">
-            Marketing Planning • PM
+            Marketing Planning · Operations PM
         </div>
         <div class="text-[10px] text-brand-gray uppercase">
             &copy; <span id="year"></span> All rights reserved.
@@ -764,45 +904,6 @@
             }
         });
 
-        // 3. Copy Email
-        function copyEmail() {
-            const email = "mjk8410@naver.com";
-
-            const showCopiedState = () => {
-                const copyBtn = document.getElementById('copyBtn');
-                const copyText = document.getElementById('copyText');
-                
-                const originalText = copyText.innerText;
-                copyText.innerText = "Copied!";
-                copyBtn.classList.add('border-brand-black');
-                copyBtn.classList.add('bg-gray-50');
-                
-                setTimeout(() => {
-                    copyText.innerText = originalText;
-                    copyBtn.classList.remove('border-brand-black');
-                    copyBtn.classList.remove('bg-gray-50');
-                }, 2000);
-            };
-
-            const fallbackCopy = () => {
-                const tempInput = document.createElement("textarea");
-                tempInput.value = email;
-                tempInput.setAttribute("readonly", "");
-                tempInput.style.position = "fixed";
-                tempInput.style.left = "-9999px";
-                document.body.appendChild(tempInput);
-                tempInput.select();
-                document.execCommand("copy");
-                document.body.removeChild(tempInput);
-                showCopiedState();
-            };
-            
-            if (navigator.clipboard && window.isSecureContext) {
-                navigator.clipboard.writeText(email).then(showCopiedState).catch(fallbackCopy);
-            } else {
-                fallbackCopy();
-            }
-        }
     </script>
 </body>
 </html>

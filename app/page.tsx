@@ -189,11 +189,11 @@ export default function Page() {
             <h1 id="hero-title">정리된 말과 따뜻한 감각으로, 브랜드의 다음 액션을 만듭니다.</h1>
             <p className="lead">
               고객사 커뮤니케이션, 제안 자료 정리, 콘텐츠·매체 운영, 프로젝트 일정 관리를 경험한
-              3년 7개월차 마케팅 실무자 김민지입니다. 흩어진 요청을 보기 쉬운 문서와 실행 흐름으로 바꾸고,
+              3년 7개월 경력 마케팅 실무자 김민지입니다. 흩어진 요청을 보기 쉬운 문서와 실행 흐름으로 바꾸고,
               브랜드가 고객에게 닿는 접점을 차분하게 다듬습니다.
             </p>
             <div className="actions">
-              <a className="button" href="/docs/minji_b2b_marketing_portfolio.pdf">포트폴리오 PDF</a>
+              <a className="button" href="#work">작업 사례 보기</a>
               <a className="button secondary" href="/docs/minji_resume.pdf">이력서 PDF</a>
               <a className="button secondary" href="mailto:mjk8410@naver.com">메일 보내기</a>
             </div>
