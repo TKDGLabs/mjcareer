@@ -151,6 +151,89 @@
             transform: translateY(0);
         }
 
+        .script-write {
+            display: inline-block;
+            white-space: nowrap;
+        }
+
+        .script-write .char {
+            display: inline-block;
+            opacity: 0;
+            transform: translateY(0.16em) rotate(-1.5deg);
+            filter: blur(2px);
+        }
+
+        .script-write .char.space {
+            width: 0.32em;
+        }
+
+        .reveal.active .script-write .char,
+        .reveal.active.script-write .char {
+            animation: inkIn 0.48s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+            animation-delay: calc(var(--write-delay, 0s) + (var(--char-index) * var(--write-speed, 0.035s)));
+        }
+
+        .script-write::after {
+            content: "";
+            display: inline-block;
+            width: 0.045em;
+            height: 0.64em;
+            margin-left: 0.02em;
+            background: currentColor;
+            border-radius: 999px;
+            opacity: 0;
+            transform: translateY(0.08em) rotate(8deg) scaleY(0.3);
+            animation: none;
+        }
+
+        .reveal.active .script-write::after,
+        .reveal.active.script-write::after {
+            animation: penTrace 0.68s cubic-bezier(0.16, 1, 0.3, 1) both;
+            animation-delay: var(--cursor-delay, 1s);
+        }
+
+        @keyframes inkIn {
+            0% {
+                opacity: 0;
+                transform: translateY(0.16em) rotate(-1.5deg);
+                filter: blur(2px);
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0) rotate(0deg);
+                filter: blur(0);
+            }
+        }
+
+        @keyframes penTrace {
+            0% {
+                opacity: 0;
+                transform: translateY(0.08em) translateX(-0.06em) rotate(8deg) scaleY(0.25);
+            }
+            45% {
+                opacity: 0.45;
+            }
+            100% {
+                opacity: 0;
+                transform: translateY(0.08em) translateX(0.14em) rotate(8deg) scaleY(0.85);
+            }
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+            .script-write .char {
+                opacity: 1;
+                transform: none;
+                filter: none;
+            }
+
+            .reveal.active .script-write .char,
+            .reveal.active.script-write .char,
+            .reveal.active .script-write::after,
+            .reveal.active.script-write::after {
+                animation: none;
+            }
+        }
+
         /* Hairline borders for Dior-like elegance */
         .hairline-b {
             border-bottom: 1px solid #E5E5E5;
@@ -183,8 +266,8 @@
         }
 
         .evidence-shot {
-            --image-scale: 1.04;
-            background: #F7F8F6;
+            --image-scale: 1.02;
+            background: #FFFFFF;
             overflow: hidden;
             min-height: 0;
         }
@@ -216,12 +299,24 @@
             aspect-ratio: 1 / 1;
         }
 
+        .evidence-shot.ratio-2-1 {
+            aspect-ratio: 2 / 1;
+        }
+
+        .evidence-shot.ratio-3-2 {
+            aspect-ratio: 3 / 2;
+        }
+
+        .evidence-shot.ratio-4-3 {
+            aspect-ratio: 4 / 3;
+        }
+
         .evidence-shot img {
             width: 100%;
             height: 100%;
             object-fit: contain;
             object-position: center top;
-            padding: clamp(8px, 1.4vw, 18px);
+            padding: 0;
             transition: transform 1.5s cubic-bezier(0.16, 1, 0.3, 1), filter 1s ease;
             transform: scale(var(--image-scale));
             transform-origin: center top;
@@ -238,6 +333,12 @@
             object-fit: cover;
             object-position: center top;
             padding: 0;
+        }
+
+        .evidence-shot.fill img {
+            --image-scale: 1;
+            object-fit: cover;
+            object-position: center center;
         }
 
         .evidence-shot.zoom-soft {
@@ -298,10 +399,10 @@
                 
                 <h1 class="font-display text-6xl md:text-8xl lg:text-[112px] leading-[1.05] mb-8 text-brand-black">
                     <div class="reveal overflow-hidden">
-                        <span class="block font-light">Strategic</span>
+                        <span class="script-write block font-light" data-write-text="Strategic" data-cursor-delay="0.48">Strategic</span>
                     </div>
                     <div class="reveal overflow-hidden delay-100">
-                        <span class="block italic pr-4 text-brand-accent">Execution.</span>
+                        <span class="script-write block italic pr-4 text-brand-accent" data-write-text="Execution." data-write-delay="0.18" data-cursor-delay="0.76">Execution.</span>
                     </div>
                 </h1>
 
@@ -354,11 +455,6 @@
                     <p class="text-brand-gray text-lg leading-[1.7] font-light">
                         빠르게 움직이는 조직 안에서 흩어진 요청을 구조화하고, 각 담당자가 바로 판단할 수 있는 기준으로 바꾸는 일을 잘합니다. 화려한 한 장보다 실무자가 다시 열어보게 되는 자료, 고객이 다음 행동을 이해하는 문장을 만듭니다.
                     </p>
-                    <div class="mt-10 text-[11px] uppercase font-semibold">
-                        <a href="./public/docs/minji_resume.pdf" download="260608_김민지_이력서.pdf" class="border-b border-brand-black pb-1 hover:text-brand-gray hover:border-brand-gray transition-colors">
-                            Download Resume
-                        </a>
-                    </div>
                 </div>
 
                 <figure class="lg:col-span-7 reveal delay-100">
@@ -463,7 +559,7 @@
                             <div class="evidence-shot square cover">
                                 <img src="./public/images/projects/dental-place-map.png" alt="치과 네이버 플레이스 지도 노출 사례">
                             </div>
-                            <div class="evidence-shot full zoom-medium">
+                            <div class="evidence-shot full ratio-4-3">
                                 <img src="./public/images/projects/dental-place-rank.png" alt="치과 플레이스 키워드 순위 관리표">
                             </div>
                         </div>
@@ -492,7 +588,7 @@
                     <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
                         <!-- Note: Image on right for desktop layout variation -->
                         <div class="lg:col-span-7 lg:order-2 evidence-board w-full reveal">
-                            <div class="evidence-shot tall zoom-soft">
+                            <div class="evidence-shot tall ratio-4-3">
                                 <img src="./public/images/projects/masturzo-store.png" alt="마스뚜르조 스마트스토어 구축 화면">
                             </div>
                         </div>
@@ -520,10 +616,10 @@
                 <div class="group cursor-pointer">
                     <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
                         <div class="lg:col-span-7 evidence-board w-full reveal">
-                            <div class="evidence-shot main zoom-soft">
+                            <div class="evidence-shot full ratio-2-1">
                                 <img src="./public/images/projects/ph40-store.png" alt="피에이치포 스마트스토어 운영 화면">
                             </div>
-                            <div class="evidence-shot full zoom-strong">
+                            <div class="evidence-shot full ratio-4-3 fill">
                                 <img src="./public/images/projects/ph40-product.png" alt="피에이치포 여성 헬스케어 제품 이미지">
                             </div>
                         </div>
@@ -554,7 +650,7 @@
                             <div class="evidence-shot square cover">
                                 <img src="./public/images/projects/dangnabal-blog.jpg" alt="당나발포차 네이버 블로그 콘텐츠 운영 사례">
                             </div>
-                            <div class="evidence-shot full zoom-soft">
+                            <div class="evidence-shot full ratio-3-2">
                                 <img src="./public/images/projects/yeouya-cafe.png" alt="여우야 카페 커뮤니티 매체 운영 화면">
                             </div>
                         </div>
@@ -587,8 +683,8 @@
     <section id="contact" class="py-40 px-6 md:px-12 relative bg-white border-t border-[#F0F0F0]">
         <div class="max-w-4xl mx-auto text-center reveal">
             <h2 class="text-5xl md:text-7xl font-display font-medium leading-tight mb-10 text-brand-black">
-                Let's Build an<br>
-                <i class="font-light text-brand-accent">Exceptional Structure.</i>
+                <span class="script-write" data-write-text="Let's Build an" data-cursor-delay="0.72">Let's Build an</span><br>
+                <i class="script-write font-light text-brand-accent" data-write-text="Exceptional Structure." data-write-delay="0.32" data-cursor-delay="1.2">Exceptional Structure.</i>
             </h2>
             
             <p class="text-lg md:text-xl text-brand-black font-light leading-[1.6] mb-16">
@@ -623,6 +719,24 @@
     <script>
         // Set year
         document.getElementById('year').textContent = new Date().getFullYear();
+
+        // Prepare handwriting-like headline reveal
+        document.querySelectorAll('[data-write-text]').forEach(target => {
+            const text = target.dataset.writeText || target.textContent.trim();
+            target.setAttribute('aria-label', text);
+            target.style.setProperty('--write-delay', `${target.dataset.writeDelay || 0}s`);
+            target.style.setProperty('--cursor-delay', `${target.dataset.cursorDelay || 1}s`);
+            target.textContent = '';
+
+            Array.from(text).forEach((char, index) => {
+                const span = document.createElement('span');
+                span.className = char === ' ' ? 'char space' : 'char';
+                span.style.setProperty('--char-index', index);
+                span.setAttribute('aria-hidden', 'true');
+                span.textContent = char === ' ' ? '\u00A0' : char;
+                target.appendChild(span);
+            });
+        });
 
         // 1. Scroll Reveal Animation
         const revealElements = document.querySelectorAll('.reveal');
