@@ -1,0 +1,687 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>김민지 | 마케팅 기획·콘텐츠 운영 포트폴리오</title>
+    <style>
+      @font-face {
+        font-family: "Wanted Sans";
+        src: url("../fonts/wanted/WantedSans-Regular.woff2") format("woff2");
+        font-weight: 400;
+        font-style: normal;
+        font-display: swap;
+      }
+
+      @font-face {
+        font-family: "Wanted Sans";
+        src: url("../fonts/wanted/WantedSans-SemiBold.woff2") format("woff2");
+        font-weight: 600;
+        font-style: normal;
+        font-display: swap;
+      }
+
+      @font-face {
+        font-family: "Wanted Sans";
+        src: url("../fonts/wanted/WantedSans-Bold.woff2") format("woff2");
+        font-weight: 700;
+        font-style: normal;
+        font-display: swap;
+      }
+
+      @font-face {
+        font-family: "Wanted Sans";
+        src: url("../fonts/wanted/WantedSans-Black.woff2") format("woff2");
+        font-weight: 900;
+        font-style: normal;
+        font-display: swap;
+      }
+
+      @page {
+        size: A4;
+        margin: 16mm 15mm 18mm;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 0;
+        background: #f7f7f4;
+        color: #111111;
+        font-family: "Wanted Sans", Arial, sans-serif;
+        -webkit-font-smoothing: antialiased;
+        text-rendering: geometricPrecision;
+      }
+
+      .page {
+        width: 210mm;
+        min-height: 297mm;
+        margin: 0 auto;
+        background: #ffffff;
+        padding: 20mm 17mm 18mm;
+        page-break-after: always;
+      }
+
+      .page:last-child {
+        page-break-after: auto;
+      }
+
+      .cover {
+        display: grid;
+        grid-template-rows: auto 1fr auto;
+      }
+
+      .eyebrow {
+        margin: 0 0 8px;
+        color: #b97800;
+        font-size: 11px;
+        line-height: 1.4;
+        font-weight: 900;
+      }
+
+      h1,
+      h2,
+      h3,
+      p {
+        margin-top: 0;
+      }
+
+      h1 {
+        margin-bottom: 22px;
+        font-size: 42px;
+        line-height: 1.12;
+        font-weight: 900;
+      }
+
+      h2 {
+        margin-bottom: 18px;
+        font-size: 28px;
+        line-height: 1.18;
+        font-weight: 900;
+      }
+
+      h3 {
+        margin-bottom: 8px;
+        font-size: 17px;
+        line-height: 1.35;
+        font-weight: 900;
+      }
+
+      .lead {
+        max-width: 150mm;
+        color: #33373d;
+        font-size: 14px;
+        line-height: 1.78;
+      }
+
+      .cover-meta {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 10mm;
+        margin-top: 30mm;
+        border-top: 2px solid #111111;
+        padding-top: 8mm;
+      }
+
+      .meta-list {
+        margin: 0;
+        border-top: 1px solid #dddddd;
+      }
+
+      .meta-list div {
+        display: grid;
+        grid-template-columns: 28mm 1fr;
+        gap: 8mm;
+        border-bottom: 1px solid #dddddd;
+        padding: 4.2mm 0;
+      }
+
+      dt {
+        color: #5f646b;
+        font-size: 10px;
+        line-height: 1.5;
+        font-weight: 800;
+      }
+
+      dd {
+        margin: 0;
+        color: #1f2328;
+        font-size: 11px;
+        line-height: 1.6;
+      }
+
+      .small {
+        color: #5f646b;
+        font-size: 10px;
+        line-height: 1.55;
+      }
+
+      .section-note {
+        margin: 0 0 8mm;
+        color: #33373d;
+        font-size: 12px;
+        line-height: 1.7;
+      }
+
+      table {
+        width: 100%;
+        border-collapse: collapse;
+        table-layout: fixed;
+      }
+
+      th,
+      td {
+        border: 1px solid #dddddd;
+        padding: 4.5mm;
+        vertical-align: top;
+        text-align: left;
+      }
+
+      th {
+        background: #fff4d2;
+        color: #5f4100;
+        font-size: 10px;
+        line-height: 1.45;
+        font-weight: 900;
+      }
+
+      td {
+        color: #2f3338;
+        font-size: 10.4px;
+        line-height: 1.62;
+      }
+
+      strong {
+        color: #111111;
+        font-weight: 900;
+      }
+
+      .case {
+        border-top: 2px solid #111111;
+        padding-top: 5mm;
+        margin-top: 7mm;
+      }
+
+      .case:first-of-type {
+        margin-top: 0;
+      }
+
+      .case-head {
+        display: grid;
+        grid-template-columns: 12mm 1fr;
+        gap: 5mm;
+        align-items: start;
+      }
+
+      .case-no {
+        color: #b97800;
+        font-size: 14px;
+        font-weight: 900;
+      }
+
+      .case p {
+        margin-bottom: 4mm;
+        color: #33373d;
+        font-size: 11px;
+        line-height: 1.72;
+      }
+
+      .case-grid {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 4mm;
+      }
+
+      .box {
+        border: 1px solid #dddddd;
+        padding: 4mm;
+      }
+
+      .box p,
+      .box ul,
+      .box ol {
+        margin-bottom: 0;
+        color: #33373d;
+        font-size: 10.4px;
+        line-height: 1.65;
+      }
+
+      .box ul,
+      .box ol {
+        padding-left: 4.5mm;
+      }
+
+      .sample-grid {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 5mm;
+      }
+
+      .plan-grid {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 4mm;
+      }
+
+      .plan-step {
+        border-top: 2px solid #b97800;
+        background: #f7f7f4;
+        padding: 4.5mm;
+      }
+
+      .plan-step ul {
+        margin: 0;
+        padding-left: 4.5mm;
+        color: #33373d;
+        font-size: 10.4px;
+        line-height: 1.65;
+      }
+
+      .disclosure {
+        margin-top: 8mm;
+        border-left: 3px solid #b97800;
+        background: #fff3cf;
+        padding: 4.5mm;
+        color: #5a4108;
+        font-size: 10.5px;
+        line-height: 1.65;
+      }
+
+      .closing {
+        display: grid;
+        grid-template-columns: 1fr 58mm;
+        gap: 9mm;
+        align-items: end;
+        margin-top: 24mm;
+      }
+
+      .signature {
+        border-top: 2px solid #111111;
+        padding-top: 5mm;
+      }
+
+      .signature strong {
+        display: block;
+        margin-bottom: 3mm;
+        font-size: 18px;
+      }
+
+      @media print {
+        body {
+          background: #ffffff;
+        }
+
+        .page {
+          margin: 0;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <section class="page cover">
+      <div>
+        <p class="eyebrow">MARKETING PLANNING / CONTENT OPERATIONS</p>
+        <h1>김민지<br />마케팅 기획·콘텐츠 운영 포트폴리오</h1>
+        <p class="lead">
+          고객의 요청을 업무 범위로 정리하고, 제안 자료와 실행 흐름으로 연결하는 실무자입니다.
+          이 문서는 실제 내부 자료를 공개하지 않고, 지원 포지션에서 바로 검토할 수 있는
+          직무 적합성, 관련 경험, 문서화 방식, 입사 초기 실행 계획만 간결하게 정리했습니다.
+        </p>
+      </div>
+
+      <div class="cover-meta">
+        <dl class="meta-list">
+          <div>
+            <dt>지원 포지션</dt>
+            <dd>마케팅 기획·콘텐츠 운영</dd>
+          </div>
+          <div>
+            <dt>경력 기준</dt>
+            <dd>3년 7개월차 마케팅 실무자</dd>
+          </div>
+          <div>
+            <dt>근무지</dt>
+            <dd>대구·경북권 근무 가능, 타 지역은 조건에 따라 협의</dd>
+          </div>
+          <div>
+            <dt>지원 관점</dt>
+            <dd>경력직 실무자로 지원하며, 내부 호칭·직급 체계는 회사 기준을 존중합니다.</dd>
+          </div>
+        </dl>
+
+        <dl class="meta-list">
+          <div>
+            <dt>핵심 경험</dt>
+            <dd>최대 8개 병원 고객사 운영 흐름 관리</dd>
+          </div>
+          <div>
+            <dt>진행 관리</dt>
+            <dd>일 최대 25건 콘텐츠 진행 상태 관리</dd>
+          </div>
+          <div>
+            <dt>문서화</dt>
+            <dd>시장조사, 경쟁 비교, 제안서 구조 정리 경험</dd>
+          </div>
+          <div>
+            <dt>연락처</dt>
+            <dd>mjk8410@naver.com</dd>
+          </div>
+        </dl>
+      </div>
+
+      <p class="small">Prepared for Marketing Roles · 2026</p>
+    </section>
+
+    <section class="page">
+      <p class="eyebrow">01 / ROLE FIT</p>
+      <h2>채용 공고의 요구를 제 업무 언어로 번역합니다.</h2>
+      <p class="section-note">
+        마케팅 기획 직무는 예쁜 콘텐츠를 혼자 만드는 일이 아니라, 고객과 내부 팀 사이에서
+        필요한 정보를 구조화하고 다음 액션이 보이게 만드는 사람이라고 이해했습니다.
+      </p>
+
+      <table>
+        <thead>
+          <tr>
+            <th>채용 공고의 업무</th>
+            <th>제 경험</th>
+            <th>입사 후 바로 할 수 있는 일</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>신규 리드 발굴</strong><br />잠재 고객을 찾고 접점을 만드는 업무</td>
+            <td>검색광고, 창업 블로그, 브랜드 채널 운영을 통해 고객 접점 콘텐츠를 구성했습니다.</td>
+            <td>업종별 잠재 고객 리스트를 만들고, 접점 채널과 제안 가능 서비스를 정리하겠습니다.</td>
+          </tr>
+          <tr>
+            <td><strong>제안·견적 준비</strong><br />범위, 산출물, 일정, 비용 기준 정리</td>
+            <td>해외 신규 제품 도입 과정에서 시장조사, 경쟁 비교, 마케팅 제안서 작성에 참여했습니다.</td>
+            <td>고객 문제, 제안 범위, 필요 자료, 일정, 다음 액션이 보이는 제안서 구조를 만들겠습니다.</td>
+          </tr>
+          <tr>
+            <td><strong>고객 커뮤니케이션</strong><br />내외부가 같은 정보를 보게 하는 역할</td>
+            <td>다수 병원 담당자의 요청, 수정사항, 승인 상태, 게시 일정을 정리했습니다.</td>
+            <td>요청사항, 수정 이력, 완료 상태를 남기고 실행팀과 공유하는 운영표를 관리하겠습니다.</td>
+          </tr>
+          <tr>
+            <td><strong>자사 매체 관리</strong><br />블로그, 홈페이지, 유튜브 등 owned media 운영</td>
+            <td>블로그, 스마트스토어, SNS, 카페, 검색광고 등 채널별 콘텐츠 목적을 구분해 운영했습니다.</td>
+            <td>서비스 자료와 포트폴리오를 고객이 이해하기 쉬운 콘텐츠 캘린더로 재정리하겠습니다.</td>
+          </tr>
+          <tr>
+            <td><strong>영업 관리</strong><br />리드 상태와 후속 액션 관리</td>
+            <td>여러 프로젝트의 일정, 소재, 게시 상태, 후속 수정 요청을 동시에 확인했습니다.</td>
+            <td>리드 상태, 제안 가능성, 팔로업 날짜, 다음 액션을 관리하는 간단한 운영표를 만들겠습니다.</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section class="page">
+      <p class="eyebrow">02 / SELECTED EXPERIENCE</p>
+      <h2>관련 사례 3가지</h2>
+
+      <article class="case">
+        <div class="case-head">
+          <span class="case-no">01</span>
+          <div>
+            <h3>병원 B2B 고객사 콘텐츠 운영 PM</h3>
+            <p>
+              다수 병원의 콘텐츠 요청, 수정사항, 검수 일정, 게시 상태가 동시에 움직이는 환경에서
+              고객사와 실행팀 사이의 커뮤니케이션을 정리했습니다.
+            </p>
+          </div>
+        </div>
+        <div class="case-grid">
+          <div class="box">
+            <h3>역할</h3>
+            <p>요청사항 정리, 원고·소재 전달, 수정 이력 관리, 게시 일정 및 완료 상태 확인.</p>
+          </div>
+          <div class="box">
+            <h3>규모</h3>
+            <p>최대 8개 병원 운영 흐름 동시 관리, 일 최대 25건 수준의 콘텐츠 진행 상태 관리.</p>
+          </div>
+          <div class="box">
+            <h3>문서화 포인트</h3>
+            <p>요청-검수-수정-승인-게시 상태를 분리해 내부 실행팀이 다음 업무를 바로 확인할 수 있게 정리.</p>
+          </div>
+          <div class="box">
+            <h3>직무 연결점</h3>
+            <p>B2B 프로젝트에서 고객 요청을 실행 가능한 업무 단위로 바꾸는 경험입니다.</p>
+          </div>
+        </div>
+      </article>
+
+      <article class="case">
+        <div class="case-head">
+          <span class="case-no">02</span>
+          <div>
+            <h3>신규 제품 시장조사·마케팅 제안서 작성</h3>
+            <p>
+              해외 신규 제품 도입 과정에서 시장 상황, 경쟁 제품, 판매 포인트, 콘텐츠 방향을 정리한
+              마케팅 제안서 작성에 참여했습니다.
+            </p>
+          </div>
+        </div>
+        <div class="case-grid">
+          <div class="box">
+            <h3>조사 범위</h3>
+            <p>제품 특성, 국내 시장 상황, 경쟁 제품, 타깃 고객, 판매 채널 구조.</p>
+          </div>
+          <div class="box">
+            <h3>제안 흐름</h3>
+            <p>문제 정의, 고객 설득 포인트, 콘텐츠 메시지, 판매 준비 항목, 필요 자료 순으로 구성.</p>
+          </div>
+          <div class="box">
+            <h3>실행 연결</h3>
+            <p>스마트스토어 개설, 상품 등록, 상세페이지 기획/제작 등 온라인 판매 준비까지 참여.</p>
+          </div>
+          <div class="box">
+            <h3>공개 범위</h3>
+            <p>실제 제안서 원본은 내부 자료로 공개하지 않고, 구조와 사고 흐름 중심으로 재구성했습니다.</p>
+          </div>
+        </div>
+      </article>
+
+      <article class="case">
+        <div class="case-head">
+          <span class="case-no">03</span>
+          <div>
+            <h3>F&amp;B/커머스 채널 운영 및 리드 접점 설계</h3>
+            <p>
+              검색광고, 블로그, 스마트스토어, 상세페이지 등 고객 접점 채널을 운영하며
+              브랜드가 발견되고 문의 또는 구매로 이어지는 흐름을 정리했습니다.
+            </p>
+          </div>
+        </div>
+        <div class="case-grid">
+          <div class="box">
+            <h3>운영 채널</h3>
+            <p>검색광고, 창업 블로그, 스마트스토어, 상세페이지, SNS, 카페 콘텐츠.</p>
+          </div>
+          <div class="box">
+            <h3>확인 성과</h3>
+            <p>참여 프로젝트 내 CTR 6.08%, 구매 전환 97건, 월 조회수 3,149, 방문자 +24.2% 등을 확인.</p>
+          </div>
+          <div class="box">
+            <h3>문서화 포인트</h3>
+            <p>채널별 목적, 핵심 문구, CTA 위치, 고객 행동 흐름을 분리해 개선 포인트를 정리.</p>
+          </div>
+          <div class="box">
+            <h3>공개 범위</h3>
+            <p>광고 관리자 화면, 매출 데이터, 광고 리포트 원본은 공개하지 않습니다.</p>
+          </div>
+        </div>
+      </article>
+    </section>
+
+    <section class="page">
+      <p class="eyebrow">03 / DOCUMENT SAMPLES</p>
+      <h2>실제 자료 대신, 정리 방식을 보여드립니다.</h2>
+      <p class="section-note">
+        아래 자료는 실제 고객사 데이터가 아닌, 마케팅 기획 업무를 가정해 재구성한 샘플입니다.
+        핵심은 “필요 정보가 빠지지 않고 다음 액션이 보이는 방식으로 정리할 수 있는가”입니다.
+      </p>
+
+      <div class="sample-grid">
+        <div class="box">
+          <h3>B2B 콘텐츠 제작 제안서 목차</h3>
+          <ol>
+            <li>고객 상황과 요청 배경</li>
+            <li>해결해야 할 문제</li>
+            <li>프로젝트 목표</li>
+            <li>제안 범위와 산출물</li>
+            <li>일정과 필요 자료</li>
+            <li>견적 산출 기준</li>
+            <li>커뮤니케이션 방식</li>
+            <li>다음 액션</li>
+          </ol>
+        </div>
+        <div class="box">
+          <h3>운영표 필수 항목</h3>
+          <ul>
+            <li>고객명 / 담당자 / 요청일</li>
+            <li>작업 항목 / 우선순위 / 마감일</li>
+            <li>내부 담당 / 검수 상태 / 수정 이력</li>
+            <li>게시 여부 / 완료일 / 후속 액션</li>
+          </ul>
+        </div>
+      </div>
+
+      <h3 style="margin-top: 8mm;">샘플. 신규 리드 관리표</h3>
+      <table>
+        <thead>
+          <tr>
+            <th>기업/업종</th>
+            <th>예상 니즈</th>
+            <th>접점 채널</th>
+            <th>현재 상태</th>
+            <th>다음 액션</th>
+            <th>팔로업</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>A 병원군</td>
+            <td>시술별 콘텐츠 정리, 지역 검색 노출 보강</td>
+            <td>홈페이지 / 블로그</td>
+            <td>서비스 소개 전</td>
+            <td>운영 가능 범위와 사례 3건 정리</td>
+            <td>D+3</td>
+          </tr>
+          <tr>
+            <td>B 프랜차이즈</td>
+            <td>창업 문의 유입용 콘텐츠와 랜딩 흐름 개선</td>
+            <td>검색광고 / 블로그</td>
+            <td>니즈 가설 수립</td>
+            <td>창업 키워드와 경쟁 브랜드 콘텐츠 비교</td>
+            <td>D+5</td>
+          </tr>
+          <tr>
+            <td>C 공공기관</td>
+            <td>사업 안내 영상·콘텐츠 제작 자료 정리</td>
+            <td>홈페이지 / 유튜브</td>
+            <td>자료 수집 필요</td>
+            <td>목적, 대상, 필수 산출물 체크리스트 요청</td>
+            <td>D+7</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section class="page">
+      <p class="eyebrow">04 / FIRST 30 DAYS</p>
+      <h2>입사 후 첫 달에는 운영 기준부터 만들겠습니다.</h2>
+      <p class="section-note">
+        첫 달에는 무리한 성과 약속보다, 기존 자료와 고객 흐름을 빠르게 파악하고
+        바로 쓸 수 있는 문서 기준을 만드는 데 집중하겠습니다.
+      </p>
+
+      <div class="plan-grid">
+        <article class="plan-step">
+          <h3>1주차</h3>
+          <ul>
+            <li>포트폴리오와 서비스 자료 구조 파악</li>
+            <li>자사 매체 운영 현황 정리</li>
+            <li>리드 관리 방식과 고객 문의 흐름 확인</li>
+          </ul>
+        </article>
+        <article class="plan-step">
+          <h3>2주차</h3>
+          <ul>
+            <li>업종별 잠재 고객 리스트 초안 작성</li>
+            <li>제안서 기본 목차 템플릿 정리</li>
+            <li>블로그/홈페이지 콘텐츠 개선 포인트 정리</li>
+          </ul>
+        </article>
+        <article class="plan-step">
+          <h3>3~4주차</h3>
+          <ul>
+            <li>자사 홍보 콘텐츠 캘린더 제안</li>
+            <li>고객 문의 응대와 제안 준비 프로세스 문서화</li>
+            <li>리드 상태별 후속 액션 관리표 운영</li>
+          </ul>
+        </article>
+      </div>
+
+      <h3 style="margin-top: 11mm;">샘플. 자사 매체 4주 운영안</h3>
+      <table>
+        <thead>
+          <tr>
+            <th>주차</th>
+            <th>블로그</th>
+            <th>홈페이지</th>
+            <th>유튜브/SNS</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Week 1</td>
+            <td>대표 포트폴리오 1건을 문제-실행-성과 구조로 정리</td>
+            <td>서비스별 문의 CTA 위치 점검</td>
+            <td>제작 비하인드 클립 후보 수집</td>
+          </tr>
+          <tr>
+            <td>Week 2</td>
+            <td>B2B 고객이 자주 묻는 질문 콘텐츠화</td>
+            <td>제안 가능 서비스 범위와 필요 자료 업데이트</td>
+            <td>공공기관/브랜드 사례 썸네일 기준 정리</td>
+          </tr>
+          <tr>
+            <td>Week 3</td>
+            <td>제작 프로세스와 협업 방식 소개</td>
+            <td>문의 후 진행 흐름을 5단계로 문서화</td>
+            <td>서비스별 리드 자석 콘텐츠 후보 선정</td>
+          </tr>
+          <tr>
+            <td>Week 4</td>
+            <td>성과형 케이스 정리 및 다음 달 주제 제안</td>
+            <td>문의 페이지 문구와 버튼 개선안 제시</td>
+            <td>리드 상태별 후속 메시지 템플릿 정리</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <p class="disclosure">
+        본 제안서는 실제 회사 및 클라이언트의 내부 자료를 공개하지 않습니다.
+        광고 관리자 화면, 매출 데이터, 병원명, 내부 운영표, 실제 제안서 원본은 제외하고
+        공개 가능한 범위의 역할, 업무 흐름, 문서 구조, 참여 성과 중심으로 재구성했습니다.
+      </p>
+
+      <div class="closing">
+        <p class="lead">
+          저는 화려한 한 장보다, 고객과 내부 팀이 같은 기준으로 움직일 수 있는 문서를 더 중요하게 봅니다.
+          마케팅 기획·콘텐츠 운영 포지션에서 고객 요청을 구조화하고 실행팀이 바로 움직일 수 있게
+          정리하는 실무자로 기여하겠습니다.
+        </p>
+        <div class="signature">
+          <strong>김민지</strong>
+          <p class="small">Marketing Planning · Content Operations · PM<br />mjk8410@naver.com</p>
+        </div>
+      </div>
+    </section>
+  </body>
+</html>

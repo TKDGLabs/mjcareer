@@ -3,24 +3,26 @@
 정적 HTML 기반 포트폴리오입니다.  
 파일 수정은 `index.html` 한 곳에서 대부분 가능합니다.
 
-추가로 `Next.js app router` 환경에서 바로 붙여쓸 수 있는 React 버전도 준비되어 있습니다.
+이번 버전은 사용자가 제공한 `all_rounder_marketer_portfolio.html`의 에디토리얼 무드를 기반으로
+마케팅 기획·콘텐츠 운영 포지션에 사용할 수 있는 포트폴리오형 웹페이지로 재구성했습니다.
+경력 나열보다 히어로 비주얼, 일하는 방식, 프로젝트 아카이브, 공개 가능한 임팩트 지표가 먼저 읽히도록 설계했습니다.
 
-- `app/page.tsx` : 애니메이션/차트/반응형/연봉 어필 섹션 포함 개선본
+- `index.html` : 배포용 정적 페이지
+- `public/docs/minji_b2b_marketing_portfolio.html` : 포트폴리오 PDF 원본 HTML
+- `public/docs/minji_b2b_marketing_portfolio.pdf` : 제출용 보조 PDF
+- `public/images/hero/minji-office-editorial-ai.png` : 히어로 비주얼 이미지
 
 ## 프로필 사진 반영
 
-증명사진을 넣으려면 아래 파일명으로 저장하면 자동 반영됩니다.
-
-- 정적 페이지(`index.html`)용: `profile-photo.jpg` (프로젝트 루트)
-- Next.js(`app/page.tsx`)용: `public/profile-photo.jpg`
-
-사진이 없으면 자동으로 `profile-placeholder.svg`가 표시됩니다.
+현재 페이지는 첨부된 AI 생성 이미지를 히어로 비주얼로 사용합니다.  
+이미지 근처에는 `*이 이미지는 생성형 AI로 제작되었습니다.` 고지를 포함했습니다.
 
 ## 문서 링크
 
 사이트 내 다운로드 버튼은 아래 파일을 사용합니다.
 
 - `/public/docs/minji_resume.pdf`
+- `/public/docs/minji_b2b_marketing_portfolio.pdf`
 - `/public/docs/minji_marketing_portfolio.pdf`
 
 ## 로컬 미리보기
@@ -31,6 +33,11 @@ python3 -m http.server 4173
 ```
 
 브라우저에서 `http://localhost:4173` 접속
+
+## PDF 재생성
+
+`public/docs/minji_b2b_marketing_portfolio.html`을 수정한 뒤 Chrome 또는 Playwright로 PDF를 다시 만들면 됩니다.
+현재 저장된 PDF는 A4 기준 6페이지입니다.
 
 ## GitHub 업로드
 

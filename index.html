@@ -1,2125 +1,694 @@
-<!doctype html>
-<html lang="ko">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Minji Kim | Marketing Portfolio 2026</title>
-    <meta
-      name="description"
-      content="마케터 김민지 포트폴리오. 의료·뷰티·F&amp;B·커머스 실무 성과를 핵심 지표와 프로젝트로 정리한 2026 웹 이력서."
-    />
+<!DOCTYPE html>
+<html lang="ko" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Minji Kim | Marketing Portfolio</title>
+    <link rel="icon" href="./profile-placeholder.svg" type="image/svg+xml">
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Noonnu Web Fonts -->
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['A2z', 'system-ui', 'sans-serif'],
+                        display: ['IncheonEducation', 'A2z', 'serif'],
+                    },
+                    colors: {
+                        brand: {
+                            black: '#0A0A0A',   /* Apple-like deep black */
+                            gray: '#737373',    /* readable secondary text */
+                            accent: '#3F6B4B',  /* quiet editorial green */
+                            accentSoft: '#EEF4EE',
+                            light: '#FFFFFF',   /* Pure White */
+                            border: '#E5E5E5'   /* Extremely subtle border */
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+
     <style>
-      @font-face {
-        font-family: "Wanted Sans";
-        src: url("./public/fonts/wanted/WantedSans-Regular.woff2") format("woff2");
-        font-weight: 400;
-        font-style: normal;
-        font-display: swap;
-      }
-
-      @font-face {
-        font-family: "Wanted Sans";
-        src: url("./public/fonts/wanted/WantedSans-Medium.woff2") format("woff2");
-        font-weight: 500;
-        font-style: normal;
-        font-display: swap;
-      }
-
-      @font-face {
-        font-family: "Wanted Sans";
-        src: url("./public/fonts/wanted/WantedSans-SemiBold.woff2") format("woff2");
-        font-weight: 600;
-        font-style: normal;
-        font-display: swap;
-      }
-
-      @font-face {
-        font-family: "Wanted Sans";
-        src: url("./public/fonts/wanted/WantedSans-Bold.woff2") format("woff2");
-        font-weight: 700;
-        font-style: normal;
-        font-display: swap;
-      }
-
-      @font-face {
-        font-family: "Wanted Sans";
-        src: url("./public/fonts/wanted/WantedSans-ExtraBold.woff2") format("woff2");
-        font-weight: 800;
-        font-style: normal;
-        font-display: swap;
-      }
-
-      @font-face {
-        font-family: "Wanted Sans";
-        src: url("./public/fonts/wanted/WantedSans-Black.woff2") format("woff2");
-        font-weight: 900;
-        font-style: normal;
-        font-display: swap;
-      }
-
-      :root {
-        --bg: #ffffff;
-        --surface: #ffffff;
-        --surface-strong: #f5f7fb;
-        --line: #d9dee8;
-        --text: #101217;
-        --muted: #5b6575;
-        --accent: #ffbe0b;
-        --green: #b57900;
-        --shadow: 0 18px 45px rgba(16, 18, 14, 0.07);
-      }
-
-      * {
-        box-sizing: border-box;
-      }
-
-      html {
-        scroll-behavior: smooth;
-      }
-
-      body {
-        margin: 0;
-        font-family: "Wanted Sans", sans-serif;
-        background: var(--bg);
-        color: var(--text);
-        -webkit-font-smoothing: antialiased;
-      }
-
-      a {
-        color: inherit;
-        text-decoration: none;
-      }
-
-      img {
-        max-width: 100%;
-        display: block;
-      }
-
-      .site {
-        width: 100%;
-      }
-
-      .site > .divider,
-      .site > section:not(.hero),
-      .site > footer {
-        width: min(1240px, calc(100% - 56px));
-        margin: 0 auto;
-      }
-
-      .topbar {
-        position: fixed;
-        left: 50%;
-        top: 14px;
-        transform: translateX(-50%);
-        z-index: 90;
-        width: min(860px, calc(100% - 28px));
-        border: 1px solid rgba(255, 214, 137, 0.26);
-        border-radius: 14px;
-        backdrop-filter: blur(9px);
-        background: rgba(24, 20, 14, 0.72);
-        box-shadow: 0 14px 30px rgba(16, 12, 8, 0.34);
-        padding: 10px 14px;
-      }
-
-      .topbar nav {
-        display: flex;
-        justify-content: center;
-        gap: 20px;
-        align-items: center;
-      }
-
-      .topbar a {
-        font-size: 11px;
-        font-weight: 800;
-        letter-spacing: 0.1em;
-        text-transform: uppercase;
-        color: rgba(255, 247, 232, 0.95);
-        transition: color 0.2s ease;
-      }
-
-      .topbar a:hover {
-        color: #ffd876;
-      }
-
-      .divider {
-        width: 100%;
-        height: 1px;
-        background: var(--line);
-      }
-
-      .section-kicker {
-        display: inline-flex;
-        align-items: center;
-        gap: 8px;
-        margin: 0;
-        font-size: 11px;
-        font-weight: 800;
-        letter-spacing: 0.12em;
-        text-transform: uppercase;
-        color: #70766b;
-      }
-
-      .section-kicker::before {
-        content: "";
-        width: 8px;
-        height: 8px;
-        border-radius: 999px;
-        background: var(--accent);
-      }
-
-      .hero {
-        position: relative;
-        width: 100%;
-        min-height: 100svh;
-        overflow: hidden;
-        background: #0f141c;
-        padding: 0;
-      }
-
-      .hero-grid {
-        position: relative;
-        height: 100svh;
-        margin: 0;
-        display: block;
-      }
-
-      .hero-overlay {
-        position: absolute;
-        left: 50%;
-        transform: translateX(-50%);
-        bottom: 20px;
-        z-index: 4;
-        width: min(980px, calc(100vw - 42px));
-        display: grid;
-        gap: 10px;
-        justify-items: center;
-        text-align: center;
-      }
-
-      .hero-copy {
-        margin: 0 0 6px;
-        max-width: 930px;
-        font-size: clamp(14px, 1.12vw, 18px);
-        line-height: 1.74;
-        color: rgba(245, 248, 255, 0.93);
-        text-shadow: 0 8px 22px rgba(0, 0, 0, 0.4);
-        word-break: keep-all;
-        text-wrap: pretty;
-      }
-
-      .hero-visual {
-        position: absolute;
-        inset: 0;
-        z-index: 1;
-      }
-
-      .hero-scene {
-        margin: 0;
-        border-radius: 0;
-        border: 0;
-        overflow: hidden;
-        width: 100%;
-        height: 100%;
-        background: #101722;
-        position: relative;
-      }
-
-      .hero-scene img {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-        object-position: center;
-        filter: saturate(0.96) contrast(1.02) brightness(0.94);
-        animation: heroDrift 14s ease-in-out infinite alternate;
-      }
-
-      .hero-scene::after {
-        content: "";
-        position: absolute;
-        inset: 0;
-        background:
-          linear-gradient(180deg, rgba(8, 11, 18, 0) 0%, rgba(8, 11, 18, 0.28) 56%, rgba(8, 11, 18, 0.72) 100%),
-          linear-gradient(90deg, rgba(8, 11, 18, 0.32) 0%, rgba(8, 11, 18, 0.06) 50%, rgba(8, 11, 18, 0.32) 100%);
-      }
-
-      .scene-name-overlay {
-        margin: 2px 0 0;
-        position: static;
-        font-size: clamp(70px, 8.8vw, 180px);
-        font-weight: 900;
-        letter-spacing: -0.018em;
-        line-height: 0.92;
-        white-space: nowrap;
-        color: rgba(248, 251, 255, 0.98);
-        text-transform: uppercase;
-        text-shadow: 0 14px 34px rgba(0, 0, 0, 0.38);
-      }
-
-      .signal {
-        padding: 62px 0;
-      }
-
-      .manifesto {
-        padding: 58px 0;
-      }
-
-      .manifesto-card {
-        border: 1px solid #dde2eb;
-        border-radius: 22px;
-        background: linear-gradient(155deg, #f9fbff 0%, #f2f5fb 100%);
-        box-shadow: var(--shadow);
-        padding: 28px;
-        display: grid;
-        grid-template-columns: minmax(0, 0.98fr) minmax(0, 1.02fr);
-        gap: 22px;
-        align-items: center;
-        transition: transform 0.32s ease, box-shadow 0.32s ease, border-color 0.32s ease;
-      }
-
-      .manifesto-card:hover {
-        transform: translateY(-4px);
-        box-shadow: 0 22px 48px rgba(16, 18, 23, 0.11);
-        border-color: #d1d8e4;
-      }
-
-      .manifesto-copy h2 {
-        margin: 10px 0 0;
-        font-size: clamp(44px, 4.7vw, 76px);
-        line-height: 0.98;
-        letter-spacing: -0.02em;
-        font-weight: 800;
-        word-break: keep-all;
-      }
-
-      .manifesto-copy p {
-        margin: 16px 0 0;
-        font-size: 16px;
-        line-height: 1.75;
-        color: #454d5c;
-        word-break: keep-all;
-      }
-
-      .manifesto-visual {
-        margin: 0;
-        border: 1px solid #e1e6ef;
-        border-radius: 18px;
-        background: #f6f8fc;
-        min-height: 420px;
-        display: grid;
-        place-items: center;
-        padding: 12px;
-      }
-
-      .manifesto-visual img {
-        width: 100%;
-        max-width: 620px;
-        height: auto;
-      }
-
-      .section-head {
-        display: grid;
-        gap: 10px;
-        margin-bottom: 26px;
-      }
-
-      .section-head h2 {
-        margin: 0;
-        font-size: clamp(40px, 4.4vw, 68px);
-        line-height: 0.98;
-        letter-spacing: -0.02em;
-        font-weight: 800;
-      }
-
-      .section-head p {
-        margin: 0;
-        max-width: 820px;
-        font-size: 16px;
-        line-height: 1.72;
-        color: #40463d;
-        word-break: keep-all;
-      }
-
-      .signal-grid {
-        display: grid;
-        grid-template-columns: repeat(4, minmax(0, 1fr));
-        gap: 12px;
-      }
-
-      .signal-card {
-        border: 1px solid #dde2eb;
-        border-radius: 14px;
-        background: linear-gradient(165deg, #f9fbff 0%, #f3f6fc 100%);
-        padding: 14px;
-        transition: transform 0.28s ease, box-shadow 0.28s ease, border-color 0.28s ease;
-      }
-
-      .signal-card:hover {
-        transform: translateY(-4px);
-        box-shadow: 0 18px 38px rgba(16, 18, 23, 0.1);
-        border-color: #d0d7e4;
-      }
-
-      .signal-head {
-        display: inline-flex;
-        align-items: center;
-        gap: 8px;
-      }
-
-      .signal-head img {
-        width: 16px;
-        height: 16px;
-        opacity: 0.78;
-      }
-
-      .signal-label {
-        margin: 0;
-        font-size: 11px;
-        font-weight: 800;
-        letter-spacing: 0.08em;
-        text-transform: uppercase;
-        color: #6c7483;
-      }
-
-      .signal-value {
-        margin: 8px 0 0;
-        font-size: clamp(30px, 2.45vw, 42px);
-        font-weight: 800;
-        line-height: 1;
-        letter-spacing: -0.02em;
-      }
-
-      .signal-meta {
-        margin: 6px 0 0;
-        font-size: 12px;
-        line-height: 1.5;
-        color: #566072;
-      }
-
-      .projects {
-        padding: 72px 0;
-      }
-
-      .letter {
-        padding: 72px 0;
-      }
-
-      .letter-grid {
-        display: grid;
-        grid-template-columns: minmax(0, 0.96fr) minmax(0, 1.04fr);
-        gap: 20px;
-      }
-
-      .letter-lead {
-        border: 1px solid #dde2eb;
-        border-radius: 18px;
-        background: var(--surface);
-        padding: 16px;
-        box-shadow: var(--shadow);
-        display: grid;
-        gap: 12px;
-      }
-
-      .letter-visual {
-        margin: 0;
-        border: 1px solid #e1e6ef;
-        border-radius: 14px;
-        background: linear-gradient(150deg, #f5f8fd 0%, #ffffff 100%);
-        min-height: 260px;
-        display: grid;
-        place-items: center;
-        padding: 10px;
-      }
-
-      .letter-visual img {
-        width: 100%;
-        max-width: 420px;
-        height: auto;
-      }
-
-      .letter-quote {
-        margin: 0;
-        border-left: 4px solid var(--accent);
-        border-radius: 10px;
-        background: #f9fbff;
-        border: 1px solid #e2e7f0;
-        padding: 12px 14px;
-        font-size: 15px;
-        line-height: 1.72;
-        color: #3c443b;
-        word-break: keep-all;
-      }
-
-      .letter-quote strong {
-        font-size: 16px;
-      }
-
-      .letter-cards {
-        display: grid;
-        gap: 12px;
-      }
-
-      .letter-card {
-        border: 1px solid #dde2eb;
-        border-radius: 16px;
-        background: linear-gradient(160deg, #f9fbff 0%, #f3f6fc 100%);
-        padding: 14px;
-        box-shadow: var(--shadow);
-      }
-
-      .letter-head {
-        display: inline-flex;
-        align-items: center;
-        gap: 8px;
-      }
-
-      .letter-head img {
-        width: 16px;
-        height: 16px;
-        opacity: 0.8;
-      }
-
-      .letter-head p {
-        margin: 0;
-        font-size: 11px;
-        font-weight: 800;
-        text-transform: uppercase;
-        letter-spacing: 0.09em;
-        color: #6c7585;
-      }
-
-      .letter-card h3 {
-        margin: 8px 0 0;
-        font-size: clamp(26px, 2.1vw, 34px);
-        line-height: 1.14;
-        letter-spacing: -0.01em;
-        font-weight: 800;
-        word-break: keep-all;
-      }
-
-      .letter-card ul {
-        margin: 10px 0 0;
-        padding: 0 0 0 16px;
-        display: grid;
-        gap: 6px;
-      }
-
-      .letter-card li {
-        font-size: 14px;
-        line-height: 1.6;
-        color: #4a5248;
-        word-break: keep-all;
-      }
-
-      .letter-gallery {
-        margin-top: 12px;
-        display: grid;
-        grid-template-columns: repeat(3, minmax(0, 1fr));
-        gap: 10px;
-      }
-
-      .letter-gallery figure {
-        margin: 0;
-        border: 1px solid #e1e6ef;
-        border-radius: 12px;
-        background: #f8f9fc;
-        min-height: 130px;
-        display: grid;
-        place-items: center;
-        padding: 8px;
-      }
-
-      .letter-gallery img {
-        width: 100%;
-        max-width: 160px;
-        height: auto;
-      }
-
-      .project-grid {
-        display: grid;
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-        gap: 22px;
-      }
-
-      .project-card {
-        border: 1px solid #dde2eb;
-        border-radius: 16px;
-        background: var(--surface);
-        padding: 14px;
-        display: grid;
-        gap: 12px;
-        box-shadow: var(--shadow);
-        transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
-      }
-
-      .project-card:hover {
-        transform: translateY(-4px);
-        box-shadow: 0 20px 42px rgba(16, 18, 23, 0.12);
-        border-color: #d0d7e4;
-      }
-
-      .project-thumb {
-        margin: 0;
-        border-radius: 12px;
-        border: 1px solid #dde2eb;
-        overflow: hidden;
-        aspect-ratio: 16 / 10;
-        background: #eef2f7;
-      }
-
-      .project-thumb img {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-        transition: transform 0.6s cubic-bezier(0.2, 0.8, 0.2, 1), filter 0.6s ease;
-      }
-
-      .project-thumb.ph40-focus img {
-        object-fit: cover;
-        object-position: 50% 36%;
-        transform: scale(1.16);
-        transform-origin: center;
-      }
-
-      .project-thumb.seo-focus img {
-        object-fit: cover;
-        object-position: 30% 58%;
-        transform: scale(1.38);
-        transform-origin: center;
-      }
-
-      .project-thumb.fit-contain img {
-        object-fit: contain;
-        background: #f6f8fc;
-      }
-
-      .project-thumb.dangnabal-focus img {
-        object-fit: cover;
-        object-position: center 18%;
-        transform: scale(1.08);
-        transform-origin: center top;
-      }
-
-      .project-card:hover .project-thumb img {
-        filter: saturate(1.06) contrast(1.02);
-      }
-
-      .project-tag {
-        margin: 0;
-        font-size: 11px;
-        font-weight: 700;
-        text-transform: uppercase;
-        letter-spacing: 0.08em;
-        color: #70798a;
-      }
-
-      .project-title {
-        margin: 0;
-        font-size: clamp(31px, 2.35vw, 42px);
-        line-height: 1.08;
-        font-weight: 800;
-        letter-spacing: -0.01em;
-        word-break: keep-all;
-      }
-
-      .project-copy {
-        margin: 0;
-        font-size: 15px;
-        line-height: 1.68;
-        color: #485265;
-        word-break: keep-all;
-      }
-
-      .project-metric {
-        margin: 0;
-        font-size: 13px;
-        font-weight: 800;
-        color: var(--green);
-      }
-
-      .project-link {
-        margin-top: 4px;
-        display: inline-flex;
-        align-items: center;
-        gap: 6px;
-        width: fit-content;
-        border: 1px solid #e8c76a;
-        border-radius: 999px;
-        background: #fff7df;
-        padding: 8px 12px;
-        font-size: 11px;
-        font-weight: 800;
-        letter-spacing: 0.06em;
-        text-transform: uppercase;
-        color: #775200;
-        transition: transform 0.2s ease, background-color 0.2s ease;
-      }
-
-      .project-link:hover {
-        transform: translateY(-1px);
-        background: #ffefbf;
-      }
-
-      .project-links {
-        margin-top: 4px;
-        display: flex;
-        flex-wrap: wrap;
-        gap: 8px;
-      }
-
-      .project-card-wide {
-        grid-column: 1 / -1;
-        padding: 16px;
-      }
-
-      .project-wide-grid {
-        display: grid;
-        grid-template-columns: minmax(0, 1fr) minmax(0, 1.05fr);
-        gap: 16px;
-        align-items: start;
-      }
-
-      .project-wide-copy {
-        display: grid;
-        gap: 10px;
-      }
-
-      .project-wide-meta {
-        margin: 0;
-        font-size: 12px;
-        font-weight: 700;
-        letter-spacing: 0.06em;
-        text-transform: uppercase;
-        color: #6f7787;
-      }
-
-      .project-points {
-        margin: 0;
-        padding: 0 0 0 18px;
-        display: grid;
-        gap: 6px;
-      }
-
-      .project-points li {
-        font-size: 14px;
-        line-height: 1.58;
-        color: #454f63;
-        word-break: keep-all;
-      }
-
-      .experience {
-        padding: 72px 0;
-      }
-
-      .essay {
-        padding: 72px 0;
-      }
-
-      .essay-grid {
-        display: block;
-      }
-
-      .essay-stack {
-        display: grid;
-        gap: 14px;
-      }
-
-      .essay-card {
-        border: 1px solid #d4d8e2;
-        border-radius: 16px;
-        background: #ffffff;
-        padding: 18px;
-        box-shadow: var(--shadow);
-        transition: transform 0.28s ease, box-shadow 0.28s ease, border-color 0.28s ease;
-      }
-
-      .essay-card:hover {
-        transform: translateY(-3px);
-        box-shadow: 0 18px 36px rgba(16, 18, 23, 0.1);
-        border-color: #d1d8e5;
-      }
-
-      .essay-card h3 {
-        margin: 6px 0 0;
-        font-size: clamp(25px, 2vw, 34px);
-        line-height: 1.12;
-        letter-spacing: -0.01em;
-        font-weight: 800;
-        word-break: keep-all;
-      }
-
-      .essay-card p {
-        margin: 10px 0 0;
-        max-width: 92ch;
-        font-size: 15px;
-        line-height: 1.8;
-        color: #3a4355;
-        word-break: normal;
-        overflow-wrap: anywhere;
-        text-wrap: pretty;
-      }
-
-      .essay-points {
-        margin: 12px 0 0;
-        padding: 0;
-        list-style: none;
-        display: grid;
-        gap: 8px;
-      }
-
-      .essay-points li {
-        border-left: 3px solid var(--accent);
-        border-radius: 8px;
-        background: #f8f9fc;
-        padding: 8px 10px;
-        font-size: 14px;
-        line-height: 1.65;
-        color: #333c4d;
-      }
-
-      .essay-illustration-card {
-        margin: 0;
-        border: 1px solid #d4d8e2;
-        border-radius: 16px;
-        background: #ffffff;
-        min-height: 260px;
-        display: grid;
-        place-items: center;
-        padding: 14px;
-        box-shadow: var(--shadow);
-      }
-
-      .essay-illustration-card img {
-        width: 100%;
-        max-width: 460px;
-        height: auto;
-      }
-
-      .essay-summary-card h3 {
-        font-size: clamp(24px, 2vw, 32px);
-        line-height: 1.28;
-        max-width: 38ch;
-        text-wrap: balance;
-      }
-
-      .essay .section-head p {
-        max-width: 760px;
-        text-wrap: balance;
-      }
-
-      .summary-break {
-        display: inline;
-      }
-
-      .experience-grid {
-        display: grid;
-        grid-template-columns: minmax(0, 1.08fr) minmax(0, 0.92fr);
-        gap: 20px;
-        align-items: start;
-      }
-
-      .timeline {
-        border: 1px solid #dde2eb;
-        border-radius: 18px;
-        background: var(--surface);
-        padding: 18px;
-        box-shadow: var(--shadow);
-        height: fit-content;
-        transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
-      }
-
-      .timeline:hover {
-        transform: translateY(-3px);
-        box-shadow: 0 20px 42px rgba(16, 18, 23, 0.11);
-        border-color: #d0d7e4;
-      }
-
-      .timeline-list {
-        margin: 12px 0 0;
-        padding: 0;
-        list-style: none;
-        display: grid;
-        gap: 10px;
-        position: relative;
-      }
-
-      .timeline-list::before {
-        content: "";
-        position: absolute;
-        left: 15px;
-        top: 12px;
-        bottom: 12px;
-        width: 2px;
-        background: linear-gradient(180deg, #ffd973 0%, #dde3ed 100%);
-      }
-
-      .timeline-item {
-        display: grid;
-        grid-template-columns: 30px 1fr;
-        gap: 10px;
-        align-items: start;
-      }
-
-      .timeline-dot {
-        z-index: 1;
-        width: 30px;
-        height: 30px;
-        border-radius: 999px;
-        border: 1px solid #ecd79f;
-        background: #fff8df;
-        display: grid;
-        place-items: center;
-        animation: dotPulse 3.2s ease-in-out infinite;
-      }
-
-      .timeline-dot img {
-        width: 14px;
-        height: 14px;
-      }
-
-      .timeline-body {
-        border: 1px solid #dfe4ed;
-        border-left: 4px solid var(--accent);
-        border-radius: 12px;
-        background: #f9fbff;
-        padding: 12px 14px;
-      }
-
-      .timeline-date {
-        display: inline-block;
-        font-size: 11px;
-        font-weight: 800;
-        letter-spacing: 0.08em;
-        text-transform: uppercase;
-        color: #777e74;
-      }
-
-      .timeline-title {
-        margin: 5px 0 0;
-        font-size: 22px;
-        line-height: 1.2;
-        font-weight: 800;
-      }
-
-      .timeline-copy {
-        margin: 5px 0 0;
-        font-size: 14px;
-        line-height: 1.55;
-        color: #495048;
-      }
-
-      .timeline-role {
-        margin: 4px 0 0;
-        font-size: 12px;
-        font-weight: 700;
-        line-height: 1.45;
-        color: #4d5870;
-      }
-
-      .timeline-points {
-        margin: 8px 0 0;
-        padding: 0 0 0 16px;
-        display: grid;
-        gap: 4px;
-      }
-
-      .timeline-points li {
-        font-size: 13px;
-        line-height: 1.55;
-        color: #3d4454;
-        word-break: keep-all;
-      }
-
-      .experience-left {
-        display: grid;
-        gap: 12px;
-        align-content: start;
-      }
-
-      .team-visual-card {
-        padding: 14px;
-      }
-
-      .team-visual-card h3 {
-        margin: 8px 0 0;
-        font-size: 26px;
-        line-height: 1.08;
-        font-weight: 800;
-      }
-
-      .team-visual-figure {
-        margin: 10px 0 0;
-        border: 1px solid #e0e5ee;
-        border-radius: 12px;
-        background: #ffffff;
-        overflow: hidden;
-        aspect-ratio: 16 / 10;
-      }
-
-      .team-visual-figure img {
-        width: 100%;
-        height: 100%;
-        object-fit: contain;
-        transition: transform 0.45s ease;
-      }
-
-      .team-visual-card:hover .team-visual-figure img {
-        transform: scale(1.03);
-      }
-
-      .team-visual-note {
-        margin: 10px 0 0;
-        font-size: 13px;
-        line-height: 1.6;
-        color: #4b5467;
-        word-break: keep-all;
-      }
-
-      .stack-col {
-        display: grid;
-        gap: 12px;
-      }
-
-      .board {
-        border: 1px solid #dde2eb;
-        border-radius: 18px;
-        background: var(--surface);
-        padding: 16px;
-        box-shadow: var(--shadow);
-        transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
-      }
-
-      .board:hover {
-        transform: translateY(-3px);
-        box-shadow: 0 20px 42px rgba(16, 18, 23, 0.11);
-        border-color: #d0d7e4;
-      }
-
-      .board h3 {
-        margin: 8px 0 0;
-        font-size: 32px;
-        line-height: 1.05;
-        font-weight: 800;
-      }
-
-      .board-list {
-        margin: 12px 0 0;
-        padding: 0;
-        list-style: none;
-        display: grid;
-        gap: 8px;
-      }
-
-      .board-list li {
-        border: 1px solid #e0e6ef;
-        border-radius: 10px;
-        background: #f8faff;
-        padding: 10px 12px;
-      }
-
-      .board-list strong {
-        display: block;
-        font-size: 15px;
-        line-height: 1.35;
-      }
-
-      .board-list span {
-        display: block;
-        margin-top: 2px;
-        font-size: 12px;
-        color: #5f6778;
-      }
-
-      .board-list .entry-meta {
-        margin-top: 4px;
-        font-size: 11px;
-        font-weight: 700;
-        letter-spacing: 0.03em;
-        color: #8a6500;
-      }
-
-      .progress-list {
-        margin-top: 14px;
-        display: grid;
-        gap: 10px;
-      }
-
-      .progress-item {
-        display: grid;
-        gap: 6px;
-      }
-
-      .progress-head {
-        display: flex;
-        justify-content: space-between;
-        align-items: baseline;
-      }
-
-      .progress-head span:first-child {
-        font-size: 11px;
-        font-weight: 800;
-        letter-spacing: 0.08em;
-        text-transform: uppercase;
-        color: #666f80;
-      }
-
-      .progress-head span:last-child {
-        font-size: 14px;
-        font-weight: 800;
-      }
-
-      .progress-track {
-        width: 100%;
-        height: 9px;
-        border-radius: 999px;
-        background: #e2e7f0;
-        overflow: hidden;
-      }
-
-      .progress-fill {
-        width: 0;
-        height: 100%;
-        border-radius: 999px;
-        background: linear-gradient(90deg, #f0aa00 0%, #ffd34d 100%);
-        transition: width 1.15s cubic-bezier(0.22, 1, 0.36, 1);
-      }
-
-      .board-visual {
-        margin-top: 12px;
-        border: 1px solid #e1e6ef;
-        border-radius: 12px;
-        background: linear-gradient(150deg, #f5f8fd 0%, #ffffff 100%);
-        padding: 8px;
-      }
-
-      .board-visual img {
-        width: 100%;
-        height: 186px;
-        object-fit: contain;
-      }
-
-      .conditions {
-        padding: 68px 0;
-      }
-
-      .conditions-grid {
-        display: grid;
-        grid-template-columns: repeat(3, minmax(0, 1fr));
-        gap: 12px;
-      }
-
-      .condition-card {
-        border: 1px solid #d8dde7;
-        border-radius: 16px;
-        background: #ffffff;
-        padding: 16px;
-        box-shadow: var(--shadow);
-        transition: transform 0.28s ease, box-shadow 0.28s ease, border-color 0.28s ease;
-      }
-
-      .condition-card:hover {
-        transform: translateY(-3px);
-        box-shadow: 0 18px 34px rgba(16, 18, 23, 0.09);
-        border-color: #cfd7e5;
-      }
-
-      .condition-label {
-        margin: 0;
-        font-size: 11px;
-        font-weight: 800;
-        letter-spacing: 0.08em;
-        text-transform: uppercase;
-        color: #70798a;
-      }
-
-      .condition-value {
-        margin: 8px 0 0;
-        font-size: clamp(34px, 2.4vw, 50px);
-        line-height: 1.04;
-        letter-spacing: -0.02em;
-        font-weight: 800;
-        color: #131722;
-        word-break: keep-all;
-      }
-
-      .condition-meta {
-        margin: 8px 0 0;
-        font-size: 13px;
-        line-height: 1.62;
-        color: #505a6d;
-        word-break: keep-all;
-      }
-
-
-      .footer {
-        padding: 28px 0 44px;
-      }
-
-      .footer-grid {
-        border-top: 1px solid var(--line);
-        padding-top: 20px;
-        display: grid;
-        grid-template-columns: repeat(3, minmax(0, 1fr));
-        gap: 14px;
-        align-items: center;
-      }
-
-      .footer-item {
-        margin: 0;
-        font-size: 12px;
-        font-weight: 700;
-        color: #565d53;
-        letter-spacing: 0.04em;
-      }
-
-      .footer-item.center {
-        text-align: center;
-      }
-
-      .footer-item.right {
-        text-align: right;
-      }
-
-      .reveal {
-        opacity: 0;
-        transform: translateY(22px);
-        transition: opacity 0.65s ease, transform 0.65s cubic-bezier(0.16, 1, 0.3, 1);
-      }
-
-      .reveal.is-visible {
-        opacity: 1;
-        transform: translateY(0);
-      }
-
-      @keyframes heroDrift {
-        0% {
-          transform: scale(1);
-        }
-        100% {
-          transform: scale(1.04);
-        }
-      }
-
-      @keyframes dotPulse {
-        0%,
-        100% {
-          box-shadow: 0 0 0 0 rgba(255, 190, 11, 0.34);
-        }
-        50% {
-          box-shadow: 0 0 0 8px rgba(255, 190, 11, 0);
-        }
-      }
-
-      @media (max-width: 1120px) {
-        .site > .divider,
-        .site > section:not(.hero),
-        .site > footer {
-          width: min(1240px, calc(100% - 34px));
+        @font-face {
+            font-family: 'IncheonEducation';
+            src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2307-2@1.0/iceJaram-Rg.woff2') format('woff2');
+            font-weight: normal;
+            font-display: swap;
         }
 
-        .topbar {
-          width: min(760px, calc(100% - 24px));
-          top: 12px;
-          padding: 9px 12px;
+        @font-face {
+            font-family: 'A2z';
+            src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/2601-6@1.0/에이투지체-1Thin.woff2') format('woff2');
+            font-weight: 100;
+            font-display: swap;
         }
 
-        .topbar nav {
-          gap: 14px;
+        @font-face {
+            font-family: 'A2z';
+            src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/2601-6@1.0/에이투지체-2ExtraLight.woff2') format('woff2');
+            font-weight: 200;
+            font-display: swap;
         }
 
-        .experience-grid,
-        .letter-grid {
-          grid-template-columns: 1fr;
+        @font-face {
+            font-family: 'A2z';
+            src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/2601-6@1.0/에이투지체-3Light.woff2') format('woff2');
+            font-weight: 300;
+            font-display: swap;
         }
 
-        .conditions-grid {
-          grid-template-columns: repeat(2, minmax(0, 1fr));
+        @font-face {
+            font-family: 'A2z';
+            src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/2601-6@1.0/에이투지체-4Regular.woff2') format('woff2');
+            font-weight: 400;
+            font-display: swap;
         }
 
-        .hero-overlay {
-          bottom: 18px;
-          width: min(900px, calc(100vw - 32px));
+        @font-face {
+            font-family: 'A2z';
+            src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/2601-6@1.0/에이투지체-5Medium.woff2') format('woff2');
+            font-weight: 500;
+            font-display: swap;
         }
 
-        .scene-name-overlay {
-          font-size: clamp(58px, 10vw, 132px);
-          white-space: nowrap;
+        @font-face {
+            font-family: 'A2z';
+            src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/2601-6@1.0/에이투지체-6SemiBold.woff2') format('woff2');
+            font-weight: 600;
+            font-display: swap;
         }
 
-        .signal-grid {
-          grid-template-columns: repeat(2, minmax(0, 1fr));
+        @font-face {
+            font-family: 'A2z';
+            src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/2601-6@1.0/에이투지체-7Bold.woff2') format('woff2');
+            font-weight: 700;
+            font-display: swap;
         }
 
-        .manifesto-card {
-          grid-template-columns: 1fr;
+        @font-face {
+            font-family: 'A2z';
+            src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/2601-6@1.0/에이투지체-8ExtraBold.woff2') format('woff2');
+            font-weight: 800;
+            font-display: swap;
         }
 
-        .manifesto-visual {
-          min-height: 360px;
+        @font-face {
+            font-family: 'A2z';
+            src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/2601-6@1.0/에이투지체-9Black.woff2') format('woff2');
+            font-weight: 900;
+            font-display: swap;
         }
 
-        .letter-gallery {
-          grid-template-columns: repeat(3, minmax(0, 1fr));
-        }
-      }
-
-      @media (max-width: 760px) {
-        .topbar {
-          width: calc(100% - 14px);
-          top: 8px;
-          padding: 8px 10px;
-          border-radius: 12px;
-        }
-
-        .topbar nav {
-          gap: 10px;
-          overflow-x: auto;
-          white-space: nowrap;
-          justify-content: flex-start;
-          scrollbar-width: none;
+        /* Typography & Readability Fixes */
+        body {
+            background-color: #FFFFFF;
+            color: #0A0A0A;
+            /* 
+               Core fix for Korean line-breaking: 
+               Ensures words don't break mid-character, giving a natural editorial feel.
+            */
+            word-break: keep-all; 
+            overflow-wrap: break-word;
+            letter-spacing: 0;
+            font-synthesis: none;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
         }
 
-        .topbar nav::-webkit-scrollbar {
-          display: none;
+        body .text-brand-gray.font-light {
+            font-weight: 400;
         }
 
-        .topbar a {
-          font-size: 10px;
-          letter-spacing: 0.08em;
+        /* Custom minimal scrollbar */
+        ::-webkit-scrollbar {
+            width: 5px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #FFFFFF;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #D1D1D1;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #0A0A0A;
         }
 
-        .site > .divider,
-        .site > section:not(.hero),
-        .site > footer {
-          width: min(1240px, calc(100% - 18px));
+        /* Reveal animations - Smooth Apple-like fade up */
+        .reveal {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 1.2s cubic-bezier(0.22, 1, 0.36, 1), transform 1.2s cubic-bezier(0.22, 1, 0.36, 1);
+            will-change: opacity, transform;
+        }
+        .reveal.active {
+            opacity: 1;
+            transform: translateY(0);
         }
 
-        .hero {
-          min-height: 94svh;
+        /* Hairline borders for Dior-like elegance */
+        .hairline-b {
+            border-bottom: 1px solid #E5E5E5;
+        }
+        .hairline-t {
+            border-top: 1px solid #E5E5E5;
         }
 
-        .hero-grid {
-          height: 94svh;
+        /* Image treatment - keep real work evidence legible */
+        .img-wrapper {
+            overflow: hidden;
+            background-color: #F8F8F8;
+        }
+        .img-wrapper img {
+            transition: transform 1.5s cubic-bezier(0.16, 1, 0.3, 1), filter 1s ease;
+            filter: grayscale(12%) saturate(0.92) contrast(0.98);
+        }
+        .group:hover .img-wrapper img {
+            transform: scale(1.015);
+            filter: grayscale(0%) saturate(1) contrast(1);
         }
 
-        .hero-overlay {
-          left: 50%;
-          right: auto;
-          width: calc(100% - 20px);
-          bottom: 12px;
-          transform: translateX(-50%);
+        .evidence-board {
+            overflow: hidden;
+            border: 1px solid #E5E5E5;
+            background: #E5E5E5;
+            display: grid;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            gap: 1px;
         }
 
-        .hero-copy {
-          margin-top: 0;
-          font-size: 12px;
-          line-height: 1.6;
+        .evidence-shot {
+            --image-scale: 1.04;
+            background: #F7F8F6;
+            overflow: hidden;
+            min-height: 0;
         }
 
-        .scene-name-overlay {
-          font-size: clamp(44px, 12vw, 78px);
-          white-space: nowrap;
+        .evidence-shot.main,
+        .evidence-shot.full {
+            grid-column: 1 / -1;
         }
 
-        .section-head h2 {
-          font-size: clamp(34px, 10vw, 50px);
+        .evidence-shot.main {
+            aspect-ratio: 4 / 3;
         }
 
-        .section-head p {
-          font-size: 14px;
-          line-height: 1.66;
+        .evidence-shot.full {
+            aspect-ratio: 16 / 7;
         }
 
-        .signal-grid,
-        .project-grid,
-        .conditions-grid {
-          grid-template-columns: 1fr;
+        .evidence-shot.split {
+            aspect-ratio: 4 / 3;
         }
 
-        .project-card-wide {
-          grid-column: auto;
-          padding: 12px;
+        .evidence-shot.tall {
+            grid-column: 1 / -1;
+            aspect-ratio: 4 / 3;
         }
 
-        .project-wide-grid {
-          grid-template-columns: 1fr;
+        .evidence-shot.square {
+            grid-column: 1 / -1;
+            aspect-ratio: 1 / 1;
         }
 
-        .letter {
-          padding: 52px 0;
+        .evidence-shot img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+            object-position: center top;
+            padding: clamp(8px, 1.4vw, 18px);
+            transition: transform 1.5s cubic-bezier(0.16, 1, 0.3, 1), filter 1s ease;
+            transform: scale(var(--image-scale));
+            transform-origin: center top;
+            filter: grayscale(10%) saturate(0.9) contrast(0.98);
         }
 
-        .letter-card h3 {
-          font-size: clamp(22px, 8vw, 30px);
+        .group:hover .evidence-shot img {
+            transform: scale(calc(var(--image-scale) + 0.018));
+            filter: grayscale(0%) saturate(1) contrast(1);
         }
 
-        .letter-card li {
-          font-size: 13px;
-          line-height: 1.58;
+        .evidence-shot.cover img {
+            --image-scale: 1;
+            object-fit: cover;
+            object-position: center top;
+            padding: 0;
         }
 
-        .letter-quote {
-          font-size: 14px;
-          line-height: 1.66;
+        .evidence-shot.zoom-soft {
+            --image-scale: 1.1;
         }
 
-        .letter-gallery {
-          grid-template-columns: 1fr;
+        .evidence-shot.zoom-medium {
+            --image-scale: 1.18;
         }
 
-        .letter-visual {
-          min-height: 220px;
+        .evidence-shot.zoom-strong {
+            --image-scale: 1.32;
         }
 
-        .manifesto {
-          padding: 42px 0;
+        .ai-frame {
+            overflow: hidden;
+            background: #F4F6F3;
         }
 
-        .manifesto-card {
-          padding: 18px;
-          gap: 14px;
+        .ai-frame img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: 48% 50%;
+            filter: saturate(0.88) contrast(0.98);
         }
 
-        .manifesto-copy h2 {
-          font-size: clamp(34px, 10vw, 56px);
-          line-height: 1.02;
-        }
-
-        .manifesto-copy p {
-          font-size: 14px;
-          line-height: 1.68;
-        }
-
-        .manifesto-visual {
-          min-height: 280px;
-          border-radius: 14px;
-          padding: 10px;
-        }
-
-        .project-card {
-          padding: 12px;
-        }
-
-        .project-thumb {
-          aspect-ratio: 4 / 3;
-        }
-
-        .project-thumb.ph40-focus img {
-          transform: scale(1.05);
-          object-position: 50% 38%;
-        }
-
-        .project-thumb.seo-focus img {
-          transform: scale(1.28);
-          object-position: 30% 58%;
-        }
-
-        .project-title {
-          font-size: 34px;
-        }
-
-        .project-copy {
-          font-size: 14px;
-          line-height: 1.64;
-        }
-
-        .essay-card p {
-          max-width: 100%;
-          font-size: 14px;
-          line-height: 1.75;
-        }
-
-        .essay-points li {
-          font-size: 13px;
-          line-height: 1.6;
-        }
-
-        .essay-card h3,
-        .essay-summary-card h3 {
-          font-size: clamp(22px, 7.4vw, 34px);
-          line-height: 1.3;
-          max-width: 100%;
-        }
-
-        .essay .section-head p {
-          max-width: 100%;
-        }
-
-        .summary-break {
-          display: none;
-        }
-
-        .essay-illustration-card {
-          min-height: 220px;
-          padding: 12px;
-        }
-
-        .timeline-title {
-          font-size: 20px;
-        }
-
-        .board h3 {
-          font-size: 28px;
-        }
-
-        .footer-grid {
-          grid-template-columns: 1fr;
-        }
-
-        .footer-item,
-        .footer-item.center,
-        .footer-item.right {
-          text-align: center;
-        }
-      }
-
-      @media (prefers-reduced-motion: reduce) {
-        html {
-          scroll-behavior: auto;
-        }
-
-        .reveal,
-        .progress-fill {
-          transition: none;
-        }
-
-        .hero-scene img,
-        .timeline-dot {
-          animation: none;
-        }
-      }
+        /* Staggered transition delays */
+        .delay-100 { transition-delay: 0.1s; }
+        .delay-200 { transition-delay: 0.2s; }
+        .delay-300 { transition-delay: 0.3s; }
     </style>
-  </head>
-  <body>
-    <div class="site">
-      <header class="topbar" aria-label="Top Menu">
-        <nav>
-          <a href="#home">Home</a>
-          <a href="#intro">Introduce</a>
-          <a href="#signal">Signal</a>
-          <a href="#experience">Experience</a>
-          <a href="#projects">Projects</a>
-          <a href="#essay">Essay</a>
-          <a href="#conditions">Conditions</a>
-          <a href="#contact">Contact</a>
-        </nav>
-      </header>
+</head>
 
-      <section id="home" class="hero reveal">
-        <div class="hero-grid">
-          <div class="hero-overlay">
-            <p class="hero-copy">
-              조리학 전공에서 출발해 의료·뷰티·F&amp;B·커머스 실무를 거치며<br />
-              콘텐츠 기획은 물론 광고 운영, 상세페이지, 스마트스토어, 그리고<br />
-              바이럴 PM까지 연결되는 실행형 커리어를 쌓았습니다.
-            </p>
-            <p class="scene-name-overlay">MINJI KIM</p>
-          </div>
-
-          <aside class="hero-visual">
-            <figure class="hero-scene">
-              <img
-                id="hero-scene-image"
-                src="./public/images/hero/minji-office-ai.png"
-                alt="대시보드를 보며 팀과 협업 중인 마케터 김민지 이미지"
-              />
-            </figure>
-          </aside>
+<body class="selection:bg-brand-black selection:text-white relative">
+    
+    <!-- Navigation -->
+    <nav class="fixed w-full z-50 px-6 py-8 md:px-12 flex justify-between items-center mix-blend-difference text-white pointer-events-none transition-all duration-300" id="navbar">
+        <div class="text-lg md:text-xl font-sans font-semibold uppercase pointer-events-auto">
+            Minji<i class="italic font-light">.</i>Kim
         </div>
-      </section>
-
-      <div class="divider"></div>
-
-      <section id="intro" class="manifesto reveal" aria-label="소개 메시지">
-        <article class="manifesto-card">
-          <div class="manifesto-copy">
-            <p class="section-kicker">Introduce</p>
-            <h2>돈 쓰는 맛을 탐구하는 마케터 김민지입니다.</h2>
-            <p>
-              보기 좋은 기획에서 멈추지 않고, 실제 운영 가능한 구조를 만들어 성과로 연결합니다.
-              브랜드가 원하는 메시지와 고객이 반응하는 포인트를 끝까지 맞추는 실행형 마케터입니다.
-            </p>
-          </div>
-          <figure class="manifesto-visual">
-            <img src="./public/graphics/marketing/growth-marketing.svg" alt="성과 상승을 상징하는 마케팅 일러스트" loading="lazy" />
-          </figure>
-        </article>
-      </section>
-
-      <div class="divider"></div>
-
-      <section id="experience" class="experience reveal" aria-label="경력 및 역량">
-        <div class="section-head">
-          <p class="section-kicker">Growth Story</p>
-          <h2>Education &amp; Experience</h2>
-          <p>
-            조리학 기반 분석 습관에서 시작해 디자인·SEO·커머스·PM으로 확장한 성장 경력을
-            한눈에 확인하실 수 있습니다.
-          </p>
+        <div class="hidden md:flex gap-10 text-[11px] font-semibold uppercase pointer-events-auto">
+            <a href="#about" class="hover:opacity-50 transition-opacity">About</a>
+            <a href="#competency" class="hover:opacity-50 transition-opacity">Competency</a>
+            <a href="#archive" class="hover:opacity-50 transition-opacity">Archive</a>
+            <a href="#contact" class="hover:opacity-50 transition-opacity">Contact</a>
         </div>
+    </nav>
 
-        <div class="experience-grid">
-          <div class="experience-left">
-          <article class="timeline">
-            <p class="section-kicker">Career Timeline</p>
-            <ol class="timeline-list">
-              <li class="timeline-item">
-                <span class="timeline-dot"><img src="./public/graphics/icons/management.svg" alt="" aria-hidden="true" /></span>
-                <div class="timeline-body">
-                  <span class="timeline-date">2022.09 - 2022.12</span>
-                  <p class="timeline-title">㈜ 위드앤코</p>
-                  <p class="timeline-role">일본 온라인 파트 · 인턴/수습 · 4개월</p>
-                  <ul class="timeline-points">
-                    <li>웹 디자인, 콘텐츠 디자인, 배너 디자인</li>
-                  </ul>
-                </div>
-              </li>
-
-              <li class="timeline-item">
-                <span class="timeline-dot"><img src="./public/graphics/icons/search.svg" alt="" aria-hidden="true" /></span>
-                <div class="timeline-body">
-                  <span class="timeline-date">2023.01 - 2023.11</span>
-                  <p class="timeline-title">지비비㈜(GBBCO.LTD)</p>
-                  <p class="timeline-role">마케팅팀 · 사원/팀원 · 11개월</p>
-                  <ul class="timeline-points">
-                    <li>상품 시장조사, 상품 촬영 기획</li>
-                    <li>상세페이지/패키지 기획 및 디자인, 오픈마켓 AMD</li>
-                    <li>광고 콘텐츠 기획/제작, 이벤트 배너·썸네일 기획/디자인</li>
-                  </ul>
-                </div>
-              </li>
-
-              <li class="timeline-item">
-                <span class="timeline-dot"><img src="./public/graphics/icons/strategy.svg" alt="" aria-hidden="true" /></span>
-                <div class="timeline-body">
-                  <span class="timeline-date">2024.02 - 2024.11</span>
-                  <p class="timeline-title">(주)비디에스</p>
-                  <p class="timeline-role">사원/팀원 · 병원마케팅</p>
-                  <ul class="timeline-points">
-                    <li>치과·뷰티 채널 SEO, 블로그·티스토리·맘카페 운영</li>
-                    <li>인스타그램·카카오·당근 콘텐츠 기획 및 채널 관리</li>
-                    <li>여성 페미닌 에티켓 제품 광고 기획, CTR 6.08%·전환 97건</li>
-                  </ul>
-                </div>
-              </li>
-
-              <li class="timeline-item">
-                <span class="timeline-dot"><img src="./public/graphics/icons/strategy.svg" alt="" aria-hidden="true" /></span>
-                <div class="timeline-body">
-                  <span class="timeline-date">2025.02 - 2025.08</span>
-                  <p class="timeline-title">브라더스팩토리(주)</p>
-                  <p class="timeline-role">마케팅 · 온라인 마케팅 및 브랜드 운영</p>
-                  <ul class="timeline-points">
-                    <li>당나발포차 네이버 검색/브랜드 광고 세팅·운영, 강탄 광고 운영 지원</li>
-                    <li>마스뚜르조 시장조사·제안서 작성·스마트스토어 개설·상품 등록</li>
-                    <li>상세페이지 기획/제작, 블로그 체험단/콘텐츠 마케팅 진행</li>
-                  </ul>
-                </div>
-              </li>
-
-              <li class="timeline-item">
-                <span class="timeline-dot"><img src="./public/graphics/icons/achievement.svg" alt="" aria-hidden="true" /></span>
-                <div class="timeline-body">
-                  <span class="timeline-date">2025.08 - Present</span>
-                  <p class="timeline-title">(주)우리의이야기</p>
-                  <p class="timeline-role">바이럴마케팅 · 병원 온라인 마케팅</p>
-                  <ul class="timeline-points">
-                    <li>성형외과 병원 대상 카페 바이럴 운영, 콘텐츠 노출 관리</li>
-                    <li>다수 병원 담당자 커뮤니케이션·일정 조율·플랜 관리</li>
-                    <li>최대 8개 병원 동시 운영, 일 최대 25건 바이럴 작업 수행</li>
-                  </ul>
-                </div>
-              </li>
-            </ol>
-          </article>
-
-          <article class="board team-visual-card" aria-label="마케팅 팀 협업 이미지">
-            <p class="section-kicker">Team Collaboration</p>
-            <h3>실행력은 결국 팀 협업에서 완성됩니다</h3>
-            <figure class="team-visual-figure">
-              <img src="./public/graphics/marketing/marketing-team-collaboration.png" alt="마케팅 팀이 데이터 보드를 중심으로 협업하는 일러스트" loading="lazy" />
-            </figure>
-            <p class="team-visual-note">
-              채널별 실행을 하나의 전환 구조로 묶어내고, 광고·콘텐츠·운영 팀과의 정렬을 통해
-              프로젝트 완성도를 높여온 협업형 실무 역량을 담았습니다.
-            </p>
-          </article>
-          </div>
-
-          <div class="stack-col">
-            <article class="board">
-              <p class="section-kicker">Capability Board</p>
-              <h3>실무 전환을 만든 핵심 스택</h3>
-              <ul class="board-list">
-                <li><strong>전략/운영</strong><span>SEO · 네이버 검색광고 · 바이럴 · 운영 PM</span></li>
-                <li><strong>크리에이티브</strong><span>카피라이팅 · 상세페이지 기획 · 콘텐츠 구조 설계</span></li>
-                <li><strong>툴/데이터</strong><span>Google Analytics · Excel · Photoshop · Illustrator · InDesign</span></li>
-              </ul>
-
-              <div class="progress-list" id="skill-bars">
-                <article class="progress-item">
-                  <div class="progress-head"><span>Execution</span><span>96</span></div>
-                  <div class="progress-track"><div class="progress-fill" data-width="96"></div></div>
-                </article>
-                <article class="progress-item">
-                  <div class="progress-head"><span>Multi-Project PM</span><span>92</span></div>
-                  <div class="progress-track"><div class="progress-fill" data-width="92"></div></div>
-                </article>
-                <article class="progress-item">
-                  <div class="progress-head"><span>Performance/SEO</span><span>89</span></div>
-                  <div class="progress-track"><div class="progress-fill" data-width="89"></div></div>
-                </article>
-                <article class="progress-item">
-                  <div class="progress-head"><span>Creative Planning</span><span>90</span></div>
-                  <div class="progress-track"><div class="progress-fill" data-width="90"></div></div>
-                </article>
-              </div>
-            </article>
-
-            <article class="board">
-              <p class="section-kicker">Education &amp; Training</p>
-              <h3>학력·교육·성장 기반</h3>
-              <ul class="board-list">
-                <li>
-                  <strong>전주대학교(4년제) 한식조리학</strong>
-                  <span class="entry-meta">2018.03 - 2022.02 · 학점 3.7/4.5</span>
-                </li>
-                <li>
-                  <strong>금오여자고등학교 문과계열</strong>
-                  <span class="entry-meta">2015.03 - 2018.02</span>
-                </li>
-                <li>
-                  <strong>러닝스푼즈 디지털 마케팅</strong>
-                  <span>데이터 활용, 콘텐츠 마케팅, 광고 집행, GA 실습, 온드미디어</span>
-                  <span class="entry-meta">2023.12 - 2024.03</span>
-                </li>
-                <li>
-                  <strong>그린컴퓨터아트학원</strong>
-                  <span>디지털 광고 디자인 실무(포토샵·일러스트·인디자인·프리미어·애프터이펙트)</span>
-                  <span class="entry-meta">2022.04 - 2022.09</span>
-                </li>
-                <li>
-                  <strong>전북바이오융합산업진흥원 · 전북대학교</strong>
-                  <span>식품 품질관리자 양성과정, HACCP 팀장과정</span>
-                  <span class="entry-meta">2021.07 - 2021.08</span>
-                </li>
-              </ul>
-            </article>
-
-            <article class="board">
-              <p class="section-kicker">License &amp; Activity</p>
-              <h3>자격·활동·현장 실행력</h3>
-              <ul class="board-list">
-                <li><strong>GTQ 일러스트 1급</strong><span class="entry-meta">2022.07 · 한국생산성본부(KPC)</span></li>
-                <li><strong>바리스타 2급</strong><span class="entry-meta">2020.05 · 한국커피교육협의회</span></li>
-                <li><strong>전주혜성중학교 사회봉사활동</strong><span class="entry-meta">2018.11 - 2019.01 · 청소년 제과 부문 특강</span></li>
-              </ul>
-            </article>
-
-          </div>
-        </div>
-      </section>
-
-      <div class="divider"></div>
-
-      <section id="signal" class="signal reveal" aria-label="핵심 성과 요약">
-        <div class="section-head">
-          <p class="section-kicker">Core Signals</p>
-          <h2>Core Signals</h2>
-          <p>채용 담당자가 빠르게 판단할 수 있도록 핵심 지표만 선별해 배치했습니다.</p>
-        </div>
-
-        <div class="signal-grid">
-          <article class="signal-card">
-            <header class="signal-head">
-              <img src="./public/graphics/icons/schedule.svg" alt="" aria-hidden="true" />
-              <p class="signal-label">Career</p>
-            </header>
-            <p class="signal-value">
-              <span data-count="3" data-suffix="년">0년</span>
-              <span data-count="4" data-suffix="개월">0개월</span>
-            </p>
-            <p class="signal-meta">2022.09 - 현재 · 실무 연속성 유지</p>
-          </article>
-
-          <article class="signal-card">
-            <header class="signal-head">
-              <img src="./public/graphics/icons/strategy.svg" alt="" aria-hidden="true" />
-              <p class="signal-label">Industry Breadth</p>
-            </header>
-            <p class="signal-value"><span data-count="4">0</span>개 산업군</p>
-            <p class="signal-meta">의료 · 뷰티 · F&amp;B · 커머스 실무 운영 경험</p>
-          </article>
-
-          <article class="signal-card">
-            <header class="signal-head">
-              <img src="./public/graphics/icons/pie-chart.svg" alt="" aria-hidden="true" />
-              <p class="signal-label">Performance</p>
-            </header>
-            <p class="signal-value"><span data-count="6.08" data-decimals="2" data-suffix="%">0.00%</span></p>
-            <p class="signal-meta">카피 테스트 기반 CTR 개선 · 구매 전환 97건</p>
-          </article>
-
-          <article class="signal-card">
-            <header class="signal-head">
-              <img src="./public/graphics/icons/search.svg" alt="" aria-hidden="true" />
-              <p class="signal-label">SEO Lift</p>
-            </header>
-            <p class="signal-value"><span data-count="24.2" data-prefix="+" data-decimals="1" data-suffix="%">+0.0%</span></p>
-            <p class="signal-meta">월 조회수 3,149 · 방문자 +24.2% 개선</p>
-          </article>
-        </div>
-      </section>
-
-      <div class="divider"></div>
-
-      <section id="projects" class="projects reveal" aria-label="주요 프로젝트">
-        <div class="section-head">
-          <p class="section-kicker">Selected Work</p>
-          <h2>Latest Projects</h2>
-          <p>문제 정의부터 실행, 결과 지표, 증빙 이미지까지 프로젝트 단위로 바로 확인할 수 있습니다.</p>
-        </div>
-
-        <div class="project-grid">
-          <article class="project-card project-card-wide">
-            <div class="project-wide-grid">
-              <figure class="project-thumb dangnabal-focus">
-                <img src="./public/images/projects/dangnabal-blog.jpg" alt="당나발포차 창업 블로그 콘텐츠 화면" loading="lazy" />
-              </figure>
-
-              <div class="project-wide-copy">
-                <p class="project-tag">Franchise Growth · Content + Search Ads</p>
-                <h3 class="project-title">당나발포차 창업 블로그 기획 및 작성</h3>
-                <p class="project-wide-meta">기간: 2025.03 · 약 1개월</p>
-                <p class="project-copy">
-                  가맹 전환을 가로막던 ‘신뢰 가능한 정보 부재’ 문제를 해결하기 위해
-                  점주 경험 스토리와 매출 공개형 콘텐츠를 설계하고, 브랜드 검색 광고를 결합해
-                  검색 상단 점유부터 블로그 랜딩까지 전환 구조를 구축했습니다.
+    <!-- Hero Section -->
+    <section class="min-h-screen flex flex-col justify-center px-6 md:px-12 pt-20 relative">
+        <div class="max-w-7xl mx-auto w-full relative z-10 flex flex-col lg:flex-row justify-between items-start lg:items-center gap-16">
+            
+            <div class="flex-1 w-full mt-20 lg:mt-0">
+                <p class="reveal text-brand-gray text-[11px] uppercase font-semibold mb-6">
+                    Marketer Portfolio
                 </p>
-                <ul class="project-points">
-                  <li>블로그 콘텐츠 운영: 점주 경험 기반 스토리, 매출 공개, 창업 현실 정보 전달</li>
-                  <li>브랜드 검색 광고 집행: ‘당나발포차’ 키워드 상단 점유, 블로그 랜딩 연결</li>
-                  <li>전환 흐름 설계: 검색 → 블로그 유입 → 신뢰 형성 → 가맹/확장 유도</li>
-                </ul>
-                <p class="project-metric">핵심 성과: 한 달 내 신규 지점 3곳 확장 · 노출/클릭/조회수 상승</p>
-                <div class="project-links">
-                  <a class="project-link" href="https://m.blog.naver.com/dangnabal_/223795872389?isFromSearchAddView=true&recommendTrackingCode=0" target="_blank" rel="noreferrer">
-                    창업 사례 글 1 ↗
-                  </a>
-                  <a class="project-link" href="https://m.blog.naver.com/dangnabal_/223795774410?isFromSearchAddView=true&recommendTrackingCode=0" target="_blank" rel="noreferrer">
-                    창업 사례 글 2 ↗
-                  </a>
+                
+                <h1 class="font-display text-6xl md:text-8xl lg:text-[112px] leading-[1.05] mb-8 text-brand-black">
+                    <div class="reveal overflow-hidden">
+                        <span class="block font-light">Strategic</span>
+                    </div>
+                    <div class="reveal overflow-hidden delay-100">
+                        <span class="block italic pr-4 text-brand-accent">Execution.</span>
+                    </div>
+                </h1>
+
+                <div class="reveal delay-200 max-w-2xl">
+                    <p class="text-brand-black text-lg md:text-2xl font-light leading-[1.6] mb-10">
+                        복잡한 정보는 간결하게, 브랜드의 메시지는 선명하게 다듬어<br class="hidden md:block">
+                        고객을 움직이는 명확한 다음 액션을 설계합니다.<br>
+                        <span class="block mt-4 text-brand-gray text-base md:text-lg">
+                            의료, 뷰티, F&B, 커머스 등 4개 산업군을 아우르며<br class="hidden md:block">
+                            마케팅 기획부터 매체 최적화, 콘텐츠 운영까지의 전체 퍼널을 매니징한<br class="hidden md:block">
+                            3년 7개월 차 올라운더 마케터 김민지입니다.
+                        </span>
+                    </p>
+                    <div class="flex gap-8 items-center text-[11px] uppercase font-semibold">
+                        <a href="#archive" class="border-b border-brand-black pb-1 hover:text-brand-gray hover:border-brand-gray transition-colors">View Projects</a>
+                        <a href="./public/docs/minji_resume.pdf" download="260608_김민지_이력서.pdf" class="border-b border-brand-black pb-1 hover:text-brand-gray hover:border-brand-gray transition-colors">Download Resume</a>
+                    </div>
                 </div>
-              </div>
             </div>
-          </article>
 
-          <article class="project-card">
-            <figure class="project-thumb ph40-focus">
-              <img src="./public/images/projects/ph40-store.png" alt="피에이치포 밸런스토크 파우더 스마트스토어 메인 화면" loading="lazy" />
-            </figure>
-            <p class="project-tag">Performance &amp; Commerce</p>
-            <h3 class="project-title">여성 페미닌 에티켓 제품 마케팅</h3>
-            <p class="project-copy">
-              “먹지말고 뿌리자” 카피 중심 A/B 테스트와 상세페이지 구조 재설계로 전환 흐름을 개선했습니다.
+            <!-- Minimalist Profile Data -->
+            <div class="w-full lg:w-[320px] reveal delay-300">
+                <div class="hairline-t pt-6 mb-6 flex justify-between items-start">
+                    <span class="text-[10px] font-semibold text-brand-gray uppercase">Focus</span>
+                    <span class="text-sm font-light text-right leading-relaxed text-brand-black">다중 프로젝트 PM<br>커뮤니케이션 및 구조화</span>
+                </div>
+                <div class="hairline-t pt-6 mb-6 flex justify-between items-start">
+                    <span class="text-[10px] font-semibold text-brand-gray uppercase">Scale</span>
+                    <span class="text-sm font-light text-right leading-relaxed text-brand-black">동시 8개 고객사 관리<br>일 25건 콘텐츠 핸들링</span>
+                </div>
+                <div class="hairline-t pt-6 flex justify-between items-start">
+                    <span class="text-[10px] font-semibold text-brand-gray uppercase">Core</span>
+                    <span class="text-sm font-light text-right leading-relaxed text-brand-black">퍼포먼스 A/B 테스트<br>브랜드 커머스 구축</span>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-28 px-6 md:px-12 relative bg-white">
+        <div class="max-w-7xl mx-auto hairline-t pt-24">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-end">
+                <div class="lg:col-span-5 reveal">
+                    <span class="block text-brand-gray text-[11px] font-semibold uppercase mb-5">Profile Note</span>
+                    <h2 class="text-4xl md:text-5xl font-display font-medium leading-tight text-brand-black mb-8">
+                        읽고, 정리하고,<br>
+                        <i class="font-light text-brand-accent">실행까지 연결합니다.</i>
+                    </h2>
+                    <p class="text-brand-gray text-lg leading-[1.7] font-light">
+                        빠르게 움직이는 조직 안에서 흩어진 요청을 구조화하고, 각 담당자가 바로 판단할 수 있는 기준으로 바꾸는 일을 잘합니다. 화려한 한 장보다 실무자가 다시 열어보게 되는 자료, 고객이 다음 행동을 이해하는 문장을 만듭니다.
+                    </p>
+                    <div class="mt-10 text-[11px] uppercase font-semibold">
+                        <a href="./public/docs/minji_resume.pdf" download="260608_김민지_이력서.pdf" class="border-b border-brand-black pb-1 hover:text-brand-gray hover:border-brand-gray transition-colors">
+                            Download Resume
+                        </a>
+                    </div>
+                </div>
+
+                <figure class="lg:col-span-7 reveal delay-100">
+                    <div class="ai-frame aspect-[4/3] w-full">
+                        <img src="./public/images/hero/minji-office-ai-portrait.png" alt="생성형 AI로 제작한 김민지 마케터 업무 콘셉트 이미지">
+                    </div>
+                    <figcaption class="mt-3 text-[11px] leading-relaxed text-brand-gray font-light">
+                        *이 이미지는 생성형 AI로 제작되었습니다.
+                    </figcaption>
+                </figure>
+            </div>
+        </div>
+    </section>
+        
+    <!-- Competency Section -->
+    <section id="competency" class="py-32 px-6 md:px-12 relative bg-white">
+        <div class="max-w-7xl mx-auto hairline-t pt-32">
+            
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-16">
+                
+                <!-- Section Title -->
+                <div class="lg:col-span-4 relative">
+                    <div class="sticky top-40 reveal">
+                        <h2 class="text-4xl md:text-5xl font-display font-medium leading-tight text-brand-black mb-6">
+                            업무의 해상도를<br>
+                            <i class="font-light text-brand-accent">높이는 방식.</i>
+                        </h2>
+                        <p class="text-brand-gray text-base leading-[1.6] font-light">
+                            마케팅은 단순히 예쁜 콘텐츠를 만드는 것을 넘어, 부서 간의 목표를 정렬하고 실무자가 확신을 가지고 실행할 수 있도록 '명확한 기준'을 세우는 일이라 믿습니다.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Detail List -->
+                <div class="lg:col-span-8">
+                    
+                    <!-- Item 01 -->
+                    <div class="reveal relative pb-20 hairline-b mb-20">
+                        <span class="block text-brand-gray text-[11px] font-semibold uppercase mb-4">01. Project Management</span>
+                        <h3 class="text-2xl md:text-3xl font-medium mb-6 text-brand-black">요구사항의 완벽한 번역과 일정 통제</h3>
+                        <p class="text-brand-gray text-lg leading-[1.6] font-light mb-8">
+                            복잡한 고객사의 요구를 실행팀이 즉각 작업할 수 있는 명확한 언어로 번역합니다. 최대 8개 성형외과의 마케팅 플랜을 총괄하며, 파편화된 수정 요청을 일원화하고 하루 25건 이상의 콘텐츠 일정을 무결점으로 조율했습니다.
+                        </p>
+                        <ul class="flex flex-wrap gap-x-8 gap-y-3 text-[12px] text-brand-black">
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-brand-accent text-[10px]"></i> B2B 커뮤니케이션</li>
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-brand-accent text-[10px]"></i> 다중 프로젝트 운영표 관리</li>
+                        </ul>
+                    </div>
+
+                    <!-- Item 02 -->
+                    <div class="reveal relative pb-20 hairline-b mb-20">
+                        <span class="block text-brand-gray text-[11px] font-semibold uppercase mb-4">02. Performance Optimization</span>
+                        <h3 class="text-2xl md:text-3xl font-medium mb-6 text-brand-black">숫자로 증명하는 채널 최적화</h3>
+                        <p class="text-brand-gray text-lg leading-[1.6] font-light mb-8">
+                            직관에만 의존하지 않고 데이터를 기반으로 고객의 행동을 유도합니다. 페미닌 제품의 카피라이팅 A/B 테스트로 최고 CTR 6.08%를 달성했으며, 검색 환경에 맞춘 키워드 구조화로 치과 블로그 방문자를 전월 대비 24.2% 상승시켰습니다.
+                        </p>
+                        <ul class="flex flex-wrap gap-x-8 gap-y-3 text-[12px] text-brand-black">
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-brand-accent text-[10px]"></i> A/B 테스트 설계</li>
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-brand-accent text-[10px]"></i> 검색엔진(SEO) 전략</li>
+                        </ul>
+                    </div>
+
+                    <!-- Item 03 -->
+                    <div class="reveal relative pb-20">
+                        <span class="block text-brand-gray text-[11px] font-semibold uppercase mb-4">03. Brand Commerce Setup</span>
+                        <h3 class="text-2xl md:text-3xl font-medium mb-6 text-brand-black">시장 조사부터 세일즈 인프라 구축까지</h3>
+                        <p class="text-brand-gray text-lg leading-[1.6] font-light mb-8">
+                            단편적인 채널 운영을 넘어 브랜드 런칭의 A to Z를 직접 세팅합니다. 이탈리아 수입 올리브오일의 국내 도입을 위해 타겟 포지셔닝을 기획하고, 브랜드 상세페이지 제작 및 스마트스토어 커머스 환경을 성공적으로 구축했습니다.
+                        </p>
+                        <ul class="flex flex-wrap gap-x-8 gap-y-3 text-[12px] text-brand-black">
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-brand-accent text-[10px]"></i> 시장 및 경쟁사 리서치</li>
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-brand-accent text-[10px]"></i> 세일즈 카피라이팅</li>
+                        </ul>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Archive Section (Projects) -->
+    <section id="archive" class="py-32 px-6 md:px-12 relative bg-[#FDFDFD]">
+        <div class="max-w-7xl mx-auto">
+            
+            <div class="reveal mb-20 md:mb-32 flex flex-col md:flex-row justify-between items-start md:items-end border-b border-brand-black pb-8">
+                <div>
+                    <h2 class="text-6xl md:text-7xl font-display font-medium text-brand-black leading-none">
+                        Archive<i class="text-brand-accent">.</i>
+                    </h2>
+                </div>
+                <p class="text-brand-gray text-sm font-light mt-6 md:mt-0 max-w-sm text-left md:text-right">
+                    공개 가능한 실제 운영 화면을 중심으로, 실무자로서의 문제 해결 과정과 실행 범위를 정리했습니다.
+                </p>
+            </div>
+
+            <div class="space-y-40">
+                
+                <!-- Project 01 -->
+                <div class="group cursor-pointer">
+                    <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                        <div class="lg:col-span-7 evidence-board w-full reveal">
+                            <div class="evidence-shot square cover">
+                                <img src="./public/images/projects/dental-place-map.png" alt="치과 네이버 플레이스 지도 노출 사례">
+                            </div>
+                            <div class="evidence-shot full zoom-medium">
+                                <img src="./public/images/projects/dental-place-rank.png" alt="치과 플레이스 키워드 순위 관리표">
+                            </div>
+                        </div>
+                        <div class="lg:col-span-5 reveal delay-100 flex flex-col justify-center">
+                            <span class="text-brand-gray text-[11px] font-semibold uppercase mb-4 block">Healthcare / Local Search</span>
+                            <h3 class="text-3xl md:text-4xl font-medium leading-snug text-brand-black mb-6">치과 플레이스 노출 관리 & <br>키워드 순위 점검</h3>
+                            <p class="text-brand-gray font-light leading-[1.6] mb-8">
+                                지역 검색 환경에서 고객사가 어떤 위치와 키워드로 노출되는지 확인하고, 플레이스 순위와 지도 노출 상태를 기준으로 개선 우선순위를 정리했습니다. 단순 업로드가 아니라 검색 결과에서 보이는 방식까지 점검했습니다.
+                            </p>
+                            <div class="grid grid-cols-2 gap-4 hairline-t pt-6">
+                                <div>
+                                    <span class="block text-[10px] text-brand-gray font-semibold uppercase mb-1">Channel</span>
+                                    <span class="text-sm font-medium">Naver Place</span>
+                                </div>
+                                <div>
+                                    <span class="block text-[10px] text-brand-gray font-semibold uppercase mb-1">Check</span>
+                                    <span class="text-sm font-medium">Keyword Ranking</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 02 -->
+                <div class="group cursor-pointer">
+                    <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                        <!-- Note: Image on right for desktop layout variation -->
+                        <div class="lg:col-span-7 lg:order-2 evidence-board w-full reveal">
+                            <div class="evidence-shot tall zoom-soft">
+                                <img src="./public/images/projects/masturzo-store.png" alt="마스뚜르조 스마트스토어 구축 화면">
+                            </div>
+                        </div>
+                        <div class="lg:col-span-5 lg:order-1 reveal delay-100 flex flex-col justify-center">
+                            <span class="text-brand-gray text-[11px] font-semibold uppercase mb-4 block">F&B / Commerce Setup</span>
+                            <h3 class="text-3xl md:text-4xl font-medium leading-snug text-brand-black mb-6">해외 신규 브랜드 런칭 & <br>세일즈 인프라 구축</h3>
+                            <p class="text-brand-gray font-light leading-[1.6] mb-8">
+                                이탈리아 올리브오일 브랜드의 국내 도입 초기 전략을 기획했습니다. 시장 분석을 바탕으로 타겟 페르소나를 설정하고, 제품의 본질을 담은 상세페이지 제작 및 스마트스토어 개설을 주도하여 성공적인 런칭 기반을 다졌습니다.
+                            </p>
+                            <div class="grid grid-cols-2 gap-4 hairline-t pt-6">
+                                <div>
+                                    <span class="block text-[10px] text-brand-gray font-semibold uppercase mb-1">Role</span>
+                                    <span class="text-sm font-medium">Market Research</span>
+                                </div>
+                                <div>
+                                    <span class="block text-[10px] text-brand-gray font-semibold uppercase mb-1">Output</span>
+                                    <span class="text-sm font-medium">Store Launched</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 03 -->
+                <div class="group cursor-pointer">
+                    <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                        <div class="lg:col-span-7 evidence-board w-full reveal">
+                            <div class="evidence-shot main zoom-soft">
+                                <img src="./public/images/projects/ph40-store.png" alt="피에이치포 스마트스토어 운영 화면">
+                            </div>
+                            <div class="evidence-shot full zoom-strong">
+                                <img src="./public/images/projects/ph40-product.png" alt="피에이치포 여성 헬스케어 제품 이미지">
+                            </div>
+                        </div>
+                        <div class="lg:col-span-5 reveal delay-100 flex flex-col justify-center">
+                            <span class="text-brand-gray text-[11px] font-semibold uppercase mb-4 block">Women Healthcare / Commerce</span>
+                            <h3 class="text-3xl md:text-4xl font-medium leading-snug text-brand-black mb-6">제품 메시지 정리 & <br>커머스 접점 최적화</h3>
+                            <p class="text-brand-gray font-light leading-[1.6] mb-8">
+                                여성 헬스케어 제품의 핵심 메시지를 고객 관점에서 정리하고, 상세페이지와 스토어 노출 흐름을 점검했습니다. 카피라이팅 A/B 테스트와 상품 정보 구조화를 통해 클릭 이후의 이해도를 높이는 방향으로 운영했습니다.
+                            </p>
+                            <div class="grid grid-cols-2 gap-4 hairline-t pt-6">
+                                <div>
+                                    <span class="block text-[10px] text-brand-gray font-semibold uppercase mb-1">A/B Test</span>
+                                    <span class="text-sm font-medium">Max CTR 6.08%</span>
+                                </div>
+                                <div>
+                                    <span class="block text-[10px] text-brand-gray font-semibold uppercase mb-1">SEO Impact</span>
+                                    <span class="text-sm font-medium">Traffic +24.2%</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 04 -->
+                <div class="group cursor-pointer">
+                    <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                        <div class="lg:col-span-7 lg:order-2 evidence-board w-full reveal">
+                            <div class="evidence-shot square cover">
+                                <img src="./public/images/projects/dangnabal-blog.jpg" alt="당나발포차 네이버 블로그 콘텐츠 운영 사례">
+                            </div>
+                            <div class="evidence-shot full zoom-soft">
+                                <img src="./public/images/projects/yeouya-cafe.png" alt="여우야 카페 커뮤니티 매체 운영 화면">
+                            </div>
+                        </div>
+                        <div class="lg:col-span-5 lg:order-1 reveal delay-100 flex flex-col justify-center">
+                            <span class="text-brand-gray text-[11px] font-semibold uppercase mb-4 block">Blog / Community Media</span>
+                            <h3 class="text-3xl md:text-4xl font-medium leading-snug text-brand-black mb-6">브랜드 블로그와 커뮤니티 <br>콘텐츠 접점 운영</h3>
+                            <p class="text-brand-gray font-light leading-[1.6] mb-8">
+                                브랜드 블로그와 카페형 커뮤니티 매체에서 사용자가 실제로 마주하는 화면 구조를 기준으로 콘텐츠를 기획했습니다. 게시판, 배너, 본문 흐름을 확인하며 정보가 자연스럽게 읽히는 접점을 만들었습니다.
+                            </p>
+                            <div class="grid grid-cols-2 gap-4 hairline-t pt-6">
+                                <div>
+                                    <span class="block text-[10px] text-brand-gray font-semibold uppercase mb-1">Media</span>
+                                    <span class="text-sm font-medium">Blog / Cafe</span>
+                                </div>
+                                <div>
+                                    <span class="block text-[10px] text-brand-gray font-semibold uppercase mb-1">Role</span>
+                                    <span class="text-sm font-medium">Content Ops</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Contact / CTA Section -->
+    <section id="contact" class="py-40 px-6 md:px-12 relative bg-white border-t border-[#F0F0F0]">
+        <div class="max-w-4xl mx-auto text-center reveal">
+            <h2 class="text-5xl md:text-7xl font-display font-medium leading-tight mb-10 text-brand-black">
+                Let's Build an<br>
+                <i class="font-light text-brand-accent">Exceptional Structure.</i>
+            </h2>
+            
+            <p class="text-lg md:text-xl text-brand-black font-light leading-[1.6] mb-16">
+                입사 후 첫 한 달, 거창한 약속보다는 기존 자료의 맥락을 빠르게 파악하고<br class="hidden md:block">
+                조직에 당장 필요한 '운영의 기준'을 탄탄하게 세우겠습니다.
             </p>
-            <p class="project-metric">CTR 6.08% · 구매 전환 97건</p>
-            <a class="project-link" href="https://smartstore.naver.com/gbb21" target="_blank" rel="noreferrer">
-              펜톡 스마트스토어 보기 ↗
-            </a>
-          </article>
 
-          <article class="project-card">
-            <figure class="project-thumb seo-focus">
-              <img src="./public/images/projects/dental-place-map.png" alt="김해365치과 네이버 플레이스 노출 지도/리스트 화면" loading="lazy" />
-            </figure>
-            <p class="project-tag">SEO &amp; Local Marketing</p>
-            <h3 class="project-title">치과 블로그·플레이스 최적화</h3>
-            <p class="project-copy">
-              ‘지역명 + 치료’ 키워드 구조로 콘텐츠를 재편해 블로그/플레이스 노출 흐름을 동시에 개선했습니다.
-            </p>
-            <p class="project-metric">월 조회수 3,149 · 방문자 +24.2%</p>
-          </article>
-
-          <article class="project-card">
-            <figure class="project-thumb">
-              <img src="./public/images/projects/masturzo-store.png" alt="마스뚜르조 스마트스토어 메인 화면" loading="lazy" />
-            </figure>
-            <p class="project-tag">0 to 1 Launching</p>
-            <h3 class="project-title">마스뚜르조 런칭 사전 구축</h3>
-            <p class="project-copy">
-              시장조사부터 스마트스토어 세팅, 상세페이지 기획, 체험단 운영까지 온라인 판매 기반을 구축했습니다.
-            </p>
-            <p class="project-metric">홈쇼핑 진행 직전 단계까지 구조 구축</p>
-            <a class="project-link" href="https://smartstore.naver.com/masturzo_kr" target="_blank" rel="noreferrer">
-              마스뚜르조 스마트스토어 보기 ↗
-            </a>
-          </article>
-
-          <article class="project-card">
-            <figure class="project-thumb fit-contain">
-              <img src="./public/images/projects/yeouya-cafe.png" alt="여우야 카페 바이럴 운영 화면" loading="lazy" />
-            </figure>
-            <p class="project-tag">Viral &amp; Project Management</p>
-            <h3 class="project-title">성형외과 병원 카페 바이럴 운영</h3>
-            <p class="project-copy">
-              병원별 커뮤니케이션·일정 조율·게시글 운영을 체계화해 고관여 업종의 다중 프로젝트를 안정적으로 관리했습니다.
-            </p>
-            <p class="project-metric">최대 8개 병원 동시 운영 · 일 최대 25건 실행</p>
-          </article>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center items-center">
+                <a href="mailto:mjk8410@naver.com" class="w-full sm:w-auto px-10 py-5 bg-brand-black text-white text-[11px] font-semibold uppercase hover:bg-black/80 transition-colors">
+                    mjk8410@naver.com
+                </a>
+                <button class="w-full sm:w-auto px-10 py-5 bg-white border border-[#E5E5E5] text-brand-black text-[11px] font-semibold uppercase hover:border-brand-black transition-colors flex items-center justify-center gap-3" onclick="copyEmail()" id="copyBtn">
+                    <span id="copyText">Copy Address</span>
+                </button>
+            </div>
         </div>
-      </section>
+    </section>
 
-      <div class="divider"></div>
-
-      <section id="essay" class="essay reveal" aria-label="자기소개서">
-        <div class="section-head">
-          <p class="section-kicker">Self Introduction</p>
-          <h2>Self-Introduction Highlights</h2>
-          <p>
-            성장과정·지원동기·입사 후 포부를 하나의 실행 스토리로 압축했습니다.
-            관찰에서 가설을 세우고, 실행과 개선으로 성과를 만드는 저의 방식이 선명하게 드러납니다.
-          </p>
+    <!-- Footer -->
+    <footer class="py-10 px-6 md:px-12 border-t border-[#E5E5E5] bg-white flex flex-col md:flex-row justify-between items-center gap-6">
+        <div class="text-sm font-sans font-semibold uppercase text-brand-black">
+            Minji<i class="italic font-light">.</i>Kim
         </div>
-
-        <div class="essay-grid">
-          <div class="essay-stack">
-            <article class="essay-card">
-              <p class="section-kicker">성장과정</p>
-              <h3>저의 별명은 ‘만지’입니다</h3>
-              <p>
-                만두 연구실 학부연구생으로 활동하며 시판 제품 비교 실험을 수행했고, 교수님·선후배 100명을 대상으로
-                브랜드 공개/비공개 관능평가를 직접 설계했습니다. 이 과정에서 ‘맛’만이 아니라 ‘브랜드 신뢰와 소통’이
-                선택을 바꾼다는 사실을 체득했습니다.
-              </p>
-              <ul class="essay-points">
-                <li>100인 블라인드 테스트 기획/운영 경험</li>
-                <li>시장조사 기반 제품 특징·소비자 니즈 구조화</li>
-                <li>원재료 특성과 조리법 최적화 관점 → 마케팅 메시지 설계로 전환</li>
-              </ul>
-            </article>
-
-            <article class="essay-card">
-              <p class="section-kicker">지원동기</p>
-              <h3>상품에 진심을 다해 고민하고 기획하는 마케터</h3>
-              <p>
-                직무 전환 후 디자인 툴과 디지털 마케팅 과정을 병행하며 실무 역량을 구축했습니다.
-                비디에스에서 SEO/콘텐츠 운영을 맡아 ‘지역명 + 치과 치료’ 키워드 구조로 리빌딩해
-                월 조회수 600회 이상 급증을 만들며, 소비자 관점의 키워드 설계가 성과를 바꾼다는 확신을 얻었습니다.
-              </p>
-              <ul class="essay-points">
-                <li>SEO/블로그/티스토리/인스타/카카오/당근 채널 운영</li>
-                <li>카피/콘텐츠/상세페이지/광고 집행을 연결한 실무형 운영</li>
-                <li>지표 기반 개선 루프를 빠르게 돌리는 실행력</li>
-              </ul>
-            </article>
-
-            <article class="essay-card">
-              <p class="section-kicker">입사 후 포부</p>
-              <h3>안주하지 않고, 팀의 성과 체계를 만드는 사람</h3>
-              <p>
-                동료와의 커뮤니케이션을 최우선으로 두고, 아이디어 공유부터 실행/개선까지 연결되는 협업 구조를
-                만들겠습니다. 처음 맡는 업무도 회피하지 않고, 데이터와 현장 감각을 결합해 트렌드에 맞는 결과를
-                내는 마케터로 성장하겠습니다.
-              </p>
-              <ul class="essay-points">
-                <li>협업 시너지 중심의 커뮤니케이션과 운영 표준화</li>
-                <li>새로운 업무에 대한 빠른 적응과 자기주도 실행</li>
-                <li>다양한 세대와 소통 가능한 콘텐츠/전략 설계</li>
-              </ul>
-            </article>
-
-            <figure class="essay-illustration-card" aria-label="자기소개서 보조 일러스트">
-              <img src="./public/graphics/marketing/retargeting-strategy.svg" alt="마케팅 커뮤니케이션 일러스트" loading="lazy" />
-            </figure>
-
-            <article class="essay-card essay-summary-card">
-              <p class="section-kicker">실행 요약</p>
-              <h3>
-                조리학 기반의 관찰·분석 습관을 마케팅 실무로 전환해,<span class="summary-break"><br /></span>
-                키워드·콘텐츠·광고·커머스를 한 흐름으로 연결하는 실행형 커리어를 만들어 왔습니다.
-              </h3>
-              <p>
-                단순 기획이 아니라 실행-개선-성과까지 이어지는 운영 구조를 만드는 데 강점이 있습니다.
-              </p>
-            </article>
-          </div>
+        <div class="text-[10px] font-semibold uppercase text-brand-gray text-center md:text-left">
+            Marketing Planning • PM
         </div>
-      </section>
-
-      <div class="divider"></div>
-
-      <section id="conditions" class="conditions reveal" aria-label="희망 근무 조건">
-        <div class="section-head">
-          <p class="section-kicker">Preferred Conditions</p>
-          <h2>희망 근무 조건</h2>
-          <p>회사와 빠르게 핏을 맞추기 위해, 선호 조건을 명확하게 공유드립니다.</p>
+        <div class="text-[10px] text-brand-gray uppercase">
+            &copy; <span id="year"></span> All rights reserved.
         </div>
-
-        <div class="conditions-grid">
-          <article class="condition-card">
-            <p class="condition-label">희망 연봉</p>
-            <p class="condition-value">
-              <span data-count="3800">0</span>만원+
-            </p>
-            <p class="condition-meta">성과 책임 범위를 넓히는 포지션 기준 · 협의 가능</p>
-          </article>
-
-          <article class="condition-card">
-            <p class="condition-label">근무 희망 지역</p>
-            <p class="condition-value">서울</p>
-            <p class="condition-meta">강남 · 종로 · 용산 중심 (협의에 따라 인접 권역 가능)</p>
-          </article>
-
-          <article class="condition-card">
-            <p class="condition-label">합류 가능 시기</p>
-            <p class="condition-value">2026.05.11</p>
-            <p class="condition-meta">2026년 5월 11일부터 합류 가능합니다.</p>
-          </article>
-
-          <article class="condition-card">
-            <p class="condition-label">선호 포지션</p>
-            <p class="condition-value">브랜드 마케터</p>
-            <p class="condition-meta">콘텐츠·퍼포먼스·SEO·커머스를 연결하는 실행형 역할 선호</p>
-          </article>
-
-          <article class="condition-card">
-            <p class="condition-label">희망 직급</p>
-            <p class="condition-value">주임</p>
-            <p class="condition-meta">실무 실행과 개선 루프를 직접 리드할 수 있는 책임 범위 선호</p>
-          </article>
-
-          <article class="condition-card">
-            <p class="condition-label">희망 고용 형태</p>
-            <p class="condition-value">정규직</p>
-            <p class="condition-meta">중장기 관점으로 브랜드 성과를 누적·확장하는 역할 지향</p>
-          </article>
-        </div>
-      </section>
-
-      <footer id="contact" class="footer">
-        <div class="footer-grid">
-          <p class="footer-item">© 2026 Minji Kim. All rights reserved.</p>
-          <p class="footer-item center">mjk9410@naver.com</p>
-          <p class="footer-item right">SEO · Performance · Viral · Commerce · PM</p>
-        </div>
-      </footer>
-    </div>
+    </footer>
 
     <script>
-      (function () {
-        const prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+        // Set year
+        document.getElementById('year').textContent = new Date().getFullYear();
 
-        const signalSection = document.getElementById("signal");
-        const experienceSection = document.getElementById("experience");
-        if (signalSection && experienceSection) {
-          const dividerBetween = experienceSection.nextElementSibling;
-          if (dividerBetween && dividerBetween.classList.contains("divider")) {
-            experienceSection.parentNode.insertBefore(signalSection, experienceSection);
-            experienceSection.parentNode.insertBefore(dividerBetween, experienceSection);
-          }
-        }
-
-        const heroSceneImage = document.getElementById("hero-scene-image");
-        if (heroSceneImage) {
-          heroSceneImage.addEventListener("error", function onError() {
-            heroSceneImage.src = "./profile-photo.jpg";
-          });
-        }
-
-        const revealTargets = document.querySelectorAll(".reveal");
-        if (revealTargets.length && !prefersReducedMotion) {
-          const revealObserver = new IntersectionObserver(
-            (entries, observer) => {
-              entries.forEach((entry) => {
+        // 1. Scroll Reveal Animation
+        const revealElements = document.querySelectorAll('.reveal');
+        
+        const revealObserver = new IntersectionObserver((entries, observer) => {
+            entries.forEach(entry => {
                 if (entry.isIntersecting) {
-                  entry.target.classList.add("is-visible");
-                  observer.unobserve(entry.target);
+                    entry.target.classList.add('active');
+                    observer.unobserve(entry.target);
                 }
-              });
-            },
-            { threshold: 0.12, rootMargin: "0px 0px -6% 0px" }
-          );
-          revealTargets.forEach((el) => revealObserver.observe(el));
-        } else {
-          revealTargets.forEach((el) => el.classList.add("is-visible"));
-        }
-
-        const numberNodes = Array.from(document.querySelectorAll("[data-count]"));
-        const animatedNodes = new WeakSet();
-
-        const animateCount = (node) => {
-          if (animatedNodes.has(node)) return;
-          animatedNodes.add(node);
-
-          const target = Number(node.getAttribute("data-count") || 0);
-          const decimals = Number(node.getAttribute("data-decimals") || 0);
-          const prefix = node.getAttribute("data-prefix") || "";
-          const suffix = node.getAttribute("data-suffix") || "";
-
-          if (prefersReducedMotion) {
-            node.textContent = prefix + target.toFixed(decimals) + suffix;
-            return;
-          }
-
-          let startTime = null;
-          const duration = 1200;
-          const frame = (timestamp) => {
-            if (!startTime) startTime = timestamp;
-            const progress = Math.min((timestamp - startTime) / duration, 1);
-            const eased = 1 - Math.pow(1 - progress, 3);
-            node.textContent = prefix + (target * eased).toFixed(decimals) + suffix;
-            if (progress < 1) {
-              requestAnimationFrame(frame);
-            }
-          };
-          requestAnimationFrame(frame);
-        };
-
-        if (numberNodes.length) {
-          const countObserver = new IntersectionObserver(
-            (entries, observer) => {
-              entries.forEach((entry) => {
-                if (entry.isIntersecting) {
-                  animateCount(entry.target);
-                  observer.unobserve(entry.target);
-                }
-              });
-            },
-            { threshold: 0.16, rootMargin: "0px 0px -4% 0px" }
-          );
-          numberNodes.forEach((node) => countObserver.observe(node));
-        }
-
-        const bars = document.querySelectorAll(".progress-fill");
-        if (bars.length) {
-          const fill = () => {
-            bars.forEach((bar) => {
-              const width = Math.max(0, Math.min(100, Number(bar.getAttribute("data-width") || 0)));
-              bar.style.width = width + "%";
             });
-          };
+        }, {
+            threshold: 0.1,
+            rootMargin: "0px 0px -50px 0px"
+        });
 
-          if (prefersReducedMotion) {
-            fill();
-          } else {
-            const barSection = document.getElementById("skill-bars");
-            if (barSection) {
-              const barObserver = new IntersectionObserver(
-                (entries, observer) => {
-                  entries.forEach((entry) => {
-                    if (entry.isIntersecting) {
-                      fill();
-                      observer.disconnect();
-                    }
-                  });
-                },
-                { threshold: 0.35 }
-              );
-              barObserver.observe(barSection);
+        revealElements.forEach(el => revealObserver.observe(el));
+
+        // 2. Navbar mix-blend interaction on scroll
+        const navbar = document.getElementById('navbar');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 50) {
+                // Ensure navbar stays legible over different backgrounds
+                navbar.classList.add('mix-blend-difference');
             }
-          }
+        });
+
+        // 3. Copy Email
+        function copyEmail() {
+            const email = "mjk8410@naver.com";
+
+            const showCopiedState = () => {
+                const copyBtn = document.getElementById('copyBtn');
+                const copyText = document.getElementById('copyText');
+                
+                const originalText = copyText.innerText;
+                copyText.innerText = "Copied!";
+                copyBtn.classList.add('border-brand-black');
+                copyBtn.classList.add('bg-gray-50');
+                
+                setTimeout(() => {
+                    copyText.innerText = originalText;
+                    copyBtn.classList.remove('border-brand-black');
+                    copyBtn.classList.remove('bg-gray-50');
+                }, 2000);
+            };
+
+            const fallbackCopy = () => {
+                const tempInput = document.createElement("textarea");
+                tempInput.value = email;
+                tempInput.setAttribute("readonly", "");
+                tempInput.style.position = "fixed";
+                tempInput.style.left = "-9999px";
+                document.body.appendChild(tempInput);
+                tempInput.select();
+                document.execCommand("copy");
+                document.body.removeChild(tempInput);
+                showCopiedState();
+            };
+            
+            if (navigator.clipboard && window.isSecureContext) {
+                navigator.clipboard.writeText(email).then(showCopiedState).catch(fallbackCopy);
+            } else {
+                fallbackCopy();
+            }
         }
-      })();
     </script>
-  </body>
+</body>
 </html>
